@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Zflip 5 | Samsunl</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+            <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body class="bg-gray-100 w-full h-full relative">
+    <!-- Tombol untuk memunculkan popup -->
+    <nav class=" fixed bottom-0 left-0 z-50 pb-5 pl-5 ">
+        <button id="openPopup"
+            class="relative overflow-hidden group px-4 py-2 flex items-center md:text-base text-sm bg-[#F6F5F1] rounded-md border  text-gray-500">
+            <i class="fa-solid fa-circle-info mr-2 sm:text-lg text-base z-20"></i>
+            <p class="sm:text-xl text-base z-20">Details about this website</p>
+            <div
+                class="absolute z-10 overflow-hidden -bottom-10 left-0 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-[3] md:group-hover:scale-[0] transition-transform duration-300 ease-out ">
+            </div>
+        </button>
+    </nav>
+    <!-- Popup -->
+    <div id="popupOverlay"
+        class="hidden w-full h-full fixed z-50 top-0 left-0 flex justify-center items-center bg-black/50">
+        <div class="sm:w-[500px] w-full sm:m-0 m-5 h-[400px] bg-[#F6F5F1] rounded-lg px-3 py-3 text-[#2b2b2b] relative overflow-y-scroll">
+            <!-- Tombol close -->
+            <button id="closePopup" class="absolute top-2 right-4 cursor-pointer text-red-500 text-lg">
+                <i class="fa-solid fa-square-xmark"></i>
+            </button>
+
+            <!-- Konten popup -->
+            <div class="flex items-center w-full text-gray-400 mb-2">
+                <i class="fa-solid fa-circle-info mr-1.5"></i>
+                <p>Details about this website</p>
+            </div>
+
+            <h3 class="sm:text-2xl text-xl mt-4">Samsung Galaxyzflip (Ecommerce web)</h3>
+            <p class="sm:text-sm text-xs text-gray-500">Created on: 19 January 2024</p>
+            <p class="mt-2 sm:text-base text-sm">Saya memilih Samsung Galaxy Zflip sebagai bahan latihan dari tugas sekolah dalam pembuatan Ecommerce web pertama saya di tahun 2024.</p>
+
+            <h3 class="sm:text-xl text-md mt-4">Fitur Utama</h3>
+            <p class="sm:text-base text-sm">Tampilan bersih. Resposive.</p>
+
+            <h3 class="sm:text-xl text-md mt-4">Dibuat dengan</h3>
+            <p class="sm:text-base text-sm">Tailwind, CSS & HTML.</p>
+        </div>
+    </div>
+    <!-- responsive Web -->
+
+    <nav id="samsung"
+        class=" py-3 flex sm:justify-between justify-center w-full items-center border bg-white px-10 md:px-32 duration-100">
+        <div class=" flex justify-center items-center">
+            <div class="logo">
+                <img class="w-32" src="/another-project/Galaxyzflip/assets/img/image-removebg-preview (1) 1.png" alt="">
+            </div>
+        </div>
+    </nav>
+    <section class="w-full  z-40 sticky top-0 " id="navbar">
+        <nav class="duration-100  w-full items-center flex justify-between bg-white px-10 md:px-32 shadow-sm ">
+
+            <div class="logo flex py-3">
+                <h1 class=" font-bold text-2xl font-serif"><img class="h-7" src="/another-project/Galaxyzflip/assets/img/samsung .png" alt=""></h1>
+                <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500"
+                    data-dropdown-trigger="hover"
+                    class="text-black font-medium rounded-sm text-sm px-5 py-2.5 text-center inline-flex items-center "
+                    type="button">
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 4 4 4-4" /></svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdownDelay"
+                    class=" z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow  min-w-72 dark:bg-white dark:shadow-md  ">
+                    <ul class="py-2 text-black text-sm  dark:text-gray-200" aria-labelledby="dropdownDelayButton">
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 text-black hover:bg-gray-100 dark:hover:bg-gray-100 dark:hover:text-black">Galaxy
+                                Z Flip5</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 text-black hover:bg-gray-100 dark:hover:bg-gray-100 dark:hover:text-black">Galaxy
+                                Z Fold5</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 text-black hover:bg-gray-100 dark:hover:bg-gray-100 dark:hover:text-black">Galaxy
+                                Tab S9 | S9+ | S9 Ultra</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 text-black hover:bg-gray-100 dark:hover:bg-gray-100 dark:hover:text-black">Sign
+                                out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <li><a href="" class="bg-blue-500 text-white py-5 px-6 hover:bg-white hover:text-black">BUY NOW</a> </li> -->
+
+            <div class="">
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="duration-100 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black border-none rounded-lg lg:hidden hover:bg-gray-100    dark:text-gray-400 dark:hover:bg-gray-100 "
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5 duration-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="z-20 shadow-sm  hidden  absolute mt-46 right-0 lg:block md:w-auto w-full lg:w-auto " id="navbar-default">
+                    <ul
+                        class="font-sans  z-20 lg:mr-10 mr-0  flex  px-1 pt-1 lg:p-0 mt-4 border  rounded-lg lg:flex-row md:space-x-8 rtl:space-x-reverse lg:mt-0 md:border-0 lg:bg-white dark:bg-white  ">
+                        <li>
+                            <a href="#"
+                                class="z-20 block py-2 px-3 text-black  lg:bg-transparent   lg:p-0 dark:text-black md:dark:text-black  border-b-4 border-b-transparent hover:border-b-blue-600 duration-100 hover:shadow-sm"
+                                aria-current="page">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="z-20 block py-2 px-3 text-black  lg:bg-transparent  lg:p-0 dark:text-black md:dark:text-black border-b-4 border-b-transparent hover:border-b-blue-600 duration-100 hover:shadow-sm">HightLight</a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="z-20 block py-2 px-3 text-black  lg:bg-transparent  lg:p-0 dark:text-black md:dark:text-black border-b-4 border-b-transparent hover:border-b-blue-600 duration-100 hover:shadow-sm">Compare</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="z-20 block py-2 px-3 text-black  lg:bg-transparent  lg:p-0 dark:text-black md:dark:text-black border-b-4 border-b-transparent hover:border-b-blue-600 duration-100 hover:shadow-sm">Accessories</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="z-20 block py-2 px-3 text-black  lg:bg-transparent  lg:p-0 dark:text-black md:dark:text-black border-b-4 border-b-transparent hover:border-b-blue-600 duration-100 hover:shadow-sm">Specs</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+
+        </nav>
+
+
+
+    </section>
+
+    <section id="hero" class="">
+        <div class=" w-full pt-16 justify-center items-center  flex ">
+            <div class="  justify-center items-center  flex lg:flex  mt-40 lg:mt-10 duration-100 ">
+
+                <div class="  text   text-black text-left justify-center z-10 mx-10 ">
+                    <h1 class=" text-4xl  font-bold md:text-left text-center sm:text-6xl   ">Galaxy z Flip5 </h1>
+                    <div
+                        class="div w-full 2xl:text-left  text-center lg:flex-auto pr-0 lg:pr-40 flex justify-center items-center  mt-5 duration-100">
+                        <h1
+                            class=" text-center   border  py-1 w-20 text-sm rounded-md border-black hover:bg-gray-900 hover:text-white lg:mx-0 sm:py-3 sm:w-32 sm:rounded-xl ">
+                            Buy Now</h1>
+                    </div>
+
+                </div>
+                <div class="img-area w-full justify-end items-s  hidden lg:block duration-100 pl-40">
+                    <img class=" max-w-xl"
+                        src="https://images.samsung.com/id/smartphones/galaxy-z-flip5/images/galaxy-z-flip5-highlights-colors-mint-mo.jpg?imbypass=true"
+                        alt="">
+                </div>
+
+
+                <!-- <img class="h-96 " src="img/star.png" alt=""> -->
+            </div>
+
+
+        </div>
+        <div class="w-full mt-40 text-center justify-center items-center flex bg-gray-100">
+            <div class="w-full font-light text-sm lg:w-1/4 px-10 duration-100">
+                <p class="sm:text-sm text- text-">Bagaimana jika ponsel Anda merupakan bagian dari diri Anda?</p>
+                <p class=" mt-3">Pas sempurna — baik dalam hidup maupun <b>saku</b> Anda. Flex Window cemerlang yang
+                    dapat Anda kustomisasikan. <b>Kamera</b> yang akan memotret <b>selfie</b> dari angle-angle terbaik.
+                    Dan, baterai yang mampu bertahan lama.</p>
+                <p class=" mt-3 mb-40">Galaxy Z Flip5 | Join the flip side</p>
+
+            </div>
+        </div>
+
+    </section>
+    <section id="about">
+        <div class="   h-full justify-center  flex-wrap p-1 sm:p-10 md:flex duration-700">
+
+
+            <img class="  rounded-xl bg-gray-100"
+                src="https://images.samsung.com/id/smartphones/galaxy-z-flip5/buy/kv_animated_exclusive_MO.jpg" alt="">
+
+
+            <div class="text-area w-full lg:w-1/2 2xl:text-left text-center duration-100">
+                <h1 class="text-3xl sm:mx-5 mx-1 sm:text-6xl ">Flex Window.
+                </h1>
+                <h1 class="text-3xl sm:text-6xl mx-5">
+                    Cover Screen terbesar pada Galaxy Z Flip</h1>
+                <p class="mx-5 mt-10 ">Galaxy Z Flip5 hadir dengan Flex Window berukuran 3,4 inci yang dirancang untuk
+                    ekspresi diri.1 Ringkas dan menarik dari segala angle, ponsel foldable ini tak hanya portabel, tapi
+                    juga fleksibel.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div class="white-area bg-white w-full pt-20 rounded-3xl mt-32">
+
+        <section id="card-area flex">
+            <div class="flex justify-center md:flex-row flex-col md:flex-wrap duration-100 ">
+
+                <div class=" overflow-hidden md:w-72 w-full  rounded-lg  text-left  mr-7 ">
+                    <div class="img w-full h-80 bg-gray-100 overflow-hidden rounded-t-3xl flex items-center justify-center">
+                        <img class="mt-32 w-72 md:w-auto"
+                            src="https://images.samsung.com/id/smartphones/galaxy-z-flip5/accessories/images/galaxy-z-flip5-accessories-silicone-case-with-ring-lavender.jpg?imbypass=true"
+                            alt="">
+                    </div>
+                    <p class="w-full pt-5 text-center font-medium  bg-gray-100">Lavender</p>
+                    <div class="color-area flex min-h-16 w-full  justify-center bg-gray-100 rounded-b-3xl">
+                        <div class=" mt-2   bg-amber-100  rounded-3xl color w-8 h-8 "></div>
+                        <div class="ml-2 mt-2  bg-emerald-100  rounded-3xl color w-8 h-8 "></div>
+                        <div class="ml-2 mt-2 border  border-gray-300 bg-orange-400 rounded-3xl color w-8 h-8 "></div>
+
+                        <div class="ml-2 mt-2  bg-gray-800 rounded-3xl color w-8 h-8 "></div>
+                        <div class="ml-2 mt-2  bg-purple-200 rounded-3xl color w-8 h-8 "></div>
+                    </div>
+                    <h1 class="w-full md:text-left text-center   mt-5 font-medium md:text-3xl text-2xl">Clear Gadget Case</h1>
+                    <p class="md:text-left text-center text-sm text-gray-600 mt-3 w-full">Sandarkan dan pandang layar dengan lebih nyaman, atau
+                        genggam dengan erat. Ganti back grip untuk beralih mode kapan pun yang Anda mau.</p>
+                    <div class="pt-2 w-full    flex justify-center md:justify-start">
+                        <p class="text-sm mb-10  btn-are border border-black h-10 items-center justify-center text-center w-28 rounded-md flex | hover:bg-gray-900 hover:text-white duration-100">PELAJARI</p>
+                    </div>
+                </div>
+
+                <div class=" overflow-hidden md:w-72 w-full rounded-lg  text-left  mr-7">
+                    <div class="img w-full h-80 bg-gray-100 overflow-hidden rounded-t-3xl  flex items-center justify-center">
+                        <img class="mt-24 w-72 md:w-auto"
+                            src="https://images.samsung.com/id/smartphones/galaxy-z-flip5/accessories/images/galaxy-z-flip5-accessories-clear-gadget-case-transparent-unfolded.jpg?imbypass=true"
+                            alt="">
+                    </div>
+                    <p class="w-full pt-5 text-center font-medium  bg-gray-100">Transparant</p>
+                    <div class="color-area flex min-h-16 w-full  justify-center bg-gray-100 rounded-b-3xl">
+                        <div class=" mt-2 border border-gray-300  bg-gray-100 rounded-3xl color w-8 h-8 "></div>
+
+                    </div>
+                    <h1 class="w-full md:text-left text-center   mt-5 font-medium md:text-3xl text-2xl">Silicone Case with Ring</h1>
+                    <p class="md:text-left text-center text-sm text-gray-600 mt-3 w-full">Tunjukkan gaya unik Anda dengan beragam warna yang
+                        ekspresif. Gunakan ring untuk menggenggam dan membawa ponsel dengan lebih mudah.</p>
+                    <div
+                        class="pt-2 w-full    flex justify-center md:justify-start">
+                        <p class="text-sm mb-10  btn-are border border-black h-10 items-center justify-center text-center w-28 rounded-md flex | hover:bg-gray-900 hover:text-white duration-100">PELAJARI</p>
+                    </div>
+                </div>
+<!-- flex items-center justify-center -->
+                <div class=" overflow-hidden md:w-72 w-full md:mx-none  rounded-lg  text-left  ">
+                    <div class="img w-full h-80 bg-gray-100 overflow-hidden rounded-t-3xl flex items-center justify-center ">
+                        <img class=" mt-32 w-72 md:w-auto"
+                            src="https://images.samsung.com/id/smartphones/galaxy-z-flip5/accessories/images/galaxy-z-flip5-accessories-flap-eco-leather-case-black.jpg?imbypass=true"
+                            alt="">
+                    </div>
+                    <p class="w-full pt-5 text-center font-medium  bg-gray-100">Black</p>
+                    <div class=" color-area flex min-h-16 w-full bg-gray-100 justify-center  rounded-b-3xl">
+
+                        <div class=" mt-2 border border-gray-300  bg-zinc-700 rounded-3xl color w-8 h-8 "></div>
+
+                    </div>
+                    <h1 class="w-full md:text-left text-center   mt-5 font-medium md:text-3xl text-2xl">Flap Eco-Leather Case</h1>
+                    <p class="md:text-left text-center text-sm text-gray-600 mt-3 w-full">Desain minimalis ini akan menghadirkan lapisan pelindung
+                        yang anggun bagi engsel ponsel Anda dengan sentuhan kulit yang lembut.1,2</p>
+                    <div
+                        class="pt-2 w-full    flex justify-center md:justify-start">
+                        <p class="text-sm mb-10  btn-are border border-black h-10 items-center justify-center text-center w-28 rounded-md flex | hover:bg-gray-900 hover:text-white duration-100">PELAJARI</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+        <section id="Date" class="w-full mt-32 pb-40">
+            <div class="bg-gray-100 mx-5 xl:mx-20 flex  justify-center items-center rounded-2xl ">
+                <div class="w-1/2 flex justify-center ">
+                    <div class="dates w-full py-5 xl:py-20 ml-0 md:ml-20 ">
+                        <div class="date1 ">
+                            <div class="flex text-2xl">
+                                <ion-icon name="calendar-outline" class="mr-3 p-2 bg-slate-200 rounded-2xl"></ion-icon>
+                                <h1 class="">Galaxy Z flip 2</h1>
+                            </div>
+                            <div class="justify-center items-center ml-5 border-l-2 pb-10">
+                                <p class="ml-8 text-sm text-neutral-600">Reased on 18 September 2020</p>
+                                <div
+                                    class="ml-8 mt-2 border  text-sm w-24 py-2 border-gray-700 text-gray-700 hover:bg-gray-900 hover:text-white text-center rounded-xl flex justify-center">
+                                    See Galaxy</div>
+                            </div>
+                        </div>
+                        <div class="date1 ">
+                            <div class="flex text-2xl">
+                                <ion-icon name="calendar-outline" class="mr-3 p-2 bg-slate-200 rounded-2xl"></ion-icon>
+                                <h1 class="">Galaxy Z Flip 3</h1>
+                            </div>
+                            <div class="justify-center items-center ml-5 border-l-2 pb-10">
+                                <p class="ml-8 text-sm text-neutral-600">Reased on 27 Agustus 2021</p>
+                                <div
+                                    class="ml-8 mt-2 border  text-sm w-24 py-2 border-gray-700 text-gray-700 hover:bg-gray-900 hover:text-white text-center rounded-xl flex justify-center">
+                                    See Galaxy</div>
+                            </div>
+                        </div>
+                        <div class="date1 ">
+                            <div class="flex text-2xl">
+                                <ion-icon name="calendar-outline" class="mr-3 p-2 bg-slate-200 rounded-2xl"></ion-icon>
+                                <h1 class="">Galaxy Z Flip 4</h1>
+                            </div>
+                            <div class="justify-center items-center ml-5 border-l-2 pb-10">
+                                <p class="ml-8 text-sm text-neutral-600">Reased on 2 September 2022</p>
+                                <div
+                                    class="ml-8 mt-2 border  text-sm w-24 py-2 border-gray-700 text-gray-700 hover:bg-gray-900 hover:text-white text-center rounded-xl flex justify-center">
+                                    See Galaxy</div>
+                            </div>
+                        </div>
+                      
+                          <div id="hs-basic-collapse-heading" class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-collapse">
+                            <div class="mt-5">
+                              <p class="text-gray-500 dark:text-gray-400">
+                                This is a collapse body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                              </p>
+                            </div>
+                          </div>
+
+
+
+                    </div>
+
+                </div>
+                <div class="w-full lg:block hidden   ">
+                    <img src="https://image-us.samsung.com/us/smartphones/galaxy-z-flip5/configurator/02-Zflip5-Configurator-800x600.jpg?$product-details-jpg$"
+                        alt="">
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+        <script>
+            const navItems = document.querySelector('.nav-items')
+
+            function onToggle(e) {
+                e.name = e.name === 'menu' ? 'close' : 'menu'
+                navItems.classList.toggle('left-[-60%]')
+                navItems.classList.add('duration-200')
+                navItems.classList.add('bg-white')
+                navItems.classList.add('border ')
+
+            }
+                    // detail website btn
+        document.addEventListener('DOMContentLoaded', function() {
+  const openBtn = document.getElementById('openPopup');
+  const closeBtn = document.getElementById('closePopup');
+  const overlay = document.getElementById('popupOverlay');
+  const body = document.body;
+
+  if (openBtn && closeBtn && overlay) {
+    // Buka popup
+    openBtn.addEventListener('click', () => {
+      overlay.classList.remove('hidden');
+      body.classList.add('overflow-hidden');
+    });
+
+    // Tutup popup dengan tombol X
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.add('hidden');
+      body.classList.remove('overflow-hidden');
+    });
+
+    // Tutup popup saat klik di area overlay (hitam)
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.add('hidden');
+        body.classList.remove('overflow-hidden');
+      }
+    });
+  }
+});
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</html>

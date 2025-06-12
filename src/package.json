@@ -1,0 +1,18 @@
+{
+    "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+},
+  "name": "portofolio-azka-2025",
+  "version": "0.0.1",
+  "private": true,
+
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.0"
+  }
+}

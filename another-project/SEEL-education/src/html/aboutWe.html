@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    </style>
+    <!-- CSS Conected -->
+    <link rel="stylesheet" type="text/css" href="/another-project/SEEL-education/src/css/style.css">
+
+    <!-- ICON & Documen -->
+    <link rel="shortcut icon" href="/another-project/SEEL-education/assets/img/logo.png">
+    <title>AboutUs Seel</title>
+
+        <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SEEL Seek & Lern</title>
+
+    <style>
+        /* FonrT & bodyAll */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1C1E23;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        /* =============== NavBar ==============*/
+
+        .navbarArea {
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            position: fixed;
+        }
+
+        .navbar {
+            margin-top: 10px;
+            width: 300px;
+            height: 50px;
+            background-color: #2A2F37;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            box-shadow: 5px 5px 20px #2a2f37af;
+        }
+
+        .navbar img {
+            width: 80px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .AboutUsNav,
+        .AboutUsNav a {
+            width: 90px;
+            height: 30px;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 15px;
+            text-decoration: none;
+            color: #f4f4f4;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+        }
+
+
+        /* =============== Learn Container ============== */
+
+        .learn {
+            width: 100vw;
+            height: 70vh;
+            background-color: #1C1E23;
+            color: white;
+            display: flex;
+        }
+
+        .lets-learn {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: 'Open Sans';
+            margin-left: 7%;
+        }
+
+        .lets-learn h1 {
+            font-size: 79px;
+            color: #f4f4f4;
+            font-family: Open Sans;
+            font-weight: 600;
+            font-style: italic;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .lets-learn p {
+            font-size: 16px;
+            color: #f4f4f4b4;
+            font-family: Open Sans;
+            font-weight: 200;
+            margin-right: 10px;
+            margin-left: 10px;
+
+        }
+
+        .seel-logo {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .seel-logo img {
+            width: 200px;
+        }
+
+        /* =============== History & Vision Container ============== */
+
+        .history {
+            width: 100vw;
+            height: 40vh;
+            background-color: #1C1E23;
+            color: white;
+            font-size: 30px;
+            display: flex;
+            font-family: 'Plus Jakarta Sans';
+        }
+
+        .history-content {
+            width: 50%;
+            height: 100%;
+            padding-right: 2%;
+            padding-left: 7%;
+            font-size: 17px;
+        }
+
+        .history-content p,
+        .vision-content p {
+            margin-top: 1%;
+            font-size: 16px;
+            color: #f4f4f4b4;
+            font-family: Open Sans;
+            font-weight: 200;
+            padding-right: 7%;
+            padding-bottom: 15%;
+        }
+
+        .vision-content {
+            width: 50%;
+            height: 100%;
+            padding-left: 7%;
+            padding-right: 7%;
+            color: #f4f4f4;
+            font-size: 17px;
+            
+        }
+
+        /* =============== Our Team Container ============== */
+
+        .our-team {
+            width: 100vw;
+
+            background-color: #1C1E23;
+            color: white;
+            font-family: 'Open Sans';
+
+        }
+
+        .our-team h1 {
+            margin-left: 7%;
+            color: #f4f4f4;
+            font-size: 30px;
+            font-family: Open Sans;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .our-team-desc {
+            font-size: 16px;
+            color: #f4f4f4b4;
+            font-family: Open Sans;
+            font-weight: 200;
+            padding-left: 7%;
+            padding-right: 7%;
+
+
+        }
+
+        .team {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .OurTeam {
+            margin-top: 60px;
+
+            width: 87vw;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .teacherCard {
+            width: 200px;
+            padding: 20px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .copy-teacher {
+
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .teacherCard img {
+            width: 200px;
+        }
+
+        .teacher-desc {
+            width: 180px;
+            background-color: #2A2F37;
+            border-radius: 20px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .teacher-desc h1 {
+            font-size: 17px;
+            font-family: Plus Jakarta Sans;
+            color: #FFFFFF;
+            text-align: center;
+            margin-left: 5px;
+        }
+
+        .teacher-desc p {
+            font-size: 16px;
+            font-family: Open Sans;
+            font-weight: 200;
+            color: #B9BABC;
+        }
+
+        /* ===============  Responsive ============== */
+        @media screen and (max-width : 968px){
+            .our-team{
+                padding-top: 10%;
+            }
+
+        }
+    
+        @media screen and (max-width : 768px) {
+            .learn {
+                flex-direction: column;
+            }
+
+            .lets-learn {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .lets-learn h1 {
+                font-size: 3em;
+            }
+
+            .lets-learn p {
+                font-size: 1em;
+            }
+
+            .seel-logo {
+                display: none;
+            }
+
+            .history {
+                height: 150vw;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .history-content {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .vision-content {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .our-team {
+                height: 200vh;
+                text-align: center;
+            }
+
+            .our-team h1 {
+                margin-left: 0;
+            }
+
+            .our-team-desc {
+                margin-left: 0;
+            }
+
+            .team {
+                flex-direction: column;
+            }
+
+            .history-content p,
+            .vision-content p {
+                padding-left: 7%;
+
+            }
+
+            .OurTeam {
+                justify-content: center;
+            }
+            
+        }
+
+
+        /* =============== Join Us Container =============== */
+
+        .joinUsContainer {
+            width: 100vw;   
+            padding-top: 35vh;
+            background-color: #1C1E23;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .joinUsContentAll {
+            width: 100vw;
+            background-color: #2A2F37;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* !!!! area Seel Text Or LogoS !!!! */
+
+        .contentseel {
+            width: 40vw;
+            padding: 0px;
+            display: flex;
+            min-width: 350px;
+            flex-wrap: wrap;
+        }
+
+        .seel {
+            width: 40vw;
+        }
+
+        .seel h1 {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            ;
+            font-size: 150px;
+        }
+
+        /* !!!! area Content !!!! */
+
+        .contentJoin {
+            width: 50vw;
+            min-width: 350px;
+            margin-left: 5px;
+        }
+
+        .contactList {
+            min-width: 350px;
+            margin-top: 80px;
+        }
+
+        .contactList ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .contactList li {
+            list-style-type: none;
+            text-align: start;
+            font-size: 20px;
+            margin-right: 40px;
+            flex-wrap: wrap;
+            color: #4A9BF9;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .textJoin {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .joinUs {
+            max-width: 600px;
+            min-width: 350px;
+        }
+
+        .joinUs h1 {
+            font-size: 50px;
+            color: #FBC497;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .joinUs p {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 300;
+            color: #4A9BF9;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .logoJoin {
+            width: 100px;
+            align-items: center;
+            display: flex;
+        }
+
+        .bar {
+            display: flex;
+        }
+
+        .logoJoin img {
+            width: 100px;
+            margin-top: 10px;
+        }
+
+        .exsamGmail {
+            width: 49vw;
+            min-width: 350px;
+            padding-top: 10px;
+        }
+
+        .bar input {
+            width: 30vw;
+            padding: 10px;
+            border-radius: 100px 0px 0px 100px;
+            border: none;
+            background-color: #F4F4F4;
+        }
+
+        .bar button {
+            width: 150px;
+            border-radius: 0px 100px 100px 0px;
+            border: none;
+            background-color: #4A9BF9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .bar button img {
+            width: 20px;
+            margin-left: 10px;
+        }
+
+        .copyrightArea {
+            width: 45vw;
+            margin-top: 13vh;
+            display: flex;
+            justify-content: space-between;
+            min-width: 350px;
+            padding-bottom: 10px;
+        }
+
+        .copyright {
+            font-size: 15px;
+            color: #4A9BF9;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .privicy-sitemap {
+            display: flex;
+        }
+
+        .privicy-sitemap p {
+            font-size: 15px;
+            color: #4A9BF9;
+            margin-left: 50px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Tombol untuk memunculkan popup -->
+    <nav class="popup-nav">
+        <button id="openPopup" class="popup-button">
+            <i class="fa-solid fa-circle-info icon"></i>
+            <p>Details about this website</p>
+        </button>
+    </nav>
+
+    <!-- Popup -->
+    <div id="popupOverlay" class="popup-overlay hidden">
+        <div class="popup-box">
+            <!-- Tombol close -->
+            <button id="closePopup" class="close-button">
+                <i class="fa-solid fa-square-xmark"></i>
+            </button>
+
+            <!-- Konten popup -->
+            <div class="popup-header">
+                <i class="fa-solid fa-circle-info icon"></i>
+                <p>Details about this website</p>
+            </div>
+
+            <h3 class="popup-title">Seel (Competition Web with Team)</h3>
+            <p class="popup-date">Created on: 9 December 2023</p>
+            <p class="popup-text">
+                Website yang bernama Seel yang dibuat oleh 3 anggota tim, website ini tentang edukasi pembelajaran, website ini berisi 2 page, dibuat tanpa tailwind karena ini dibuat sebelum saya belajar tailwind, atau baru pertama kali belajar tailwind, saya sebagai developer utama, membuat website ini dengan bantuan 2 anggota tim lainnya, yaitu <b>Reveeno</b> dan <b>Mawaldy</b>, website ini dibuat untuk mengikuti lomba yang diadakan oleh <b>Universitas Negeri Malang</b>, website ini dibuat dengan menggunakan HTML, CSS, dan JavaScript, website ini juga sudah responsive.
+            </p>
+
+            <h3 class="popup-subtitle">Fitur Utama</h3>
+            <p class="popup-text">Responsive. Pewarnaan Ceria.</p>
+
+            <h3 class="popup-subtitle">Dibuat dengan</h3>
+            <p class="popup-text">CSS, HTML & JS.</p>
+        </div>
+    </div>
+    <div class="navbarArea">
+        <div class="navbar">
+            <div class="AboutUsNav">
+                <a href="/another-project/SEEL-education/src/html/index.html" target="_blank">Home</a>
+            </div>
+            <img src="/another-project/SEEL-education/assets/img/Navlogo.png" alt="">
+            <div class="AboutUsNav">
+                <a href="/another-project/SEEL-education/src/html/aboutWe.html">About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============== Learn Container ============== -->
+
+    <div class="learn">
+        <div class="lets-learn">
+            <h1><i>Let’s know more <br>about</i> <span style="color: #FBC497;">SE</span><span
+                    style="color: #4A9BF9;">EL</span>!</h1>
+            <p><b style="font-weight: 600;">SEEL</b> focus to provide access to quality <br>education to everyone, regardless of age, <br> background or
+                location. We believe that <br>education is a right for every individual.</p>
+        </div>
+        <div class="seel-logo">
+            <img src="/another-project/SEEL-education/assets/img/Seel logo.png" alt="">
+        </div>
+    </div>
+
+    <!-- =============== History & Vision Container ============== -->
+
+    <div class="history">
+        <div class="history-content">
+            <h1><i>History</i></h1>
+            <p> The SEEL development team comes from a variety of backgrounds, including experienced educators, technologists, and interface designers. They unite to design education from various learning materials and from genius professionals on earth
+
+                Along with technological developments, SEEL offers more than just offline learning. By using easy learning methods, namely online learning, such as distance using Zoom and etc., SEEL takes education to a new level, and easily anywhere. They believe that education is the key to unlocking hidden potential, and in this spirit, they launched SEEL education.</p>
+        </div>
+        <div class="vision-content">
+            <h1><i>Vision & Mission</i></h1>
+            <p>SEEL's mission is to empower every individual to achieve personal success. This website offers courses from various disciplines, from science to unique things.
+                SEEL's vision is to create a world where education is no longer limited by geographic, economic, or social boundaries.</p>
+                
+        </div>
+    </div>
+
+    <!-- =============== Our Team Container ============== -->
+
+    <div class="our-team">
+        <h1><i>Our Team</i></h1>
+        <p class="our-team-desc">These are the Peoples that create this <br> creative and innovative website</p>
+        <div class="team">
+            <div class="OurTeam">
+                <div class="teacherCard">
+                    <div class="copy-teacher">
+                        <img src="/another-project/SEEL-education/assets/img/mawaldy.png">
+                    </div>
+                    <div class="teacher-desc">
+                        <h1>Mawaldy Adha Majid</h1>
+                        <p><span style="color: #FBC497;">Head </span><span style="color: #4A9BF9;">Coder</span></p>
+                    </div>
+                </div>
+                <div class="teacherCard">
+                    <div class="copy-teacher">
+                        <img src="/another-project/SEEL-education/assets/img/azka azkia.png">
+                    </div>
+                    <div class="teacher-desc">
+                        <h1>Azka Azkia Baiquni</h1>
+                        <p><span style="color: #FBC497;">Team Leader</span> & <span style="color: #4A9BF9;">Coder</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="teacherCard">
+                    <div class="copy-teacher">
+                        <img src="/another-project/SEEL-education/assets/img/revino.png">
+                    </div>
+                    <div class="teacher-desc">
+                        <h1>Reveeno Dhirgham P.</h1>
+                        <p><span style="color: #FBC497;">Head </span> <span
+                                style="color: #4A9BF9;">Designer</span></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============== Join Us Container =============== -->
+
+    <div class="joinUsContainer">
+        <div class="joinUsContentAll">
+            <div class="contentseel">
+                <div class="seel">
+                    <h1><span style="color: #FBC497;">SE</span><span style="color: #4A9BF9;">EL</span></h1>
+                </div>
+
+            </div>
+            <div class="contentJoin">
+                <div class="contactList">
+                    <ul>
+                        <li><a href="/another-project/SEEL-education/src/html/index.html#Material">Our Materials</a></li>
+                        <li><a href="/another-project/SEEL-education/src/html/index.html#OurTeacher">Our Teachers</a></li>
+                        <li><a href="/another-project/SEEL-education/src/html/index.html#AboutUs">About Us</a></li>
+                        <li><a href="/another-project/SEEL-education/src/html/contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="textJoin">
+                    <div class="joinUs">
+                        <h1>Well Let’s Join!</h1>
+                        <p>Join our classes & start upgrade your skills with SEEL.
+                            Sing up and join a class!</p>
+                    </div>
+
+                </div>
+                <div class="exsamGmail">
+                    <div class="bar">
+                        <input placeholder="example@email.com" id="inputut">
+                        <button for="inputut">Chat Us!<img src="/another-project/SEEL-education/assets/img/btn.png"></button>
+                    </div>
+                </div>
+                <div class="copyrightArea">
+                    <div class="copyright">© 2023, SEEL Everything Inc. All Rights Reserved.</div>
+                    <div class="privicy-sitemap">
+                        <p>Privacy Policy</p>
+                        <p>Sitemap</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

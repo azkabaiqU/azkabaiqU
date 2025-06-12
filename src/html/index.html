@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azka portofolio</title>
+  <!-- tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="/src/css/style.css">
+  <!-- googlefont -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Plus+Jakarta+Sans&display=swap"
+    rel="stylesheet">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- React -->
+   <script type="module" src="/src/main.jsx"></script>
+</head>
+<style>
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 10px 2px #4ed07e;
+    }
+
+    50% {
+      box-shadow: 0 0 20px 8px #4ed07e;
+    }
+  }
+
+  .glow-green {
+    animation: pulse-glow 2s infinite;
+  }
+</style>
+
+<body class="bg-[#F6F5F1] relative w-screen h-screen">
+  <div>
+    <!-- navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-[#F6F5F1] py-3 px-6 md:px-36 z-50 flex justify-center items-center">
+      <div class="flex justify-between items-center font-medium text-lg w-[1410px] ">
+
+        <!-- Tombol burger -->
+        <button id="burgerBtn" class="md:hidden relative w-10 h-10 z-50">
+          <!-- Ikon tertutup -->
+          <i id="iconClosed" class="fa-solid fa-folder text-3xl block"></i>
+          <!-- Ikon terbuka -->
+          <i id="iconOpened" class="fa-solid fa-folder-open text-3xl hidden"></i>
+        </button>
+        <!-- Menu Mobile -->
+        <ul id="mobileMenu"
+          class="hidden flex-col items-center w-full bg-white text-center fixed top-0 left-0 z-40 transition-transform transform -translate-y-full duration-300">
+          <button onclick="window.location.href='/lib/html/index.html'"
+            class="py-6 border-b border-gray-600 w-full overflow-hidden">
+
+            <a class=" relative overflow-hidden" href="#">Home
+              <div class="cone-other | absolute opacity-100 -top-24 duration-300 -left-10 filter blur-2xl ">
+              </div>
+            </a>
+          </button>
+          <button onclick="window.location.href='/src/html/aboutme.html'"
+            class="py-6 border-b border-gray-600 w-full"><a href="#">Aboutme</a></button>
+          <button onclick="window.location.href='/src/html/work_page.html'"
+            class="py-6 border-b border-gray-600 w-full"><a href="#">Work</a></button>
+          <button onclick="window.location.href='/src/html/certificate.html'" class="py-6  w-full"><a
+              href="#">Certificate</a></button>
+        </ul>
+
+        <!-- Menu Desktop -->
+        <ul class="hidden md:flex space-x-10 items-center">
+          <li><a href="aboutme.html" class="text-gray-700">Aboutme</a></li>
+          <li><a href="work_page.html" class="text-gray-700">Work</a></li>
+          <li><a href="certificate.html" class="text-gray-700">Certificate</a></li>
+        </ul>
+
+        <!-- Icon Home -->
+        <ul class="relative group">
+          <li>
+            <div class="cone-home | absolute opacity-100 -top-36 duration-300 -right-10 filter blur-xl ">
+            </div>
+            <div class="absolute -top-32 right-0 filter blur-xl opacity-100 duration-300"></div>
+            <div
+              class="absolute top-14 right-0 opacity-0 group-hover:opacity-100 py-1 px-4 bg-[#2b2b2b] text-white text-sm text-center duration-300">
+              Home
+            </div>
+            <a href="index.html" class="text-5xl text-gray-700">🛋️</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="fixed z-50 bottom-0 right-0 p-5 flex justify-end group ">
+        <div id="containerContact"
+            class="bg-[#FBFBF9] duration-300 right-0 transition-all flex justify-end items-start rounded-2xl relative">
+                                        <div
+                        class="absolute -top-10 flex w-[110px] opacity-0 group-hover:opacity-100 py-1 px-4 bg-[#2b2b2b] text-white text-sm text-center duration-300">
+                        Contact Me
+                    </div>
+            <div class="relative flex z-30">
+                <div id="contact1"
+                    class="opacity-0 translate-x-0 transition-all duration-300 ease-in-out z-0 absolute left-0  h-[70px] flex justify-center items-center pointer-events-none">
+                    <a href="https://github.com/azkabaiqU"><i
+                            class="fa-brands fa-square-github text-2xl text-[#2b2b2b]"></i></a>
+                </div>
+                <div id="contact2"
+                    class="opacity-0 translate-x-0 transition-all duration-300 ease-in-out z-0 absolute left-0  h-[70px] flex justify-center items-center pointer-events-none">
+                    <a href="https://www.linkedin.com/in/azka-azkia-baiquni-778b25247/"> <i
+                            class="fa-brands fa-linkedin text-2xl text-[#2b2b2b]"></i></a>
+                </div>
+                <div id="contact3"
+                    class="opacity-0 translate-x-0 transition-all duration-300 ease-in-out z-0 absolute left-0  h-[70px] flex justify-center items-center pointer-events-none">
+                    <a href="https://wa.link/qoiyeq"> <i
+                            class="fa-brands fa-square-whatsapp text-2xl text-[#2b2b2b]"></i></a>
+                </div>
+            </div>
+            <button id="btnContact" class="right-0 relative ">
+                <div class=" w-[70px] z-50 h-[70px] relative bg-white rounded-2xl flex justify-center items-center">
+                    <img class="w-[35px]"
+                        src="https://em-content.zobj.net/source/apple/81/open-mailbox-with-lowered-flag_1f4ed.png"
+                        alt="">
+                </div>
+            </button>
+        </div>
+    </div>
+
+
+     <div
+        class="fixed  md:-left-28 -left-20  top-56 flex items-center overflow-hidden -translate-y-1/2 rotate-90  bg-[#D7F3DC] text-black md:px-6 px-3 pt-2 pb-12 rounded-t-xl  transition z-50 ">
+        <div class="w-2.5 h-2.5 bg-green-600 rounded-full mr-5 pulse-glow shadow-2xl glow-green">
+        </div>
+        <p class="text-green-800 md:text-lg text-sm">Available for work</p>
+    </div>
+
+
+    <!-- opening -->
+    <div class="justify-center items-center flex  lg:py-72 py-52">
+      <div class="md:w-[1000px] w-[380px]  text-center flex flex-col-reverse lg:flex-row justify-between">
+        <div class="">
+          <div class="lg:text-left text-center">
+            <p class="lg:mt-0 mt-7">Hi, Im azka!</p>
+            <h1 class="md:mb-8 mb-2 lg:mt-5 mt-1 md:text-7xl text-4xl baskervville-regular ">Software Engineer &<br>
+              Flutter
+              Developer</h1>
+            <div class=" w-full lg:block flex justify-center items-center">
+              <h3 class="md:w-[550px] md:text-base text-sm">Saya lebih terbiasa dalam pengembangan front-end, namun saya juga berkomitmen untuk mengembangkan skill back-end agar ke depannya dapat menjadi full-stack developer.</h3>
+            </div>
+            <div class="w-full justify-center lg:justify-start items-center flex">
+                          <button  onclick="window.open('https://drive.google.com/file/d/1xfW1ir4dKUa12MlpY0UOBlTqj7G_ZtSw/view?usp=sharing')"  class="py-2 px-4 bg-white border rounded-lg mt-5 flex items-center">
+              <i class="fa-solid fa-arrow-up-right-from-square md:text-base text-sm"></i>
+              <p class="ml-2 md:text-base text-sm">View My CV</p>
+            </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="w-full flex justify-center items-center max-lg:hidden">
+            <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/IMG_0068.JPG?updatedAt=1749198787667
+                        " alt="Deskripsi" class="object-cover w-[200px] h-[240px]" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- about me -->
+    <section class=" w-full flex justify-center items-center ">
+      <!-- 1 -->
+      <div class="">
+        <div class="lg:w-[1000px] md:w-[650px] w-[350px] justify-between items-end flex relative group">
+
+          <div>
+            <h3 class="md:text-4xl text-3xl baskervville-regular">About mySelf</h3>
+            <p class="md:text-xl text-lg mt-2 baskervville-regular w-[300px]">Hi nice to meet you</p>
+          </div>
+          <div class="relative p-5">
+            <button onclick="window.location.href='/src/html/aboutme.html'"
+              class=" w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full z-20 flex items-center opacity-100 group-hover:opacity-100 duration-200">
+              <i class="fa-solid fa-arrow-right text-3xl  text-black"></i>
+            </button>
+          </div>
+        </div>
+        <div class="flex w-full  mt-5">
+          <div class="md:flex ">
+            <!-- img -->
+            <div class="w-full md:w-auto  flex justify-center md:mt-0 mt-5">
+              <div
+                class="w-[300px] md:h-[350px] h-[250px]     border-4 border-white bg-white rounded-2xl  duration-200 z-30 overflow-hidden">
+                <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/Photo%20on%2009-08-24%20at%2020.54.jpg?updatedAt=1749339309313
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <!-- text -->
+            <div class="lg:w-[660px] md:w-[300px] w-[370px] md:text-left text-center  md:ml-10 ">
+              <h3 class="md:text-xl text-lg">Hi!, im azka</h3>
+              <p class="md:text-base mb-5 text-sm">My name is Azka Azkia Baiquni. I was born in Bandung, Indonesia. When
+                I
+                was in vocational school, I entered an IT school and majored in Software Engineer. I have
+                studied website and application creation using Flutter. </p>
+              <p class="text-base mb-5">Lately, I have been deepening my learning of Flutter at school. Although
+                my skills still need a lot of development, I have mastered about 70% of the frontend part of
+                making an application. In the future, I plan to deepen my understanding in the backend
+                field, especially using Laravel. </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- about skill -->
+    <section class=" w-full flex justify-center items-center mt-10 ">
+      <!-- 1 -->
+      <div class="">
+        <div class="lg:w-[1000px] md:w-[650px] w-[350px] justify-between items-end flex relative group">
+
+          <div>
+            <h3 class="md:text-3xl text-2xl baskervville-regular">My Skill</h3>
+            <!-- <p class="text-xl mt-2 baskervville-regular w-[300px]">Hi nice to meet you</p> -->
+          </div>
+        </div>
+        <div class="mt-5 w-full ">
+          <!-- HTML -->
+          <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+            data-img="/assets/images/html-serti.png"
+            data-text="Saya belajar HTML di kelas 10, dan mengikuti course di sololearn.">
+            <div class="absolute flex left-0 md:top-3 top-2   transition-all duration-300 group-hover:left-4">
+              <p class="w-[60px] md:text-base text-sm ">No.1</p>
+              <h3 class="md:text-base text-sm">HTML</h3>
+            </div>
+            <div class="absolute right-0 group-hover:right-4 md:top-3 top-1.5 duration-300 md:text-base text-sm">
+              Advanced
+            </div>
+          </div>
+
+          <!-- CSS -->
+          <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6  border-b border-gray-400"
+            data-img="/assets/images/front-end-serti.png"
+            data-text="Saya belajar CSS di kelas 10, dan mengikuti course front-end di sololearn.">
+            <div class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+              <p class="w-[60px] md:text-base text-sm">No.2</p>
+              <h3 class="md:text-base text-sm">CSS</h3>
+            </div>
+            <div class=" md:text-base text-sm absolute right-0 group-hover:right-4 md:top-3 top-1.5 duration-300">
+              Intermediate
+            </div>
+          </div>
+          <!-- JS -->
+          <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+            data-img="/assets/images/js-serti.png"
+            data-text="Saya belajar sedikit logic JS dari sekolah, namun di internet saya juga belajar lebih dalam lagi">
+            <div class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+              <p class="w-[60px] md:text-base text-sm">No.3</p>
+              <h3 class="md:text-base text-sm">JS</h3>
+            </div>
+            <div class=" md:text-base text-sm absolute right-0 group-hover:right-4 md:top-3 top-1.5 duration-300">
+              Basic
+            </div>
+          </div>
+          <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+            data-img="/assets/images/tailwind-serti.png"
+            data-text="Setelah saya mempelajari  HTML & CSS, Saya belajar Tailwind disekolah.">
+            <div class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+              <p class="w-[60px] md:text-base text-sm">No.4</p>
+              <h3 class="md:text-base text-sm">Tailwind</h3>
+            </div>
+            <div class="md:text-base text-sm absolute right-0 group-hover:right-4 md:top-3 top-1.5 duration-300">
+              Intermediate
+            </div>
+          </div>
+          <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+            data-img="/assets/images/coomingsoon-serti.png"
+            data-text="Baru baru ini di kelas 11, saya belajar pembuatan applikasi mengunakan dart Flutter.">
+            <div class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+              <p class="w-[60px] md:text-base text-sm">No.5</p>
+              <h3 class="md:text-base text-sm">Flutter</h3>
+            </div>
+            <div class="md:text-base text-sm absolute right-0 group-hover:right-4 md:top-3 top-1.5 duration-300">
+              Intermediate
+            </div>
+          </div>
+          <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+            data-img="/assets/images/laravel.png"
+            data-text="Di kelas 10 dan 11, saya juga belajar laravel, namun saya cukup susah untuk hal ini, namun laravel akan saya kuasai sendiri. ">
+            <div class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+              <p class="w-[60px] md:text-base text-sm">No.6</p>
+              <h3 class="md:text-base text-sm">Laravel</h3>
+            </div>
+            <div class="md:text-base text-sm absolute right-0  group-hover:right-4 md:top-3 top-1.5 duration-300">
+              Basic
+            </div>
+          </div>
+          <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+            data-img=""
+            data-text="Saya dapat mengerti dalam hal Design terutama Pembuatan UI/UX.">
+            <div class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+              <p class="w-[60px] md:text-base text-sm">No.7</p>
+              <h3 class="md:text-base text-sm">Designer UI/UX</h3>
+            </div>
+            <div class="md:text-base text-sm absolute right-0  group-hover:right-4 md:top-3 top-1.5 duration-300">
+              Intermediate
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about me -->
+    <section class=" w-full flex justify-center items-center mt-32">
+      <!-- 1 -->
+      <div class="lg:w-[1000px] md:w-[650px] w-[350px]">
+        <div class=" justify-between items-end flex relative group">
+
+          <div>
+            <h3 class="md:text-3xl text-2xl baskervville-regular">My Work's</h3>
+            <p class="md:text-xl text-lg md:mt-2  baskervville-regular w-[300px]">Itu adalah hasil karyaku dari tahun 2023-2024</p>
+          </div>
+          <div class="relative ">
+            <button onclick="window.location.href='/src/html/work_page.html'"
+              class=" w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full z-20 flex items-center opacity-100 group-hover:opacity-100 duration-200">
+              <i class="fa-solid fa-arrow-right text-3xl  text-black"></i>
+            </button>
+          </div>
+
+        </div>
+        <div
+          class="group relative overflow-hidden w-auto lg:h-[600px] h-[500px] rounded-2xl bg-[#E8E7E4] flex justify-center mt-5">
+          <!-- <button onclick="window.open('/another-project/samsungs24/src/html/samsungS.html', '_blank')"
+            class="bottom-4  right-4  w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full absolute z-20 flex items-center opacity-0  group-hover:opacity-100 duration-200">
+            <i class="fa-solid fa-arrow-right text-3xl  text-white "></i>
+          </button>
+          <div
+            class="absolute z-10 overflow-hidden -bottom-10 -right-10 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0   md:group-hover:scale-[10] transition-transform duration-300 ease-out ">
+          </div> -->
+          <div class=" flex justify-center relative  w-[900px]  ">
+            <div
+              class="absolute lg:top-24 top-10 md:left-14 lg:w-[600px] md:w-[550px] w-[300px] lg:h-[400px] md:h-[350px] h-[200px] border-4 border-white bg-white rounded-3xl transform md:group-hover:w-[650px]  md:group-hover:h-[450px] md:-rotate-6  group-hover:rotate-6 duration-200  z-20 overflow-hidden">
+              <img src="/assets/images/samsungweb1.png" alt="Deskripsi" class="w-full h-full object-cover" />
+            </div>
+            <!-- Container 2 -->
+            <div
+              class="absolute lg:top-56 md:top-60 top-64  md:right-14  lg:w-[300px] md:w-[200px] w-[300px] lg:h-[300px] h-[200px]  group-hover:w-[350px] border-4 border-white bg-white rounded-3xl transform md:rotate-6 group-hover:-rotate-6 duration-200 z-30 overflow-hidden">
+              <img src="/assets/images/samsungweb2.png" alt="Deskripsi" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-10">
+      <div class="mt-32 mb-10   text-center text-sm text-gray-500 border-t  border-gray-300 pt-4">
+        © Portofolio by Azka. All rights reserved.
+      </div>
+    </footer>
+
+
+    <!-- Gambar kursor -->
+    <!-- <img id="cursorImage" class="w-80 h-auto cursor-img shadow-lg size-10 " /> -->
+
+    <div id="cursorBox" class="cursor-box w-[250px] h-[200px] bg-yellow-200 shadow-lg ">
+      <p id="cursorText" class="cursor-text w-[250px]"></p>
+      <img id="cursorImage" class="z-30 w-56 h-auto cursor-img shadow-lg size-10 " />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+      // navbar ==========================
+      const burgerBtn = document.getElementById('burgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const iconClosed = document.getElementById('iconClosed');
+      const iconOpened = document.getElementById('iconOpened');
+
+      let menuOpen = false;
+
+      burgerBtn.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+
+        if (menuOpen) {
+          mobileMenu.classList.remove('hidden');
+          setTimeout(() => {
+            mobileMenu.classList.remove('-translate-y-full');
+            mobileMenu.classList.add('translate-y-0');
+          }, 10);
+        } else {
+          mobileMenu.classList.remove('translate-y-0');
+          mobileMenu.classList.add('-translate-y-full');
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+          }, 300);
+        }
+        iconClosed.classList.toggle('hidden', menuOpen);
+        iconOpened.classList.toggle('hidden', !menuOpen);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && menuOpen) {
+          menuOpen = false;
+          mobileMenu.classList.remove('translate-y-0');
+          mobileMenu.classList.add('-translate-y-full');
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+          }, 300);
+          iconClosed.classList.remove('hidden');
+          iconOpened.classList.add('hidden');
+        }
+      });
+
+      // cursor magic with note ==========================
+      const cursorBox = document.getElementById("cursorBox");
+      const cursorText = document.getElementById("cursorText");
+      const cursorImg = document.getElementById("cursorImage");
+      const targets = document.querySelectorAll(".hover-target");
+
+      targets.forEach(target => {
+        target.addEventListener("mouseenter", () => {
+          const imgSrc = target.getAttribute("data-img");
+          const text = target.getAttribute("data-text");
+
+          cursorImg.src = imgSrc;
+          cursorImg.style.display = "block";
+
+          cursorText.textContent = text;
+          cursorText.style.display = "block";
+
+          cursorBox.style.display = "block";
+        });
+
+        target.addEventListener("mouseleave", () => {
+          cursorImg.style.display = "none";
+          cursorText.style.display = "none";
+          cursorBox.style.display = "none";
+        });
+
+        target.addEventListener("mousemove", (e) => {
+          const offsetX = 20;
+          const offsetY = 20;
+
+          cursorImg.style.left = `${e.clientX + offsetX + 100}px`;
+          cursorImg.style.top = `${e.clientY + offsetY + 100}px`;
+
+          cursorText.style.left = `${e.clientX + offsetX}px`;
+          cursorText.style.top = `${e.clientY + offsetY}px`;
+
+          cursorBox.style.left = `${e.clientX + offsetX}px`;
+          cursorBox.style.top = `${e.clientY + offsetY }px`;
+        });
+      });
+
+      // GSAP image scroll (guarded)
+      const container = document.getElementById("imageContainer");
+      if (container) {
+        const images = gsap.utils.toArray(".image");
+        const animation = gsap.to(images, {
+          xPercent: 100,
+          repeat: -1,
+          duration: 5,
+          ease: "linear",
+          modifiers: {
+            xPercent: gsap.utils.wrap(-100, 100)
+          }
+        });
+        container.addEventListener("mouseenter", () => animation.pause());
+        container.addEventListener("mouseleave", () => animation.resume());
+      }
+
+      // button contact
+      const containerContact = document.getElementById('containerContact');
+      const btnContact = document.getElementById('btnContact');
+      const contact1 = document.getElementById('contact1');
+      const contact2 = document.getElementById('contact2');
+      const contact3 = document.getElementById('contact3');
+      let open = false;
+
+      btnContact.addEventListener('click', () => {
+        open = !open;
+        // Container Contact
+        containerContact.classList.toggle('w-[70px]', !open);
+        containerContact.classList.toggle('w-[270px]', open);
+        // Github
+        contact1.classList.toggle('opacity-0', !open);
+        contact1.classList.toggle('pointer-events-none', !open);
+        contact1.classList.toggle('translate-x-0', !open);
+        contact1.classList.toggle('-translate-x-[50px]', open);
+
+        // Linkedin
+        contact2.classList.toggle('opacity-0', !open);
+        contact2.classList.toggle('pointer-events-none', !open);
+        contact2.classList.toggle('translate-x-0', !open);
+        contact2.classList.toggle('-translate-x-[110px]', open);
+
+        // Whatsapp
+        contact3.classList.toggle('opacity-0', !open);
+        contact3.classList.toggle('pointer-events-none', !open);
+        contact3.classList.toggle('translate-x-0', !open);
+        contact3.classList.toggle('-translate-x-[170px]', open);
+      });
+    </script>
+  </div>
+
+</body>
+
+</html>

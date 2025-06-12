@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccomYou | Home</title>
+    <!-- js -->
+    <script src="/another-project/AccomYou/src/js/script.js"></script>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="/another-project/AccomYou/src/css/Gobal.css">
+    <link rel="stylesheet" href="/another-project/AccomYou/src/css/course.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+    <!-- baskerville clasico -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- baskerville libre -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="w-full h-full relative">
+    <!-- Tombol untuk memunculkan popup -->
+    <nav class=" fixed bottom-0 left-0 z-50 pb-5 pl-5 ">
+        <button id="openPopup"
+            class="relative overflow-hidden group px-4 py-2 flex items-center md:text-base text-sm bg-[#F6F5F1] rounded-md border  text-gray-500">
+            <i class="fa-solid fa-circle-info mr-2 sm:text-lg text-base z-20"></i>
+            <p class="sm:text-xl text-base z-20">Details about this website</p>
+            <div
+                class="absolute z-10 overflow-hidden -bottom-10 left-0 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-[3] md:group-hover:scale-[0] transition-transform duration-300 ease-out ">
+            </div>
+        </button>
+    </nav>
+
+    <!-- Popup -->
+    <div id="popupOverlay"
+        class="hidden w-full h-full fixed z-50 top-0 left-0 flex justify-center items-center bg-black/50">
+        <div
+            class="sm:w-[500px] w-full sm:m-0 m-5 h-[400px] bg-[#F6F5F1] rounded-lg px-5 py-3 text-[#2b2b2b] relative overflow-y-scroll">
+            <!-- Tombol close -->
+            <button id="closePopup" class="absolute top-2 right-4 cursor-pointer text-red-500 text-lg">
+                <i class="fa-solid fa-square-xmark"></i>
+            </button>
+
+            <!-- Konten popup -->
+            <div class="flex items-center w-full text-gray-400 mb-2">
+                <i class="fa-solid fa-circle-info mr-1.5"></i>
+                <p>Details about this website</p>
+            </div>
+
+            <h3 class="sm:text-2xl text-xl mt-4">AccomYou (Competition Web with Team)</h3>
+            <p class="sm:text-sm text-xs text-gray-500">Created on: 28 February 2024</p>
+            <p class="mt-2 sm:text-base text-sm">Kami melakukan Lomba website secara Online bersama satu teman saya,Saya
+                bertanggung jawab sebagai coder dan turut membantu desain, sementara teman saya fokus pada desain utama
+                dan pengisian konten.</p>
+            <p class="mt-2 sm:text-base text-sm">Website ini bernama Accomyou (singkatan dari Accompany You), yang
+                bertujuan untuk membantu dan menemani para pelajar dalam mempelajari berbagai materi melalui platform
+                pembelajaran
+                online. Kami merancang website ini dengan empat materi:
+
+                Bahasa
+
+                Matematika
+
+                Sains
+
+                Medis
+
+                Namun karena keterbatasan waktu dalam lomba, kami hanya mengembangkan satu materi pelajaran dan satu
+                bagian saja sebagai contoh tampilan UI dan konsep pembelajaran yang kami rancang.
+
+            </p>
+
+
+            <h3 class="sm:text-xl text-md mt-4">Fitur Utama</h3>
+            <p class="sm:text-base text-sm">Tampilan bersih dan fokus. Memiliki 2 fitur utama yaitu: Course dan
+                Comunity. Comunity yang terbagi disetiap materi pelajaran. Study Tips yang mudah ditemukan didalam couse
+            </p>
+
+            <h3 class="sm:text-xl text-md mt-4">Dibuat dengan</h3>
+            <p class="sm:text-base text-sm">Tailwind, CSS, HTML & JS.</p>
+        </div>
+    </div>
+    <!-- navbar -->
+    <nav class=" sticky top-0 |w-full z-20  start-0 bg-white/30 backdrop-blur-xl">
+        <div class=" flex flex-wrap items-center justify-between   py-4  px-20 ">
+            <!-- logo -->
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/another-project/AccomYou/assets/img/logo.png" class="h-5" alt="Flowbite Logo">
+            </a>
+            <!-- burger + button -->
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="/another-project/AccomYou/src/html/signIn.html"
+                    class=" flex justify-between items-center py-2 pt-2.5 px-5 btnonly text-white text-sm  rounded-xl monaSans text-center  duration-100 hover:opacity-85">JoinNow
+                </a>
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <!-- listnav -->
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 text-black libre-baskerville-regular">
+                    <li class="">
+                        <a href="/another-project/AccomYou/src/html/home.html"
+                            class="block py-2 px-3  md:p-0 border-b-2 brownBor duration-100">Home</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/course.html"
+                            class="block py-2 px-3  md:p-0  border-b-2 border-transparent hover:border-gray-300 duration-100 ">Course</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/comunity.html"
+                            class="block py-2 px-3  md:p-0   border-b-2 border-transparent hover:border-gray-300 duration-100 ">Comunity</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/about.html"
+                            class="block py-2 px-3  md:p-0  border-b-2 border-transparent hover:border-gray-300 duration-100">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- title openning -->
+
+    <section class="w-full  justify-center items-center pt-52 ">
+        <!-- title text -->
+        <div class="text | text-center">
+            <h1 class="text-6xl font-bold  brownOri monaSans">Master New Skills<br>
+                With AccomYou</h1>
+            <p class="text-md mt-2 h-5 ">Still sad about doing homework alone or still</p>
+            <p> sad that no one wants to teach you?</p>
+        </div>
+        <!-- button and people -->
+        <div class="tryAccomYou | flex justify-center items-center mt-10">
+            <a href="/another-project/AccomYou/src/html/course.html"
+                class=" flex justify-between items-center py-2 pt-2.5 px-5 btnonly text-white text-sm  rounded-xl monaSans text-center  duration-100 hover:opacity-85">Try
+                AccomYou <div class="ml-3 w-6 h-6 rounded-2xl   text-white justify-center items-center flex text-2xl">→
+                </div></a>
+            <div class="flex items-center justify-center | ml-7 ">
+                <img src="/another-project/AccomYou/assets/img/homepfp.png" class="w-20" alt="who">
+                <div class="ml-1">
+                    <h1 class="text-2xl font-medium h-6">36k +</h1>
+                    <p class="">Using this app</p>
+                </div>
+            </div>
+        </div>
+        <!-- terpercaya -->
+        <div class=" mt-14 text-center ">
+            <p>trusted by:</p>
+            <div class="flex justify-center items-center mt-3">
+                <img src="/another-project/AccomYou/assets/img/beleavit.png" class="w-96" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- content materi -->
+    <section class="w-full  justify-center items-center pt-60">
+        <!-- img besar -->
+        <div class=" flex justify-center ">
+            <a href="/another-project/AccomYou/src/html/course.html"
+                class="rounded-md flex justify-end items-end | w-[940px] h-[560px] absolute hover:bg-gray-200/30 hover:backdrop-blur-sm opacity-0 hover:opacity-100 duration-200 ">
+                <button
+                    class="m-5 flex justify-between items-center py-2 pt-2.5 px-5 btnonly text-white text-sm  rounded-xl monaSans text-center  duration-100 hover:opacity-85">SeeMore
+                    <div class="ml-3 w-6 h-6 rounded-2xl   text-white justify-center items-center flex text-2xl">→
+                    </div></button>
+            </a>
+
+            <img id="imgCourse" src="/another-project/AccomYou/assets/img/lang.png"
+                class="grayOri p-5 rounded-xl w-[940px]" alt="">
+        </div>
+        <!-- box course -->
+        <div class="flex justify-center items-start h-[400px]">
+
+            <!-- language -->
+            <div id="language" onclick="langpage()"
+                class="cursor-pointer  |  mt-4 overflow-x-hidden h-36 w-56 grayOri p-4 rounded-xl hover:h-auto hover:ring-gray-300 hover:ring-1 ring-0 duration-300 ">
+                <div class="">
+                    <div class=" p-2 rounded-sm  w-7 | yellowLang">
+                        <img src="/another-project/AccomYou/assets/img/translate.png" class="w-4" alt="">
+                    </div>
+                    <h1 class="text-lg font-medium">Language</h1>
+                    <p class="text-sm">We have created more than 3 languages with levels starting from basic to expert
+                        level.
+                    </p><br>
+                    <p class="text-sm">Language is the most important thing in human life, even humans can communicate
+                        using their language, but there is not just one language in this world, but many.
+                        would you like to learn one of the human languages?</p>
+                </div>
+            </div>
+
+            <!-- math -->
+            <div id="math" onclick="mathpage()"
+                class="cursor-pointer ml-4 |  mt-4 overflow-x-hidden h-36 w-56 grayOri p-4 rounded-xl hover:h-auto hover:ring-gray-300 hover:ring-1 ring-0 duration-300 ">
+                <div class="">
+                    <div class=" p-2 rounded-sm  w-7 | purpleMusic">
+                        <img src="/another-project/AccomYou/assets/img/math.png" class="w-4" alt="">
+                    </div>
+                    <h1 class="text-lg font-medium">Math</h1>
+                    <p class="text-sm">study mathematics lessons from elementary school to college.
+                    </p><br>
+                    <p class="text-sm">Mathematics is the subject that students hate the most, even the most difficult
+                        because it requires logical thinking, but here we make it easier to learn mathematics like a
+                        game.
+                    </p>
+                </div>
+            </div>
+
+            <!-- sains -->
+            <div id="sains" onclick="sainspage()"
+                class="cursor-pointer  ml-4 |  mt-4 overflow-x-hidden h-36 w-56 grayOri p-4 rounded-xl hover:h-auto hover:ring-gray-300 hover:ring-1 ring-0 duration-300 ">
+                <div class="">
+                    <div class=" p-2 rounded-sm  w-7 | blueSains">
+                        <img src="/another-project/AccomYou/assets/img/atom.png" class="w-4" alt="">
+                    </div>
+                    <h1 class="text-lg font-medium">Science</h1>
+                    <p class="text-sm">learn without having to blow up a laboratory,<br><br> study science from
+                        elementary school to college</p>
+                    <p class="text-sm">It is proven that 1k people have completed the study and 90% of them were
+                        impressed so that some received scholarships,
+                        <br><br><br>Come on, be one of the students</p>
+                </div>
+            </div>
+
+            <!-- medical -->
+            <div id="medical" onclick="medicpage()"
+                class="cursor-pointer  ml-4 |  mt-4 overflow-x-hidden h-36 w-56 grayOri p-4 rounded-xl hover:h-auto hover:ring-gray-300 hover:ring-1 ring-0 duration-300 ">
+                <div class="duration-300">
+                    <div class=" p-2 rounded-sm  w-7 | greenMath">
+                        <img src="/another-project/AccomYou/assets/img/musical-note.png" class="w-4" alt="">
+                    </div>
+                    <h1 class="text-lg font-medium">Medical</h1>
+                    <p class="text-sm">learn from biology, anatomy, etc.
+                    </p>
+                    <p class="text-sm"> Study until you can save the people you love, even ordinary people, but will we
+                        learn medical lessons easily? Don't worry, we will help you!
+
+                        <br><br><br>Come on, be one of the students</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- content comunity -->
+
+    <section class="w-full justify-center items-center pt-10">
+        <!-- title text -->
+        <div class="justify-center flex items-center">
+            <div class="w-[940px] ">
+                <h1 class="text-4xl font-bold  brownOri monaSans">Enhance your experience<br>
+                    with our Community</h1>
+                <p class="text-md mt-2 h-5  ">Boost your creativity or even tell your problem on the community, </p>
+                <p class="text-md "></p>it might help you with your courses</p>
+
+            </div>
+        </div>
+
+        <!-- img comunity -->
+        <div class="flex justify-center items-center mt-5">
+            <div
+                class="rounded-md flex justify-end items-end | w-[940px] h-[560px] absolute hover:bg-gray-200/30 hover:backdrop-blur-sm opacity-0 hover:opacity-100 duration-200 ">
+                <a href="/another-project/AccomYou/src/html/comunity.html"
+                    class="m-5 flex justify-between items-center py-2 pt-2.5 px-5 btnonly text-white text-sm  rounded-xl monaSans text-center  duration-100 hover:opacity-85">SeeMore
+                    <div class="ml-3 w-6 h-6 rounded-2xl   text-white justify-center items-center flex text-2xl">→
+                    </div></a>
+            </div>
+            <img src="/another-project/AccomYou/assets/img/imgcomunity.png" class="grayOri p-5 rounded-xl w-[940px]"
+                alt="">
+        </div>
+    </section>
+
+    <!-- content rate -->
+    <section class="w-full justify-center items-center pt-60">
+        <!-- title text -->
+        <div class="justify-center flex items-center">
+            <div class="w-[940px] ">
+                <h1 class="text-4xl font-bold  brownOri monaSans">What They Say.<br>
+                    Assessment Of Students.</h1>
+                <p class="text-md mt-2 h-5  ">Being recognized by others is much better than being recognized </p>
+                <p class="text-md "> by yourself</p>
+            </div>
+        </div>
+        <!-- rate box -->
+        <div class="justify-center flex items-center">
+            <div class="w-[940px] mt-10 flex ">
+
+                <!-- x box -->
+                <div class="left">
+                    <div class="Human | min-h-20  mb-4 grayOri w-[500px] p-5  rounded-md">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-gray-800"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">Vissamora</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont">I've never found a learning website that's as good as this. If I
+                                was
+                                a kid, this already existed. I recommend it for students who want to learn but are too
+                                lazy
+                                to use books. I really like this. I'm giving it 5 stars.</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="/another-project/AccomYou/assets/img/star.png" class="w-20" alt="">
+                        </div>
+                    </div>
+                    <div class="Human | min-h-20  mb-4 grayOri w-[500px] p-5  rounded-md">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-gray-800"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">MinyungChoi</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont">I really like this lesson, it's fun like a game and again this
+                                is trusted by big companies like Duogoo and Outside, even though it's not easy to be
+                                trusted by big companies, which is clear I really like it.</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="/another-project/AccomYou/assets/img/star.png" class="w-20" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- box seemore -->
+                <div class="ringht | ml-4 overflow-x-hidden h-[380px]  mb-4 grayOri w-[400px]   rounded-md |relative">
+                    <div
+                        class="rounded-md flex justify-end items-end | w-[400px] h-[380px] absolute hover:bg-gray-200/30 hover:backdrop-blur-sm opacity-0 hover:opacity-100 duration-200 ">
+                        <a href="/another-project/AccomYou/src/html/comunity.html"
+                            class="m-5 flex justify-between items-center py-2 pt-2.5 px-5 btnonly text-white text-sm  rounded-xl monaSans text-center  duration-100 hover:opacity-85">SeeMore
+                            <div
+                                class="ml-3 w-6 h-6 rounded-2xl   text-white justify-center items-center flex text-2xl">
+                                →
+                            </div></a>
+                    </div>
+                    <div class="Human | m-5 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-blue-950"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">DongAha</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont">wow i like it</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="/another-project/AccomYou/assets/img/star.png" class="w-20" alt="">
+                        </div>
+                    </div>
+                    <div class="Human | m-5">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-red-950"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">Noah</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont">yeah i like to</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="/another-project/AccomYou/assets/img/star.png" class="w-20" alt="">
+                        </div>
+                    </div>
+                    <div class="Human | m-5">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-red-950"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">AsepSo</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont">hey this creator I'm asepso, I really like it</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="/another-project/AccomYou/assets/img/star.png" class="w-20" alt="">
+                        </div>
+                    </div>
+                    <div class="Human | m-5">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">Ji Sun</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont">WOwwwwwwww</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="/another-project/AccomYou/assets/img/star.png" class="w-20" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="grayOri rounded-lg shadow mt-32">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <!-- logo -->
+                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="/another-project/AccomYou/assets/img/logobrown.png" class="h-8" alt="Flowbite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">AccomYou</span>
+                </a>
+                <!-- list nav -->
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 brownOri">
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/home.html"
+                            class="hover:underline me-4 md:me-6">Home</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/course.html"
+                            class="hover:underline me-4 md:me-6">Course</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/comunity.html"
+                            class="hover:underline me-4 md:me-6">Comunity</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/about.html" class="hover:underline">About</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 borderonly sm:mx-auto lg:my-8" />
+            <!-- All Right Reserved -->
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+                    href="https://flowbite.com/" class="hover:underline">AccomYou™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        // language funtion --------
+        function langpage() {
+            const img = document.getElementById('imgCourse')
+            img.src = "/another-project/AccomYou/assets/img/lang.png"
+        }
+
+        // math funtion --------
+        function mathpage() {
+            const img = document.getElementById('imgCourse')
+            img.src = "/another-project/AccomYou/assets/img/mathHome.png"
+        }
+
+        // sains funtion --------
+        function sainspage() {
+            const img = document.getElementById('imgCourse')
+            img.src = "/another-project/AccomYou/assets/img/sainsHome.png"
+        }
+
+        // Medic funtion --------
+        function medicpage() {
+            const img = document.getElementById('imgCourse')
+            img.src = "/another-project/AccomYou/assets/img/medicHome.png"
+        }
+        // detail website btn
+        document.addEventListener('DOMContentLoaded', function () {
+            const openBtn = document.getElementById('openPopup');
+            const closeBtn = document.getElementById('closePopup');
+            const overlay = document.getElementById('popupOverlay');
+            const body = document.body;
+
+            if (openBtn && closeBtn && overlay) {
+                // Buka popup
+                openBtn.addEventListener('click', () => {
+                    overlay.classList.remove('hidden');
+                    body.classList.add('overflow-hidden');
+                });
+
+                // Tutup popup dengan tombol X
+                closeBtn.addEventListener('click', () => {
+                    overlay.classList.add('hidden');
+                    body.classList.remove('overflow-hidden');
+                });
+
+                // Tutup popup saat klik di area overlay (hitam)
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) {
+                        overlay.classList.add('hidden');
+                        body.classList.remove('overflow-hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

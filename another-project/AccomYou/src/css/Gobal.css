@@ -1,0 +1,121 @@
+
+    /* Font area ================= */
+    /* mona ----- */
+    @import url('https://fonts.cdnfonts.com/css/mona');
+
+    .monaSansBtn {
+        font-family: 'Mona Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    .monaSans {
+        font-family: 'Mona Sans', sans-serif;
+        font-weight: normal;
+    }
+
+    /* baskerville clasico ----- */
+    .baskervville-regular {
+        font-family: "Baskervville", serif;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    /* baskerville libre ------ */
+    .libre-baskerville-regular {
+        font-family: "Libre Baskerville", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .libre-baskerville-bold {
+        font-family: "Libre Baskerville", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    /* original from Us border,color,dll */
+    .borderonly{
+      border:solid 0.5px #BEBECC
+    }
+
+    .borderOriR {
+        border-right-width: 1px;
+        border-right-color: #BEBECC;
+    }
+
+    .borderOriL {
+        border-left-width: 1px;
+        border-left-color: #BEBECC;
+    }
+    .borderOriLR{
+      border-left-width: 1px;
+      border-right-width: 1px;
+      border-right-color: #BEBECC;
+      border-left-color: #BEBECC;
+
+    }
+    .borderB{
+      border-bottom-width:1px;
+      border-bottom-color: #BEBECC;
+
+    }
+    .ask{
+      color:#BEBECC;
+    }
+    .borderFull{
+      border:1px solid #BEBECC;
+    }
+    .btnonly{
+      background:#410000;
+    }
+
+    .borderOriB {
+        border-bottom-width: 1px;
+        border-bottom-color: #BEBECC;
+    }
+
+    .yellowLang {
+        background-color: #FFF8E0;
+    }
+
+    .greenMath {
+        background-color: #E9FFEF;
+    }
+
+    .blueSains {
+        background-color: #E9FAFF;
+    }
+
+    .purpleMusic {
+        background-color: #EEEEFF;
+    }
+
+    .grayOri {
+        background-color: #F9F9F9;
+    }
+
+    .brownOri {
+        color: #541A1A;
+    }
+
+    .brownBor {
+      border-bottom-color: #541A1A;
+  }
+    .brownBgOri{
+        background: #541A1A;
+    }
+    .brownOpa{
+      background-color: #541A1A;
+      opacity: 50%;
+    }
+    .gray-font{
+      color:#BEBECC;
+    }
+
+    .grayFont {
+        color: #666666;
+    }
+    .borderF{
+      border-color: #BEBECC;
+    }
+

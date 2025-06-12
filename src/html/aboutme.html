@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aboutme</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Plus+Jakarta+Sans&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .menu-transition {
+            transition: max-height 0.4s ease-in-out, opacity 0.4s ease;
+            overflow: hidden;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px 2px #4ed07e;
+            }
+
+            50% {
+                box-shadow: 0 0 20px 8px #4ed07e;
+            }
+        }
+
+        .glow-green {
+            animation: pulse-glow 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F6F5F1]">
+    <!-- navbar -->
+    <nav
+        class="fixed bg-[#F6F5F1] top-0 left-0 w-full  py-3 px-6 md:px-36 z-50 overflow-hidden flex justify-center items-center">
+        <div class="flex justify-between items-center font-medium text-lg w-[1410px]">
+            <!-- Menu Desktop -->
+            <ul class="hidden md:flex space-x-10 items-center">
+                <li class="group">
+                    <a href="aboutme.html" class="text-gray-700 relative">
+                        Aboutme
+                        <div
+                            class="cone-other |  absolute opacity-100 -bottom-8 -left-5 duration-300  filter blur-2xl ">
+                        </div>
+                    </a></li>
+                <li><a href="work_page.html" class="text-gray-700">Work</a></li>
+                <li><a href="certificate.html" class="text-gray-700">Certificate</a></li>
+            </ul>
+            <!-- Tombol burger -->
+            <button id="burgerBtn" class="md:hidden relative w-10 h-10 z-50">
+                <!-- Ikon tertutup -->
+                <i id="iconClosed" class="fa-solid fa-folder text-3xl block"></i>
+                <!-- Ikon terbuka -->
+                <i id="iconOpened" class="fa-solid fa-folder-open text-3xl hidden"></i>
+            </button>
+            <!-- Menu Mobile -->
+            <ul id="mobileMenu"
+                class="hidden flex-col items-center w-full bg-white text-center fixed top-0 left-0 z-40 transition-transform transform -translate-y-full duration-300">
+                <button onclick="window.location.href='/src/html/index.html'"
+                    class="py-6 border-b border-gray-600 w-full"><a href="#">Home</a></button>
+                <button onclick="window.location.href='/src/html/aboutme.html'"
+                    class="py-6 border-b border-gray-600 w-full overflow-hidden">
+                    <a class=" relative overflow-hidden" href="#">Aboutme
+                        <div class="cone-other | absolute opacity-100 -top-24 duration-300 -left-10 filter blur-2xl ">
+                        </div>
+                    </a>
+                </button>
+                <button onclick="window.location.href='/src/html/work_page.html'"
+                    class="py-6 border-b border-gray-600 w-full"><a href="#">Work</a></button>
+                <button onclick="window.location.href='/src/html/certificate.html'" class="py-6  w-full"><a
+                        href="#">Certificate</a></button>
+            </ul>
+
+
+
+            <!-- Icon Home -->
+            <ul class="relative group">
+                <li>
+                    <!-- <div class="cone-home | absolute opacity-100 -top-36 duration-300 -right-10 filter blur-xl ">
+                    </div> -->
+
+                    <div
+                        class="absolute top-7 -right-20 opacity-0 group-hover:opacity-100 py-1 px-4 bg-[#2b2b2b] text-white text-sm text-center duration-300">
+                        Home
+                    </div>
+                    <a href="index.html" class="text-5xl text-gray-700">🛋️</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="fixed z-50 bottom-0 right-0 p-5 flex justify-end group ">
+        <div id="containerContact"
+            class="bg-[#FBFBF9] duration-300 right-0 transition-all flex justify-end items-start rounded-2xl relative">
+                                        <div
+                        class="absolute -top-10 flex w-[110px] opacity-0 group-hover:opacity-100 py-1 px-4 bg-[#2b2b2b] text-white text-sm text-center duration-300">
+                        Contact Me
+                    </div>
+            <div class="relative flex z-30">
+                <div id="contact1"
+                    class="opacity-0 translate-x-0 transition-all duration-300 ease-in-out z-0 absolute left-0  h-[70px] flex justify-center items-center pointer-events-none">
+                    <a href="https://github.com/azkabaiqU"><i
+                            class="fa-brands fa-square-github text-2xl text-[#2b2b2b]"></i></a>
+                </div>
+                <div id="contact2"
+                    class="opacity-0 translate-x-0 transition-all duration-300 ease-in-out z-0 absolute left-0  h-[70px] flex justify-center items-center pointer-events-none">
+                    <a href="https://www.linkedin.com/in/azka-azkia-baiquni-778b25247/"> <i
+                            class="fa-brands fa-linkedin text-2xl text-[#2b2b2b]"></i></a>
+                </div>
+                <div id="contact3"
+                    class="opacity-0 translate-x-0 transition-all duration-300 ease-in-out z-0 absolute left-0  h-[70px] flex justify-center items-center pointer-events-none">
+                    <a href="https://wa.link/qoiyeq"> <i
+                            class="fa-brands fa-square-whatsapp text-2xl text-[#2b2b2b]"></i></a>
+                </div>
+            </div>
+            <button id="btnContact" class="right-0 relative ">
+                <div class=" w-[70px] z-50 h-[70px] relative bg-white rounded-2xl flex justify-center items-center">
+                    <img class="w-[35px]"
+                        src="https://em-content.zobj.net/source/apple/81/open-mailbox-with-lowered-flag_1f4ed.png"
+                        alt="">
+                </div>
+            </button>
+        </div>
+    </div>
+
+
+    <div
+        class="fixed  md:-left-28 -left-20  top-56 flex items-center overflow-hidden -translate-y-1/2 rotate-90  bg-[#D7F3DC] text-black md:px-6 px-3 pt-2 pb-12 rounded-t-xl  transition z-50 ">
+        <div class="w-2.5 h-2.5 bg-green-600 rounded-full mr-5 pulse-glow shadow-2xl glow-green">
+        </div>
+        <p class="text-green-800 md:text-lg text-sm">Available for work</p>
+    </div>
+
+
+    <!-- content My experience -->
+    <section class=" w-full flex justify-center items-center mt-36">
+        <div>
+            <div class="w-full flex justify-center items-center mt-10">
+                <div>
+                    <div class="xl:w-[865px] md:w-[650px] w-[350px] justify-between items-end flex relative group">
+                        <div>
+                            <h3 class="md:text-4xl text-3xl baskervville-regular">About Myself</h3>
+                            <p class="md:text-xl text-lg mt-2 baskervville-regular w-[300px]">Hi nice to meet you</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-5">
+                        <div class="md:flex">
+                            <!-- img -->
+                            <div class="w-full md:w-auto  flex justify-center md:mt-0 mt-5">
+                                <div
+                                    class=" w-[300px] md:h-[350px] h-[250px]  border-4 border-white bg-white rounded-2xl  duration-200 z-30 overflow-hidden">
+                                    <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/Photo%20on%2009-08-24%20at%2020.54.jpg?updatedAt=1749339309313
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                            <!-- text -->
+                            <div class="lg:w-[550px]  md:w-[300px] w-[370px] md:text-left text-center  md:ml-10 ">
+                                <h3 class="md:text-xl text-base">Hi!, im azka</h3>
+                                <p class="md:text-base mb-5 text-sm">Nama saya Azka Azkia Baiquni. Saya lahir di
+                                    Bandung, Indonesia. Saat saya masih di sekolah kejuruan, saya masuk sekolah IT dan
+                                    mengambil jurusan Software Engineer. Saya pernah belajar pembuatan web dan
+                                    aplikasi menggunakan Flutter.</p>
+                                <p class="md:text-base mb-5 text-sm">Flutter di sekolah.
+                                    Meskipun
+                                    keterampilan saya masih perlu banyak dikembangkan, saya telah menguasai sekitar 70%
+                                    bagian frontend
+                                    dalam
+                                    pembuatan aplikasi. Ke depannya, saya berencana untuk memperdalam pemahaman saya di
+                                    bidang
+                                    backend, khususnya menggunakan Laravel.</p>
+                                    <div class="w-full flex md:justify-start justify-center ">
+                                        <button  onclick="window.open('https://drive.google.com/file/d/1xfW1ir4dKUa12MlpY0UOBlTqj7G_ZtSw/view?usp=sharing', '_blank')"  class="py-2 px-4 bg-white border rounded-lg mt-5 flex items-center">
+              <i class="fa-solid fa-arrow-up-right-from-square md:text-base text-sm"></i>
+              <p class="ml-2 md:text-base text-sm">View My CV</p>
+            </button>
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-20">
+                <div class="lg:w-[865px] md:w-[650px] w-[350px]">
+                    <div class="justify-between items-end flex relative group">
+
+                        <div>
+                            <h3 class="md:text-3xl text-2xl baskervville-regular ">My Language</h3>
+                            <!-- <p class="text-xl mt-2 baskervville-regular w-[300px]">Hi nice to meet you</p> -->
+                        </div>
+                    </div>
+                    <div class="mt-5 w-full flex flex-wrap gap-5">
+                        <div
+                            class="relative group lg:w-[420px] w-full  h-[70px] overflow-hidden rounded-2xl bg-[#E8E7E4] p-3 flex  items-center">
+                            <img class="w-[50px] h-[50px] rounded-full object-cover"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1200px-Flag_of_Indonesia.svg.png"
+                                alt="">
+                            <div class="ml-2">
+                                <h3 class="text-lg">Indonesia</h3>
+                                <p class="text-sm text-gray-500">Native</p>
+                            </div>
+                        </div>
+                        <div
+                            class="relative group overflow-hidden lg:w-[420px] w-full h-[70px] rounded-2xl bg-[#E8E7E4] p-3 flex  items-center">
+                            <img class="w-[50px] h-[50px] rounded-full object-cover"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+                                alt="">
+                            <div class="ml-2">
+                                <h3 class="text-lg">English</h3>
+                                <p class="text-sm text-gray-500">Basic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-20">
+                <div class="lg:w-[865px] md:w-[650px] w-[350px]">
+                    <div class="w-[865px] justify-between items-end flex relative group">
+
+                        <div>
+                            <h3 class="md:text-3xl text-2xl baskervville-regular">My Education</h3>
+                            <!-- <p class="text-xl mt-2 baskervville-regular w-[300px]">Hi nice to meet you</p> -->
+                        </div>
+
+
+                    </div>
+                    <div class="justify-center mt-5">
+                        <h3 class="md:text-xl text-lg mt-4">Junior High School</h3>
+                        <h3 class="text-gray-500 md:text-base text-sm">IDN Boarding School (2020 - 2023)</h3>
+                        <p class="mt-1 md:text-base text-sm">Selama 3 tahun di SMP, saya mempelajari dasar-dasar di
+                            bidang IT. Beberapa hal
+                            yang saya pelajari antara lain pembuatan game 2D menggunakan Scratch, pembuatan game 3D
+                            dengan Buildbox, desain poster menggunakan Canva, serta dasar-dasar 3D modeling dengan
+                            Blender. Meskipun saya mempelajari banyak hal, semuanya masih berada pada tingkat dasar.</p>
+                        <!-- elementary school -->
+                        <h3 class="md:text-xl text-lg mt-4">Vocational High School</h3>
+                        <h3 class="text-gray-500 md:text-base text-sm">IDN Boarding School (2023 - 2026)</h3>
+                        <p class="mt-1 md:text-base text-sm">Saat ini saya berada di kelas 11, namun saya sudah melewati
+                            banyak pengalaman
+                            menarik selama 2 tahun terakhir. Selama waktu tersebut, saya mempelajari pengembangan
+                            website menggunakan Tailwind dan Laravel. Terbaru, saya juga mulai mempelajari pengembangan
+                            aplikasi Android menggunakan Flutter.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-20">
+                <div class="lg:w-[865px] md:w-[650px] w-[350px]">
+                    <div class="w-[865px] justify-between items-end flex relative group">
+
+                        <div>
+                            <h3 class="md:text-3xl text-2xl baskervville-regular">My Skill</h3>
+                            <!-- <p class="text-xl mt-2 baskervville-regular w-[300px]">Hi nice to meet you</p> -->
+                        </div>
+                    </div>
+                    <div class="mt-5 w-full ">
+                        <!-- HTML -->
+                        <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+                            data-img="/assets/images/html-serti.png"
+                            data-text="Saya belajar HTML di kelas 10, dan mengikuti course di sololearn.">
+                            <div
+                                class="absolute flex left-0 md:top-3 top-2   transition-all duration-300 group-hover:left-4">
+                                <p class="w-[60px] md:text-base text-sm">No.1</p>
+                                <h3 class="md:text-base text-sm">HTML</h3>
+                            </div>
+                            <div
+                                class="absolute right-0 group-hover:right-4 md:top-3 top-1.5 duration-300 md:text-base text-sm">
+                                Advanced
+                            </div>
+                        </div>
+
+                        <!-- CSS -->
+                        <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6  border-b border-gray-400"
+                            data-img="/assets/images/front-end-serti.png"
+                            data-text="Saya belajar HTML di kelas 10, dan mengikuti course front-end di sololearn.">
+                            <div
+                                class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+                                <p class="w-[60px] md:text-base text-sm">No.2</p>
+                                <h3 class="md:text-base text-sm">CSS</h3>
+                            </div>
+                            <div
+                                class="absolute right-0 group-hover:right-4  md:top-3 top-1.5 duration-300 md:text-base text-sm">
+                                Intermediate
+                            </div>
+                        </div>
+                        <!-- JS -->
+                        <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+                            data-img="/assets/images/js-serti.png"
+                            data-text="Saya belajar sedikit logic JS dari sekolah, namun di internet saya juga belajar lebih dalam lagi">
+                            <div
+                                class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+                                <p class="w-[60px] md:text-base text-sm">No.3</p>
+                                <h3 class="md:text-base text-sm">JS</h3>
+                            </div>
+                            <div
+                                class="absolute right-0 group-hover:right-4 md:top-3 top-1.5 duration-300 md:text-base text-sm">
+                                Basic
+                            </div>
+                        </div>
+                        <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+                            data-img="/assets/images/tailwind-serti.png"
+                            data-text="Setelah saya mempelajari  HTML & CSS, Saya belajar Tailwind disekolah.">
+                            <div
+                                class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+                                <p class="w-[60px] md:text-base text-sm">No.4</p>
+                                <h3 class="md:text-base text-sm">Tailwind</h3>
+                            </div>
+                            <div
+                                class="absolute right-0 group-hover:right-4 md:top-3 top-1.5 duration-300 md:text-base text-sm">
+                                Intermediate
+                            </div>
+                        </div>
+                        <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+                            data-img="/assets/images/coomingsoon-serti.png"
+                            data-text="Baru baru ini di kelas 11, saya belajar pembuatan applikasi mengunakan dart Flutter.">
+                            <div
+                                class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+                                <p class="w-[60px] md:text-base text-sm">No.5</p>
+                                <h3 class="md:text-base text-sm">Flutter</h3>
+                            </div>
+                            <div
+                                class="absolute right-0 group-hover:right-4 md:top-3 top-1.5 duration-300 md:text-base text-sm">
+                                Intermediate
+                            </div>
+                        </div>
+                        <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+                            data-img="/assets/images/laravel.png"
+                            data-text="Di kelas 10 dan 11, saya juga belajar laravel, namun saya cukup susah untuk hal ini, namun laravel akan saya kuasai sendiri. ">
+                            <div
+                                class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+                                <p class="w-[60px] md:text-base text-sm">No.6</p>
+                                <h3 class="md:text-base text-sm">Laravel</h3>
+                            </div>
+                            <div
+                                class="absolute right-0  group-hover:right-4 md:top-3 top-1.5 duration-300 md:text-base text-sm">
+                                Basic
+                            </div>
+                        </div>
+
+                        <div class="hover-target group relative flex justify-between px-2 py-4 md:py-6 border-b border-gray-400"
+                            data-img=""
+                            data-text="Saya dapat mengerti dalam hal Design terutama Pembuatan UI/UX.">
+                            <div
+                                class="absolute flex left-0 md:top-3 top-1.5 transition-all duration-300 group-hover:left-4">
+                                <p class="w-[60px] md:text-base text-sm">No.7</p>
+                                <h3 class="md:text-base text-sm">Designer UI/UX</h3>
+                            </div>
+                            <div
+                                class="absolute right-0  group-hover:right-4 md:top-3 top-1.5 duration-300 md:text-base text-sm">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex justify-center items-center mt-20">
+                <div class="lg:w-[865px] md:w-[650px] w-[350px]">
+                    <div class="justify-between items-end flex relative group">
+
+                        <div class="flex justify-between items-cente w-full">
+                            <h3 class="md:text-3xl text-2xl baskervville-regular">My Certificate's</h3>
+                            <button onclick="window.location.href='/src/html/certificate.html'"
+                                class=" w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full z-20 flex items-center opacity-100 group-hover:opacity-100 duration-200">
+                                <i class="fa-solid fa-arrow-right text-3xl  text-black"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-5  w-full md:h-[200px] h-[150px] bg-[#E8E7E4] rounded-2xl overflow-hidden ">
+                        <div class="w-full flex justify-center items-center h-full relative group ">
+                            <div class="z-20 container flex justify-center items-center" id="imageContainer">
+                                <img src="/assets/images/html-serti.png" class="image md:w-[200px] w-[120px]" />
+                                <img src="/assets/images/front-end-serti.png" class="image md:w-[200px] w-[120px]" />
+                                <img src="/assets/images/js-serti.png" class="image md:w-[200px] w-[120px]" />
+                                <img src="/assets/images/tailwind-serti.png" class="image md:w-[200px] w-[120px]" />
+                                <img src="/assets/images/laravel-auth.png" class="image md:w-[200px] w-[120px]" />
+                                <img src="/assets/images/laravel-protect.png" class="image md:w-[200px] w-[120px]" />
+                                <img src="/assets/images/laravel-security.png" class="image md:w-[200px] w-[120px]" />
+                            </div>
+                            <div
+                                class="absolute z-0 overflow-hidden -bottom-10 -right-10 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0   md:group-hover:scale-[3] transition-transform duration-300 ease-out ">
+                            </div>
+                            <div
+                                class="absolute z-0 overflow-hidden -bottom-10 -left-0 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0   md:group-hover:scale-[3] transition-transform duration-300 ease-out ">
+                            </div>
+                            <div
+                                class="absolute z-0 overflow-hidden -top-0 -right-10 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0   md:group-hover:scale-[3] transition-transform duration-300 ease-out ">
+                            </div>
+                            <div
+                                class="absolute z-0 overflow-hidden -top-0 -left-0 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0   md:group-hover:scale-[3] transition-transform duration-300 ease-out ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class=" flex justify-center items-center w-full">
+                <div class="lg:w-[865px] md:w-[650px] w-[350px] ">
+                    <div class="w-full mt-28 flex z-30">
+                        <div class="w-[450px] ">
+                            <h3 class="md:text-3xl text-2xl baskervville-regular ">My Dream</h3>
+                            <p class="md:text-xl text-lg baskervville-regular mt-1 ">I have a dream, other than a dream
+                                when sleeping
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 1 -->
+                    <div class="lg:flex mt-10 group  ">
+                        <!-- img -->
+                        <div class="lg:w-[865px] md:w-[650px] w-[350px]  h-[250px]  relative flex justify-center ">
+                            <div class="flex justify-center relative w-[400px] ">
+                                <div
+                                    class="absolute bottom-0 top-6 left-4 w-[150px]  h-[210px]  border-4 border-white bg-white rounded-2xl rotate-6 duration-200 z-20 overflow-hidden">
+                                    <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/IMG_0068.JPG?updatedAt=1749198787667"
+                                        alt="Deskripsi" class="w-full h-full object-cover" />
+                                </div>
+                                <div
+                                    class="absolute bottom-0 top-6 right-4 w-[100px] h-[160px]  border-4 border-white bg-white rounded-2xl -rotate-6 duration-200 z-30 overflow-hidden">
+                                    <img src="https://www.cuesc.com/University/UploadFiles_5132/201702/2017022220352720.jpg"
+                                        alt="Deskripsi" class="w-full h-full object-cover" />
+                                </div>
+                                <p class="md:text-2xl text-xl absolute top-28 md:left-48 left-44 ">🇮🇩🫱🏻‍🫲🏼🇨🇳</p>
+                                <p
+                                    class="text-xl absolute top-14 -rotate-6 md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.2s] group-hover:animate-pulseLoopFade">
+                                    ⭐️</p>
+                                <p
+                                    class="text-xl absolute top-40 left-56 rotate-45  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade ">
+                                    ⭐️</p>
+                                <p
+                                    class="text-4xl absolute top-0 left-0 group-hover:animate-pulseLoopFade  transition-all duration-100  md:opacity-0 group-hover:opacity-100">
+                                    ✨</p>
+                                <p
+                                    class="text-4xl absolute bottom-16 right-0 rotate-12 group-hover:animate-pulseLoopFade  transition-all duration-100 group-hover:[animation-delay:.1s]  md:opacity-0 group-hover:opacity-100">
+                                    ✨</p>
+                                <p
+                                    class="text-4xl absolute top-0 right-32 group-hover:animate-pulseLoopFade  transition-all duration-100 group-hover:[animation-delay:.3s]  md:opacity-0 group-hover:opacity-100">
+                                    ✨</p>
+                                <p class="text-4xl absolute top-52 left-32 z-40 group-hover:-rotate-12 duration-500">
+                                    👋🏼
+                                </p>
+                            </div>
+                        </div>
+                        <!-- text -->
+                        <div class=" min-h-[300px] lg:ml-10 ml-0 lg:mt-0 mt-5 lg:text-left text-center">
+                            <h3 class="md:text-xl text-lg">Ingin kuliah di Negri Bambu</h3>
+                                <p class="md:text-base text-sm mb-5">Tahun 2024, saat saya masih duduk di bangku kelas 10, saya sudah memutuskan
+jalan yang ingin saya tempuh setelah lulus dari sekolah kejuruan. Saya berencana untuk melanjutkan
+studi di Tiongkok dengan beasiswa, Insya Allah. Setelah lulus, saya akan mengambil gap year selama
+satu tahun untuk fokus belajar bahasa. </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class=" flex justify-center items-center w-full">
+                <div class="lg:w-[865px] md:w-[650px] w-[350px] ">
+                    <div class="w-full lg:mt-10 mt-10 flex z-30 ">
+                        <div class="w-[450px] ">
+                            <h3 class="md:text-3xl text-2xl baskervville-regular ">My Experience's</h3>
+                            <p class="md:text-xl text-lg baskervville-regular mt-1 ">I have a lot of experiences, but I
+                                can't tell you all of
+                                them.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col-reverse lg:flex-row mt-5 relative group">
+                        <!-- text -->
+                        <div class="min-h-[300px]  lg:mt-0 mt-5 lg:text-left text-center ">
+                            <h3 class="md:text-xl text-lg">Mengikuti Proyek Ujikom: Aplikasi Form Colaboration</h3>
+                            <p class="md:text-sm text-xs text-gray-500">01 Febuary 2025 - 09 juni 2025</p>
+                            <p class="md:text-base text-sm mb-3 mt-2">Kami mendapat Tugas yang bernama Ujikom dari sekolah, kami
+                                harus mencari perusahan dan menawarkan jasa pembuatan applikasi atau website secara
+                                Gratis, dan alhamdulillah saya dan tim saya mendapat tugas untuk membuat Applikasi untuk
+                                Form Colaborasi dari Perusahaan PT. Bungasari, Saya sebagai Designer UI dan Slicing UI
+                                Aplikasi Mengunakan flutter.</p>
+                        </div>
+                        <!-- img -->
+                        <div
+                            class="lg:w-[865px] md:w-[650px] w-[350px]  h-[250px]  relative flex justify-center  lg:ml-10 ml-0  ">
+                            <div
+                                class=" w-[430px] h-[250px]  border-4 border-white bg-white rounded-2xl  duration-200 z-30 overflow-hidden">
+                                <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/Screenshot%202025-06-09%20at%2017.00.21.png?updatedAt=1749463273718
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+                            </div>
+                            <p
+                                class="z-40 text-3xl absolute top-15 right-0 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.5s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-40 text-3xl absolute top-15 left-5 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-40 text-3xl absolute bottom-20 right-5 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+
+
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="lg:flex mt-5   group  ">
+                        <!-- img -->
+                        <div class="lg:w-[865px] md:w-[650px] w-[350px]  h-[250px]  relative flex justify-center ">
+                            <div
+                                class=" w-[400px] h-[250px]  border-4 border-white bg-white rounded-2xl  duration-200 z-30 overflow-hidden">
+                                <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/Screenshot%202025-06-06%20at%2015.25.37.png?updatedAt=1749198352956
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+                            </div>
+                            <p
+                                class="z-30 text-3xl absolute right-0 top-0 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.2s] group-hover:animate-pulseLoopFade">
+                                ⭐️</p>
+
+                            <p
+                                class="z-30 text-5xl absolute left-0 bottom-10 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.3s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-30 text-4xl absolute left-10 top-5 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                🎯</p>
+                            <p
+                                class="z-30 text-3xl absolute left-3 top-3 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-30 text-5xl absolute bottom-5 right-5 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+
+                        </div>
+                        <!-- text -->
+                        <div class=" min-h-[300px] lg:ml-10 ml-0 lg:mt-0 mt-5 lg:text-left text-center ">
+                            <h3 class="md:text-xl text-lg">Berpartisipasi dalam 4 kompetisi Website</h3>
+                            <p class="md:text-sm text-xs text-gray-500">23 Jun 2024 - 23 jun 2025</p>
+                            <p class="md:text-base text-sm mb-3 mt-2">Dari tahun lalu(2024) hinga sekarang, saya telah
+                                berpartisipasi dalam
+                                empat kompetisi pembuatan situs web. Meskipun saya tidak pernah memenangkan salah satu
+                                dari empat kompetisi tersebut, pengalaman yang saya dapatkan sangat berharga. Seiring
+                                berjalannya waktu, saya merasa bahwa keterampilan saya terus berkembang dan
+                                meningkat
+                                dengan setiap kesempatan.</p>
+                        </div>
+                        <!-- img -->
+
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="flex flex-col-reverse lg:flex-row mt-5 relative group">
+                        <!-- text -->
+                        <div class="min-h-[300px]  lg:mt-0 mt-5 lg:text-left text-center ">
+                            <h3 class="md:text-xl text-lg">Mengikuti Program Student Development Initiative course Data
+                                Classification and Summarization di HACKTI8</h3>
+                            <p class="md:text-sm text-xs text-gray-500">09 juni 2025 - 11 juni 2025</p>
+                            <p class="md:text-base text-sm mb-3 mt-2">Cooming Soon!</p>
+
+
+                        </div>
+                        <!-- img -->
+                        <div
+                            class="lg:w-[865px] md:w-[650px] w-[350px]  h-[250px]  relative flex justify-center  lg:ml-10 ml-0  ">
+                            <div
+                                class=" w-[430px] h-[250px]  border-4 border-white bg-white rounded-2xl  duration-200 z-30 overflow-hidden">
+                                <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/Screenshot%202025-06-09%20at%2020.44.24.png?updatedAt=1749635411417
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+                            </div>
+                            <p
+                                class="z-40 text-3xl absolute top-15 right-0 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.5s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-40 text-3xl absolute top-15 left-5 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-40 text-3xl absolute bottom-20 right-5 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-30 text-3xl absolute top-5 left-5 -rotate-12  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.2s] group-hover:animate-pulseLoopFade">
+                                🇮🇩</p>
+                            <p
+                                class="z-30 text-4xl absolute bottom-20 right-10 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.3s] group-hover:animate-pulseLoopFade">
+                                🌏</p>
+
+                        </div>
+                    </div>
+                    <!-- 1 -->
+                    <div class="lg:flex mt-10   group  ">
+                        <!-- img -->
+                        <div class="lg:w-[865px] md:w-[650px] w-[350px]  h-[250px]  relative flex justify-center ">
+                            <div
+                                class=" w-[400px] h-[250px]  border-4 border-white bg-white rounded-2xl  duration-200 z-30 overflow-hidden">
+                                <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/Screenshot%202025-06-06%20at%2014.54.46.png?updatedAt=1749196506030
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+                            </div>
+                            <p
+                                class="z-30 text-3xl absolute right-0 top-0 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.2s] group-hover:animate-pulseLoopFade">
+                                ⭐️</p>
+
+                            <p
+                                class="z-30 text-5xl absolute left-0 bottom-10 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.3s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-30 text-4xl absolute left-10 top-5 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                🎯</p>
+                            <p
+                                class="z-30 text-3xl absolute left-3 top-3 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-30 text-5xl absolute bottom-5 right-5 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+
+                        </div>
+                        <!-- text -->
+                        <div class=" min-h-[300px] lg:ml-10 ml-0 lg:mt-0 mt-5 lg:text-left text-center ">
+                            <h3 class="md:text-xl text-lg">Mengajar tentang Pembuatan Website</h3>
+                            <p class="md:text-sm text-xs text-gray-500">2024</p>
+                            <p class="md:text-base text-sm mb-3 mt-2">Aku dan teman-temanku mengajar di sekolah
+                                persantren yang bernama Darul Tauhid - Bandung, kami mengajar tentang pembutan website
+                                mengunakan HTML & CSS, kami hanya menjelaskan yang basicnya dan diakhiri dengan
+                                pembuatan Simple Personal Website, kami mengajar sekitar 3 Harian, kami tak mengar
+                                dengan full day, melainkan hanya di jam tertentu dan waktunya 1-2 Jam.</p>
+
+
+                        </div>
+                        <!-- img -->
+
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="flex flex-col-reverse lg:flex-row mt-5 relative group">
+                        <!-- text -->
+                        <div class="min-h-[300px]  lg:mt-0 mt-5 lg:text-left text-center ">
+                            <h3 class="md:text-xl text-lg">Mengikuti program Backpacker</h3>
+                            <p class="md:text-sm text-xs text-gray-500">07 jan 2025 - 05 july 2025</p>
+                            <p class="md:text-base text-sm mb-3 mt-2">Saya pernah mengikuti program backpacker keluar negara salah satunya adalah negara yang paling ingin saya kunjungi yaitu China.</p>
+                            <p class="md:text-base text-sm ">Selama perjalanan, saya mendapatkan banyak pengalaman
+                                berharga. Meskipun ada hal-hal pahit yang saya alami, program ini mengajarkan saya untuk
+                                lebih mandiri dan memahami perbedaan budaya dari berbagai negara yang saya kunjungi.</p>
+                        </div>
+                        <!-- img -->
+                        <div
+                            class="lg:w-[865px] md:w-[650px] w-[350px]  h-[250px]  relative flex justify-center  lg:ml-10 ml-0  ">
+                            <div
+                                class=" w-[430px] h-[250px]  border-4 border-white bg-white rounded-2xl  duration-200 z-30 overflow-hidden">
+                                <img src="https://idn.sch.id/wp-content/uploads/2025/02/idn13-1-scaled.jpg
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+                            </div>
+                            <p
+                                class="z-40 text-3xl absolute top-15 right-0 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.5s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-40 text-3xl absolute top-15 left-5 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-40 text-3xl absolute bottom-20 right-5 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.1s] group-hover:animate-pulseLoopFade">
+                                ✨</p>
+                            <p
+                                class="z-30 text-3xl absolute top-5 left-5 -rotate-12  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.2s] group-hover:animate-pulseLoopFade">
+                                🇮🇩</p>
+                            <p
+                                class="z-30 text-4xl absolute bottom-20 right-10 -rotate-6  md:opacity-0 group-hover:opacity-100 duration-300 group-hover:[animation-delay:.3s] group-hover:animate-pulseLoopFade">
+                                🌏</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 w-full h-[200px] md:block hidden ">
+                <div class="relative group flex ">
+                    <div
+                        class="absolute z-0 overflow-hidden -bottom-28 left-10 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0   md:group-hover:scale-[4] transition-transform duration-500 ease-out ">
+                    </div>
+                    <div
+                        class="absolute left-0  w-[150px] h-[150px] rotate-0  border-4 border-white bg-white rounded-2xl   duration-200 z-30 overflow-hidden">
+                        <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/Screenshot%202025-06-07%20at%2017.50.27.png?updatedAt=1749293451844
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="absolute left-0 group-hover:left-28  w-[150px] h-[150px] rotate-6 group-hover:rotate-0  border-4 border-white bg-white rounded-2xl   duration-200 z-30 overflow-hidden">
+                        <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/IMG_2111.JPG?updatedAt=1749293489321
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="absolute left-0 group-hover:left-60  w-[150px] h-[150px]  -rotate-6 group-hover:rotate-0   border-4 border-white bg-white rounded-2xl  duration-200 z-30 overflow-hidden">
+                        <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/Screenshot%202025-06-07%20at%2017.54.51.png?updatedAt=1749293704782
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="absolute left-0 group-hover:left-96  w-[150px] h-[150px]  rotate-12 group-hover:rotate-0   border-4 border-white bg-white rounded-2xl  duration-200 z-30 overflow-hidden">
+                        <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/Screenshot%202025-06-07%20at%2017.56.32.png?updatedAt=1749293820098
+                        " alt="Deskripsi" class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="z-20 absolute flex justify-center items-end p-3 left-44 w-[150px] h-[150px] border-gray-200 rounded-2xl border">
+                        <!-- <i class="fa-solid fa-arrow-left  text-xl  text-red-400"></i> -->
+                        <p class="text-red-400 text-sm">Hover Me!,<br> you'll see magic!</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- my education -->
+    <section class=" w-full flex justify-center items-center mt-10 ">
+        <!-- 1 -->
+
+    </section>
+
+    <footer class="py-10">
+        <div class="mt-32 mb-10   text-center text-sm text-gray-500 border-t  border-gray-300 pt-4">
+            © Portofolio by Azka. All rights reserved.
+        </div>
+    </footer>
+
+
+    <!-- Gambar kursor -->
+    <div id="cursorBox" class="cursor-box w-[250px] h-[200px] bg-yellow-200 shadow-lg ">
+        <p id="cursorText" class="cursor-text w-[250px]"></p>
+        <img id="cursorImage" class="z-30 w-56 h-auto cursor-img shadow-lg size-10 " />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        // navbar   
+        // navbar ==========================
+        const burgerBtn = document.getElementById('burgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const iconClosed = document.getElementById('iconClosed');
+        const iconOpened = document.getElementById('iconOpened');
+
+        let menuOpen = false;
+
+        burgerBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+
+            if (menuOpen) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.remove('-translate-y-full');
+                    mobileMenu.classList.add('translate-y-0');
+                }, 10);
+            } else {
+                mobileMenu.classList.remove('translate-y-0');
+                mobileMenu.classList.add('-translate-y-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            }
+            iconClosed.classList.toggle('hidden', menuOpen);
+            iconOpened.classList.toggle('hidden', !menuOpen);
+        });
+
+        // ADD THIS CODE:
+        window.addEventListener('resize', () => {
+            // 768px is the md breakpoint in Tailwind
+            if (window.innerWidth >= 768 && menuOpen) {
+                // Close the mobile menu if switching to desktop
+                menuOpen = false;
+                mobileMenu.classList.remove('translate-y-0');
+                mobileMenu.classList.add('-translate-y-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+                iconClosed.classList.remove('hidden');
+                iconOpened.classList.add('hidden');
+            }
+        });
+        //     <!-- Gambar kursor -->
+        const cursorBox = document.getElementById("cursorBox");
+        const cursorText = document.getElementById("cursorText");
+        const cursorImg = document.getElementById("cursorImage");
+        const targets = document.querySelectorAll(".hover-target");
+
+        targets.forEach(target => {
+            target.addEventListener("mouseenter", () => {
+                const imgSrc = target.getAttribute("data-img");
+                const text = target.getAttribute("data-text");
+
+                cursorImg.src = imgSrc;
+                cursorImg.style.display = "block";
+
+                cursorText.textContent = text;
+                cursorText.style.display = "block";
+
+                cursorBox.style.display = "block";
+            });
+
+            target.addEventListener("mouseleave", () => {
+                cursorImg.style.display = "none";
+                cursorText.style.display = "none";
+                cursorBox.style.display = "none";
+            });
+
+            target.addEventListener("mousemove", (e) => {
+                const offsetX = 20;
+                const offsetY = 20;
+
+                cursorImg.style.left = `${e.clientX + offsetX + 100}px`;
+                cursorImg.style.top = `${e.clientY + offsetY + 100}px`;
+
+                cursorText.style.left = `${e.clientX + offsetX}px`;
+                cursorText.style.top = `${e.clientY + offsetY}px`;
+
+                cursorBox.style.left = `${e.clientX + offsetX}px`;
+                cursorBox.style.top = `${e.clientY + offsetY }px`;
+            });
+        });
+
+        // Inisialisasi gambar kursor
+        // Scrolll ke kanan Looping dengan Gsap
+        const container = document.getElementById("imageContainer");
+        const images = gsap.utils.toArray(".image");
+
+        // Simpan animasi dalam variabel agar bisa di-control
+        const animation = gsap.to(images, {
+            xPercent: 100,
+            repeat: -1,
+            duration: 5,
+            ease: "linear",
+            modifiers: {
+                xPercent: gsap.utils.wrap(-100, 100)
+            }
+        });
+
+        // Pause saat hover
+        container.addEventListener("mouseenter", () => animation.pause());
+        container.addEventListener("mouseleave", () => animation.resume());
+
+        // contact me
+        // button contact
+        const containerContact = document.getElementById('containerContact');
+        const btnContact = document.getElementById('btnContact');
+        const contact1 = document.getElementById('contact1');
+        const contact2 = document.getElementById('contact2');
+        const contact3 = document.getElementById('contact3');
+        let open = false;
+
+        btnContact.addEventListener('click', () => {
+            open = !open;
+            // Container Contact
+            containerContact.classList.toggle('w-[70px]', !open);
+            containerContact.classList.toggle('w-[270px]', open);
+            // Github
+            contact1.classList.toggle('opacity-0', !open);
+            contact1.classList.toggle('pointer-events-none', !open);
+            contact1.classList.toggle('translate-x-0', !open);
+            contact1.classList.toggle('-translate-x-[50px]', open);
+
+            // Linkedin
+            contact2.classList.toggle('opacity-0', !open);
+            contact2.classList.toggle('pointer-events-none', !open);
+            contact2.classList.toggle('translate-x-0', !open);
+            contact2.classList.toggle('-translate-x-[110px]', open);
+
+            // Whatsapp
+            contact3.classList.toggle('opacity-0', !open);
+            contact3.classList.toggle('pointer-events-none', !open);
+            contact3.classList.toggle('translate-x-0', !open);
+            contact3.classList.toggle('-translate-x-[170px]', open);
+        });
+    </script>
+</body>
+
+</html>

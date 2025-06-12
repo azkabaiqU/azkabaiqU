@@ -1,0 +1,53 @@
+        * {
+            scroll-behavior: smooth;
+        }
+
+        @font-face {
+            font-family: samsungStyle;
+            src: url(assets/font/SamsungSharpSansBd.woff) format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'TripSans';
+            src: url('./fonts/TripSans-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Baskerville';
+            src: url('./fonts/Baskerville Classico Regular.ttf') format('truetype');
+        }
+
+        .baskervville-regular {
+            font-family: "Baskervville", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .plus-jakarta-sans-regular {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+
+        .samsungS {
+            font-family: samsungStyle;
+        }
+
+        .icon {
+            color: white;
+        }
+
+        #scrollP2 {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        #scrollP2::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Harus di bawahnya */
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;

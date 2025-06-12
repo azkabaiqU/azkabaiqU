@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/another-project/SEEL-education/src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/another-project/SEEL-education/src/css/SpashScreen.css">
+    <!-- ICON & Documen -->
+    <link rel="shortcut icon" href="/another-project/SEEL-education/assets/img/logo.png">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SEEL Seek & Lern</title>
+</head>
+
+<body class="w-full h-full relative">
+
+    <!-- Tombol untuk memunculkan popup -->
+    <nav class="popup-nav">
+        <button id="openPopup" class="popup-button">
+            <i class="fa-solid fa-circle-info icon"></i>
+            <p>Details about this website</p>
+        </button>
+    </nav>
+
+    <!-- Popup -->
+    <div id="popupOverlay" class="popup-overlay hidden">
+        <div class="popup-box">
+            <!-- Tombol close -->
+            <button id="closePopup" class="close-button">
+                <i class="fa-solid fa-square-xmark"></i>
+            </button>
+
+            <!-- Konten popup -->
+            <div class="popup-header">
+                <i class="fa-solid fa-circle-info icon"></i>
+                <p>Details about this website</p>
+            </div>
+
+            <h3 class="popup-title">Seel (Competition Web with Team)</h3>
+            <p class="popup-date">Created on: 9 December 2023</p>
+            <p class="popup-text">
+                Website yang bernama Seel yang dibuat oleh 3 anggota tim, website ini tentang edukasi pembelajaran, website ini berisi 2 page, dibuat tanpa tailwind karena ini dibuat sebelum saya belajar tailwind, atau baru pertama kali belajar tailwind, saya sebagai developer utama, membuat website ini dengan bantuan 2 anggota tim lainnya, yaitu <b>Reveeno</b> dan <b>Mawaldy</b>, website ini dibuat untuk mengikuti lomba yang diadakan oleh <b>Universitas Negeri Malang</b>, website ini dibuat dengan menggunakan HTML, CSS, dan JavaScript, website ini juga sudah responsive.
+            </p>
+
+            <h3 class="popup-subtitle">Fitur Utama</h3>
+            <p class="popup-text">Responsive. Pewarnaan Ceria.</p>
+
+            <h3 class="popup-subtitle">Dibuat dengan</h3>
+            <p class="popup-text">CSS, HTML & JS.</p>
+        </div>
+    </div>
+
+
+    <!-- =============== Spash Screen  =============== -->
+
+    <div class="spashScreenAnim" id="Spash-Screen">
+        <div class="ssanim">
+            <p><span style="color: #FBC497;">SE</span><span style="color: #4A9BF9;">EL</span></p>
+            <img src="/another-project/SEEL-education/assets/img/spahs.png" alt="">
+        </div>
+    </div>
+
+    <div class="navbarArea">
+        <div class="navbar">
+            <div class="AboutUsNav">
+                <a href="index.html">Home</a>
+            </div>
+            <img src="/another-project/SEEL-education/assets/img/Navlogo.png" alt="Logo">
+            <div class="AboutUsNav">
+                <a href="/another-project/SEEL-education/src/html/aboutWe.html" target="_blank">About Us</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =============== Home Container =============== -->
+
+    <div class="container" id="HomePage">
+        <div class="text-area-page1">
+            <div class="text-page1">
+                <h1><span class="seek-title">Seek</span> & <span class="learn-title">Learn</span>
+                    <br><i style="font-weight: 100;">with </i>PROFESSIONAL <b
+                        style="-webkit-text-stroke: 2px  #F4F4F4;">TEACHERS</b> <i>!</i></h1>
+                <p>Feel stupid, stress, don’t understand subject at school?
+                    <br>SEEL might help you!</p>
+            </div>
+        </div>
+        <div class="area-img-page1">
+            <img src="/another-project/SEEL-education/assets/img/page1IMG.png">
+        </div>
+    </div>
+
+    <!-- =============== What They Say Container =============== -->
+
+    <div class="they-say">
+        <div class="box-say">
+            <div class="title-say"><i>"Definitely the best site to solve your problems on school"</i></div>
+            <div class="by-say"><i>Dean Denaki.co.ltd</i></div>
+        </div>
+        <div class="box-say">
+            <div class="title-say"><i>"Definitely the best site to solve your problems on school"</i></div>
+            <div class="by-say"><i>Dean Denaki.co.ltd</i></div>
+        </div>
+    </div>
+
+    <!-- =============== Statistics Container =============== -->
+
+    <div class="statistics" id="AboutUs">
+        <div class="statistics-content">
+            <div class="statistics-text">
+                <h1><i>Let’s know more<br> about <span style="color: #FBC497;">SE</span><span
+                            style="color: #4A9BF9;">EL</span>!</i></h1>
+                <p><b>SEEL </b>focus to provide access to quality education to everyone, regardless of age, background
+                    or location. We believe that education is a right for every individual.</p>
+                <div class="seemore" id="SeeMoreOurTeam"><a href="/another-project/SEEL-education/src/html/aboutWe.html"
+                        target="_blank"> See More</a></div>
+            </div>
+            <div class="statistics-by">
+                <p>Trusted by:</p>
+            </div>
+            <div class="who-trusted">
+                <img src="/another-project/SEEL-education/assets/img/trusted.png">
+            </div>
+        </div>
+        <div class="space" style="width: 22vw ; height: 20px;"></div>
+        <div class="statistics-numbers">
+            <img src="/another-project/SEEL-education/assets/img/value.png">
+            <!-- JavaS -->
+        </div>
+    </div>
+
+    <!-- =============== Material Container =============== -->
+
+    <div class="material-container" id="Material">
+        <div class="text-area-material">
+            <h1><i>The material we teach</i></h1>
+            <p><i>With many choices, Users be able to find their subject easily,<br> These are the <b>most
+                        searchedlessons</b> in <b>SEEL</b></i></p>
+        </div>
+        <div class="content-material-outarea">
+            <div class="content-material-inarea" id="inarea">
+            </div>
+        </div>
+        <div class="contentValue-TilteOutArea">
+            <div class="contentValue-TilteInArea" id="inareaV">
+            </div>
+        </div>
+    </div>
+
+    <!-- =============== Teacher Container =============== -->
+
+    <div class="teachersContainer" id="OurTeacher">
+        <div class="textteacher">
+            <h1><i>Our Teachers</i></h1>
+            <p><i>These are some selected professional and trusted teachers with their respective majors</i></p>
+        </div>
+        <div class="content-teacherArea">
+            <div class="taecher-scroll">
+                <div class="teacher" id="teacherArea">
+                    <!-- JavaS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============== Event Container =============== -->
+
+    <div class="eventContainer" id="event">
+        <div class="text-area-event">
+            <h1><i>Event fales</i></h1>
+            <div class="wadahp">
+                <p>Some cool and interesting Events that are held by Professional mentors that you can join</p>
+            </div>
+        </div>
+        <div class="contentEvent-Outarea">
+            <div class="contentEvent-Intarea" id="eventIn">
+                <!-- JavaS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- =============== Join Us Container =============== -->
+
+    <div class="joinUsContainer">
+        <div class="joinUsContentAll">
+            <div class="contentseel">
+                <div class="seel">
+                    <h1><span style="color: #FBC497;">SE</span><span style="color: #4A9BF9;">EL</span></h1>
+                </div>
+
+            </div>
+            <div class="contentJoin">
+                <div class="contactList">
+                    <ul>
+                        <li><a href="#Material">Our Materials</a></li>
+                        <li><a href="#OurTeacher">Our Teachers</a></li>
+                        <li><a href="#AboutUs">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="textJoin">
+                    <div class="joinUs">
+                        <h1>Well Let’s Join!</h1>
+                        <p>Join our classes & start upgrade your skills with SEEL.
+                            Sing up and join a class!</p>
+                    </div>
+
+                </div>
+                <div class="exsamGmail">
+                    <div class="bar">
+                        <input placeholder="example@email.com" id="inputut">
+                        <button for="inputut">Chat Us!<img
+                                src="/another-project/SEEL-education/assets/img/btn.png"></button>
+                    </div>
+                </div>
+                <div class="copyrightArea">
+                    <div class="copyright">© 2023, SEEL Everything Inc. All Rights Reserved.</div>
+                    <div class="privicy-sitemap">
+                        <p>Privacy Policy</p>
+                        <p>Sitemap</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============== JavaScript =============== -->
+
+    <script src="/another-project/SEEL-education/src/js/java.js"></script>
+    <script src="/another-project/SEEL-education/src/js/SpashScreenJs.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my workpage</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Plus+Jakarta+Sans&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px 2px #4ed07e;
+            }
+
+            50% {
+                box-shadow: 0 0 20px 8px #4ed07e;
+            }
+        }
+
+        .glow-green {
+            animation: pulse-glow 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F6F5F1]">
+    <!-- navbar -->
+    <nav
+        class="fixed flex justify-center items-center bg-[#F6F5F1] top-0 left-0 w-full  py-3 px-6 md:px-36 z-50 overflow-hidden">
+        <div class="flex justify-between items-center font-medium text-lg w-[1410px] ">
+            <!-- Menu Desktop -->
+            <ul class="hidden md:flex space-x-10 items-center">
+
+                <li class=""><a href="aboutme.html" class="text-gray-700">Aboutme</a></li>
+                <li class="group">
+                    <a href="work_page.html" class="text-gray-700 relative">
+                        Work
+                        <div
+                            class="cone-other |  absolute opacity-100 -bottom-8 -left-10 duration-300  filter blur-2xl ">
+                        </div>
+                    </a></li>
+                <li><a href="certificate.html" class="text-gray-700">Certificate</a></li>
+            </ul>
+            <!-- Tombol burger -->
+            <button id="burgerBtn" class="md:hidden relative w-10 h-10 z-50">
+                <!-- Ikon tertutup -->
+                <i id="iconClosed" class="fa-solid fa-folder text-3xl block"></i>
+                <!-- Ikon terbuka -->
+                <i id="iconOpened" class="fa-solid fa-folder-open text-3xl hidden"></i>
+            </button>
+            <!-- Menu Mobile -->
+            <ul id="mobileMenu"
+                class="hidden flex-col items-center w-full bg-white text-center fixed top-0 left-0 z-40 transition-transform transform -translate-y-full duration-300">
+                <button onclick="window.location.href='/src/html/index.html'"
+                    class="py-6 border-b border-gray-600 w-full"><a href="#">Home</a></button>
+                <button onclick="window.location.href='/src/html/aboutme.html'"
+                    class="py-6 border-b border-gray-600 w-full"><a href="#">Aboutme</a></button>
+                <button onclick="window.location.href='/src/html/work_page.html'"
+                    class="py-6 border-b border-gray-600 w-full overflow-hidden">
+                    <a class=" relative overflow-hidden" href="#">Work
+                        <div class="cone-other | absolute opacity-100 -top-24 duration-300 -left-10 filter blur-2xl ">
+                        </div>
+                    </a>
+                </button>
+                <button onclick="window.location.href='/src/html/certificate.html'" class="py-6  w-full"><a
+                        href="#">Certificate</a></button>
+            </ul>
+            <!-- Icon Home -->
+            <ul class="relative group">
+                <li>
+                    <!-- <div class="cone-home | absolute opacity-100 -top-36 duration-300 -right-10 filter blur-xl ">
+                    </div> -->
+
+                    <div
+                        class="absolute top-7 -right-20 opacity-0 group-hover:opacity-100 py-1 px-4 bg-[#2b2b2b] text-white text-sm text-center duration-300">
+                        Home
+                    </div>
+                    <a href="index.html" class="text-5xl text-gray-700">🛋️</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="fixed z-50 bottom-0 right-0 p-5 flex justify-end group ">
+        <div id="containerContact"
+            class="bg-[#FBFBF9] duration-300 right-0 transition-all flex justify-end items-start rounded-2xl relative">
+                                        <div
+                        class="absolute -top-10 flex w-[110px] opacity-0 group-hover:opacity-100 py-1 px-4 bg-[#2b2b2b] text-white text-sm text-center duration-300">
+                        Contact Me
+                    </div>
+            <div class="relative flex z-30">
+                <div id="contact1"
+                    class="opacity-0 translate-x-0 transition-all duration-300 ease-in-out z-0 absolute left-0  h-[70px] flex justify-center items-center pointer-events-none">
+                    <a href="https://github.com/azkabaiqU"><i
+                            class="fa-brands fa-square-github text-2xl text-[#2b2b2b]"></i></a>
+                </div>
+                <div id="contact2"
+                    class="opacity-0 translate-x-0 transition-all duration-300 ease-in-out z-0 absolute left-0  h-[70px] flex justify-center items-center pointer-events-none">
+                    <a href="https://www.linkedin.com/in/azka-azkia-baiquni-778b25247/"> <i
+                            class="fa-brands fa-linkedin text-2xl text-[#2b2b2b]"></i></a>
+                </div>
+                <div id="contact3"
+                    class="opacity-0 translate-x-0 transition-all duration-300 ease-in-out z-0 absolute left-0  h-[70px] flex justify-center items-center pointer-events-none">
+                    <a href="https://wa.link/qoiyeq"> <i
+                            class="fa-brands fa-square-whatsapp text-2xl text-[#2b2b2b]"></i></a>
+                </div>
+            </div>
+            <button id="btnContact" class="right-0 relative ">
+                <div class=" w-[70px] z-50 h-[70px] relative bg-white rounded-2xl flex justify-center items-center">
+                    <img class="w-[35px]"
+                        src="https://em-content.zobj.net/source/apple/81/open-mailbox-with-lowered-flag_1f4ed.png"
+                        alt="">
+                </div>
+            </button>
+        </div>
+    </div>
+
+
+    <div
+        class="fixed  md:-left-28 -left-20  top-56 flex items-center overflow-hidden -translate-y-1/2 rotate-90  bg-[#D7F3DC] text-black md:px-6 px-3 pt-2 pb-12 rounded-t-xl  transition z-50 ">
+        <div class="w-2.5 h-2.5 bg-green-600 rounded-full mr-5 pulse-glow shadow-2xl glow-green">
+        </div>
+        <p class="text-green-800 md:text-lg text-sm">Available for work</p>
+    </div>
+
+    <!-- my work -->
+    <section class=" w-full flex justify-center items-center mt-36">
+        <div>
+            <div class=" justify-between items-end flex relative group">
+                <div>
+                    <h3 class="md:text-4xl text-3xl baskervville-regular">My Work's</h3>
+                    <p class="md:text-xl text-lg mt-2 baskervville-regular w-[300px]">Itu adalah hasil karyaku dari tahun 2023-2024</p>
+                </div>
+            </div>
+            <!-- 1 -->
+            <div class="flex justify-center items-start mt-10">
+                <!-- web card -->
+                <div class="md:flex">
+                    <div
+                        class="2xl:w-[1000px] xl:w-[850px] lg:w-[620px] md:w-[470px] sm:w-[620px] w-[320px] flex justify-center items-center md:mr-3 mr-0 group">
+                        <div
+                            class="w-full xl:h-[650px] lg:h-[550px] sm:h-[450px] h-[400px] p-4 relative overflow-hidden rounded-3xl bg-[#E8E7E4] flex justify-center ">
+                            <div class=" flex justify-center relative  lg:w-[900px] w-[100%]">
+                                <div
+                                    class="absolute xl:top-24 md:top-10 top-4 xl:left-14 xl:w-[600px] lg:w-[550px] sm:w-[450px] w-[300px] xl:h-[400px] lg:h-[320px] h-[270px] border-4 border-white bg-white rounded-3xl transform xl:group-hover:w-[650px] lg:group-hover:w-[570px]   xl:group-hover:h-[450px] lg:group-hover:h-[370px]   md:-rotate-6 md:group-hover:rotate-6 duration-200  z-20 overflow-hidden">
+                                    <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/samsungweb1.png?updatedAt=1749195088548" alt="Deskripsi"
+                                        class="w-full h-full object-cover" />
+
+                                </div>
+                                <!-- Container 2 -->
+                                <div
+                                    class="absolute xl:top-56 md:top-64 top-4 xl:right-14 right-0 sm:block hidden xl:w-[300px] lg:w-[200px] w-[150px] xl:h-[300px] lg:h-[200px] h-[150px] xl:group-hover:w-[350px] lg:group-hover:w-[250px]  xl:group-hover:h-[350px] lg:group-hover:h-[250px]  border-4 border-white bg-white rounded-3xl transform md:rotate-6 group-hover:-rotate-6 duration-200 z-30 overflow-hidden">
+                                    <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/samsungweb2.png?updatedAt=1749195089035" alt="Deskripsi"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+
+                            <button
+                                onclick="window.open('/another-project/samsungs24/src/html/samsungS.html', '_blank')"
+                                class="md:bottom-4 bottom-8 md:right-4 right-8 w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center  rounded-full absolute lg:z-20 z-50  items-center md:opacity-0 opacity-100 group-hover:opacity-100 duration-200">
+                                <i class="fa-solid fa-arrow-right md:text-3xl text-4xl md:text-white text-gray-400"></i>
+                            </button>
+                            <div
+                                class="absolute lg:z-10 z-40 overflow-hidden -bottom-10 -right-10 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0   md:group-hover:scale-[10] transition-transform duration-300 ease-out ">
+                            </div>
+                            <div
+                                class="bottom-4 absolute 2xl:w-[1000px] xl:w-[850px] lg:w-[620px] md:w-[470px] sm:w-[620px] w-[320px] pl-4">
+                                <h3 class="md:text-2xl text-xl">Ecommerce web</h3>
+                                <p class="md:text-xl text-lg text-gray-400">Website - Individual</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- phone card -->
+                    <div class="flex justify-center items-center md:mt-0 mt-3">
+                        <div
+                            class=" xl:h-[650px] lg:h-[550px] h-[450px] lg:w-[400px] md:w-[250px] sm:w-[620px] w-[320px]  p-4 relative rounded-3xl bg-[#E8E7E4] group overflow-hidden ">
+                            <div class="w-full h-full flex justify-center relative z-10">
+                                <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/bungasari.png?updatedAt=1749195045508" alt="Card Image"
+                                    class="absolute top-10 xl:w-[250px] lg:w-[200px] w-[150px] object-cover  duration-500 -rotate-6" />
+                            </div>
+                            <div
+                                class="absolute z-20 overflow-hidden -bottom-10 left-0 w-10 h-10 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 md:group-hover:scale-[40] transition-transform duration-300 ease-out ">
+                            </div>
+
+                            <div class="top-4 absolute z-20 flex items-center ">
+                                <p
+                                    class="baskervville-regular lg:text-3xl text-2xl text-black   opacity-0 md:group-hover:opacity-100 duration-200 transition-delay">
+                                    Bungasari adalah aplikasi yang dibuat oleh tim untuk proyek Uji
+                                    Kompetensi. Aplikasi ini berfungsi sebagai platform bentuk kolaborasi antara
+                                    Bungasari dan perusahaan lain.</p>
+                            </div>
+                            <button onclick="window.open('Bungasari-detail-page.html', '_blank')"
+                                class="md:bottom-4 bottom-8 md:right-4 right-8 w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full absolute z-20 flex items-center md:opacity-0 opacity-100 group-hover:opacity-100 duration-200">
+                                <i class="fa-solid fa-arrow-right md:text-3xl text-4xl  md:text-gray-300 text-gray-400"></i>
+                            </button>
+
+                            <div class="bottom-4 absolute z-20 lg:flex items-end ">
+                                <h3 class="md:text-2xl text-xl mr-2 text-[#2b2b2b]  ">Bungasari app
+                                </h3>
+                                <p class="md:text-xl text-lg text-gray-400  duration-200">Mobile App
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="flex justify-center items-start mt-3">
+                <!-- web card -->
+                <div class="w-[100%] flex justify-center items-center ">
+                    <div
+                        class="w-full lg:h-[600px] md:h-[500px] sm:h-[400px] h-[250px] p-4 relative overflow-hidden rounded-3xl bg-[#E8E7E4] group ">
+                        <!-- img -->
+                        <div class="w-full h-full  flex justify-center  ">
+                            <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/accomyou.png?updatedAt=1749195042026" alt="Card Image"
+                                class="absolute flex lg:top-10 top-0  lg:-right-32 right-0  lg:scale-90 scale-75 lg:group-hover:scale-95 group-hover:scale-[0.8]  object-cover  duration-200   z-40" />
+                        </div>
+                        <button onclick="window.open('/another-project/accomyou/src/html/home.html', '_blank')"
+                            class="md:top-4 bottom-8 md:left-4 right-8 w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full absolute z-20 flex items-center md:opacity-0 opacity-100 group-hover:opacity-100 duration-200">
+                            <i class="fa-solid fa-arrow-right md:text-3xl text-4xl md:text-white text-gray-400"></i>
+                        </button>
+                        <div
+                            class="absolute z-10  overflow-hidden -top-10 -left-10 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 md:group-hover:scale-[15] transition-transform duration-300 ease-out ">
+                        </div>
+
+                        <!-- tet -->
+                        <div class="bottom-4 absolute">
+                            <h3 class="md:text-2xl text-xl">Accomyou</h3>
+                            <p class="md:text-xl text-lg text-gray-400">Website - Team Competition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="flex justify-center items-start mt-3 ">
+                <!-- web card -->
+                <div class="md:flex">
+                    <div class="flex justify-center items-center md:mt-0 mt-3 mr-3">
+                        <div
+                            class=" xl:h-[650px] lg:h-[550px] h-[450px] lg:w-[400px] md:w-[250px] sm:w-[620px] w-[320px]  p-4 relative rounded-3xl bg-[#E8E7E4] group overflow-hidden ">
+                            <div class="w-full h-full flex justify-center relative z-10">
+                                <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/arsitekapp.png?updatedAt=1749195044699" alt="Card Image"
+                                    class="absolute top-10 xl:w-[250px] lg:w-[200px] w-[150px] object-cover  duration-500 rotate-6" />
+                            </div>
+                            <div
+                                class="absolute z-20 overflow-hidden -bottom-10 left-0 w-10 h-10 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 md:group-hover:scale-[40] transition-transform duration-300 ease-out ">
+                            </div>
+
+                            <div class="top-4 absolute z-20 flex items-center ">
+                                <p
+                                    class="baskervville-regular  lg:text-3xl text-2xl text-black   opacity-0 md:group-hover:opacity-100 duration-200 transition-delay">
+                                    HouseApp adalah aplikasi penjualan rumah yang dibuat menggunakan Flutter sebagai
+                                    latihan proyek sekolah. Aplikasi ini memiliki antarmuka yang sederhana dan berfokus
+                                    pada proses pembuatan UI tanpa fitur fungsional tingkat lanjut.</p>
+                            </div>
+                            <button onclick="window.open('House-detail-page.html', '_blank')"
+                                class="md:bottom-4 bottom-8 md:right-4 right-8 w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full absolute lg:z-20 z-50 flex items-center md:opacity-0 opacity-100 group-hover:opacity-100 duration-200">
+                                <i class="fa-solid fa-arrow-right md:text-3xl text-4xl  md:text-gray-300 text-gray-400"></i>
+                            </button>
+
+                            <div class="bottom-4 absolute z-20 lg:flex items-end ">
+                                <h3 class="md:text-2xl text-xl mr-2 text-[#2b2b2b]  ">House app
+                                </h3>
+                                <p class="md:text-xl text-lg text-gray-400  duration-200">Mobile App
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="2xl:w-[1000px] xl:w-[850px] lg:w-[620px] md:w-[470px] sm:w-[620px] w-[320px] flex justify-center items-center md:mt-0 mt-3  group">
+                        <div
+                            class="w-full xl:h-[650px] lg:h-[550px] sm:h-[450px] h-[400px] p-4 relative overflow-hidden rounded-3xl bg-[#E8E7E4] flex justify-center ">
+                            <div class=" flex justify-center relative  lg:w-[900px] w-[100%]">
+                                <div
+                                    class="absolute xl:top-24 md:top-10 top-4 xl:left-14 xl:w-[600px] lg:w-[550px] sm:w-[450px] w-[300px] xl:h-[400px] lg:h-[320px] h-[270px] border-4 border-white bg-white rounded-3xl transform xl:group-hover:w-[650px] lg:group-hover:w-[570px]   xl:group-hover:h-[450px] lg:group-hover:h-[370px] md:-rotate-6 md:group-hover:rotate-6 duration-200  z-20 overflow-hidden">
+                                    <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/zflip1.png?updatedAt=1749195111141" alt="Deskripsi"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <!-- Container 2 -->
+                                <div
+                                    class="absolute xl:top-56 md:top-64 top-4 xl:right-14 right-0 sm:block hidden xl:w-[300px] lg:w-[200px] w-[150px] xl:h-[300px] lg:h-[200px] h-[150px] xl:group-hover:w-[350px] lg:group-hover:w-[250px]  xl:group-hover:h-[350px] lg:group-hover:h-[250px] border-4 border-white bg-white rounded-3xl transform rotate-6 group-hover:-rotate-6 duration-200 z-30 overflow-hidden">
+                                    <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/zflip2.png?updatedAt=1749195111707" alt="Deskripsi"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+
+                            <button onclick="window.open('/another-project/Galaxyzflip/src/html/index.html', '_blank')"
+                                class="md:bottom-4 bottom-8 md:right-4 right-8 w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full absolute lg:z-20 z-50 flex items-center md:opacity-0 opacity-100 group-hover:opacity-100 duration-200">
+                                <i class="fa-solid fa-arrow-right md:text-3xl text-4xl md:text-white text-gray-400"></i>
+                            </button>
+                            <div
+                                class="absolute lg:z-10 z-40 overflow-hidden -bottom-10 -right-10 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0   md:group-hover:scale-[10] transition-transform duration-300 ease-out ">
+                            </div>
+                            <div
+                                class="bottom-4 absolute 2xl:w-[1000px] xl:w-[850px] lg:w-[620px] md:w-[470px] sm:w-[620px] w-[320px] pl-4">
+                                <h3 class="md:text-2xl text-xl">Ecommerce web</h3>
+                                <p class="md:text-xl text-lg text-gray-400">Website - Individual</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- phone card -->
+
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="flex justify-center items-start mt-3">
+                <!-- web card -->
+                <div class="w-[100%] flex justify-center items-center ">
+                    <div
+                        class="w-full lg:h-[600px] md:h-[500px] sm:h-[400px] h-[250px] p-4 relative overflow-hidden rounded-3xl bg-[#E8E7E4] group ">
+                        <!-- img -->
+                        <div class="w-full h-full  flex justify-center  ">
+                            <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/molocalweb.png?updatedAt=1749195082794" alt="Card Image"
+                                class="absolute flex lg:top-10 top-0  lg:-right-32 right-0  lg:scale-90 scale-75 lg:group-hover:scale-95 group-hover:scale-[0.8]   object-cover  duration-200   z-40" />
+                        </div>
+                        <button onclick="window.open('/another-project/Molocal/src/html/index.html', '_blank')"
+                            class="md:top-4 bottom-8 md:left-4 right-8 w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full absolute z-20 flex items-center md:opacity-0 opacity-100 group-hover:opacity-100 duration-200">
+                            <i class="fa-solid fa-arrow-right md:text-3xl text-4xl md:text-white text-gray-400"></i>
+                        </button>
+                        <div
+                            class="absolute z-10 overflow-hidden -top-10 -left-10 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 md:group-hover:scale-[15] transition-transform duration-300 ease-out ">
+                        </div>
+
+                        <!-- tet -->
+                        <div class="bottom-4 absolute">
+                            <h3 class="md:text-2xl text-xl">Molocal</h3>
+                            <p class="md:text-xl text-lg text-gray-400">Website - Team Competition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="flex justify-center items-start mt-3">
+                <!-- web card -->
+                <div class="md:flex">
+                    <div
+                        class="2xl:w-[1000px] xl:w-[850px] lg:w-[620px] md:w-[470px] sm:w-[620px] w-[320px] flex justify-center items-center md:mr-3 group">
+                        <div
+                            class="w-full xl:h-[650px] lg:h-[550px] sm:h-[450px] h-[400px] p-4 relative overflow-hidden rounded-3xl bg-[#E8E7E4] flex justify-center ">
+                            <div class=" flex justify-center relative  lg:w-[900px] w-[100%]">
+                                <div
+                                    class="absolute xl:top-24 md:top-10 top-4 xl:left-14 xl:w-[600px] lg:w-[550px] sm:w-[450px] w-[300px] xl:h-[340px] lg:h-[320px] h-[270px] border-4 border-white bg-white rounded-3xl transform xl:group-hover:w-[650px] lg:group-hover:w-[570px]   xl:group-hover:h-[450px] lg:group-hover:h-[370px] md:-rotate-6 md:group-hover:rotate-6 duration-200  z-20 overflow-hidden">
+                                    <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/seelweb1.png?updatedAt=1749195087482" alt="Deskripsi"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <!-- Container 2 -->
+                                <div
+                                    class="absolute xl:top-56 md:top-64 top-4 xl:right-14 right-0 sm:block hidden xl:w-[300px] lg:w-[200px] w-[150px] xl:h-[300px] lg:h-[200px] h-[150px] xl:group-hover:w-[350px] lg:group-hover:w-[250px]  xl:group-hover:h-[350px] lg:group-hover:h-[250px] border-4 border-white bg-white rounded-3xl transform rotate-6 group-hover:-rotate-6 duration-200 z-30 overflow-hidden">
+                                    <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/seelweb2.png?updatedAt=1749195087647" alt="Deskripsi"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+
+                            <button
+                                onclick="window.open('/another-project/SEEL-education/src/html/index.html', '_blank')"
+                                class="md:bottom-4 bottom-8 md:right-4 right-8 w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full absolute lg:z-20 z-50 flex items-center md:opacity-0 opacity-100 group-hover:opacity-100 duration-200">
+                                <i class="fa-solid fa-arrow-right md:text-3xl text-4xl md:text-white text-gray-400"></i>
+                            </button>
+                            <div
+                                class="absolute lg:z-10 z-40 overflow-hidden -bottom-10 -right-10 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0   md:group-hover:scale-[10] transition-transform duration-300 ease-out ">
+                            </div>
+                            <div
+                                class="bottom-4 absolute 2xl:w-[1000px] xl:w-[850px] lg:w-[620px] md:w-[470px] sm:w-[620px] w-[320px] pl-4">
+                                <h3 class="md:text-2xl text-xl">Seel Education</h3>
+                                <p class="md:text-xl text-lg text-gray-400">Website - Team Competition</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- phone card -->
+                    <div class="flex justify-center items-center md:mt-0 mt-3">
+                        <div
+                            class=" xl:h-[650px] lg:h-[550px] h-[450px] lg:w-[400px] md:w-[250px] sm:w-[620px] w-[320px]  p-4 relative rounded-3xl bg-[#E8E7E4] group overflow-hidden ">
+                            <div class="w-full h-full flex justify-center relative z-10">
+                                <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/soon.png?updatedAt=1749195102468" alt="Card Image"
+                                    class="absolute top-10 xl:w-[250px] lg:w-[200px] w-[150px] object-cover  duration-500 -rotate-6" />
+                            </div>
+                            <div
+                                class="absolute z-20 overflow-hidden -bottom-10 left-0 w-10 h-10 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 md:group-hover:scale-[40] transition-transform duration-300 ease-out ">
+                            </div>
+
+                            <div class="top-4 absolute z-20 flex items-center ">
+                                <p
+                                    class="baskervville-regular lg:text-3xl text-2xl text-black   opacity-0 md:group-hover:opacity-100 duration-200 transition-delay">
+                                    See u soon!! :))</p>
+                            </div>
+                            <button onclick="window.open('Bungasari-detail-page.html', '_blank')"
+                                class="md:bottom-4 bottom-8 md:right-4 right-8 w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full absolute z-20 flex items-center md:opacity-0 opacity-100 group-hover:opacity-100 duration-200">
+                                <i class="fa-solid fa-arrow-right md:text-3xl text-4xl  md:text-gray-300 text-gray-400"></i>
+                            </button>
+
+                            <div class="bottom-4 absolute z-20 lg:flex items-end ">
+                                <h3 class="md:text-2xl text-xl mr-2 text-[#2b2b2b]  flex">Coomingsoon!<span class="lg:block hidden">yall :)</span> 
+                                </h3>
+                                <p class="md:text-xl text-lg text-gray-400  duration-200">Mobile App
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="flex justify-center items-start mt-3">
+                <!-- web card -->
+                <div class="w-[100%] flex justify-center items-center ">
+                    <div
+                        class="w-full lg:h-[600px] md:h-[500px] sm:h-[450px] h-[250px] p-4 relative overflow-hidden rounded-3xl bg-[#E8E7E4] group ">
+                        <!-- img -->
+                        <div class="w-full h-full  flex justify-center  ">
+                            <img src="https://ik.imagekit.io/imgazkaid2025/img-2025-portofolio/indoexploreweb1.png?updatedAt=1749195073672" alt="Card Image"
+                                class="absolute flex lg:top-10 top-0  lg:-right-32 right-0  lg:scale-90 scale-75 lg:group-hover:scale-95 group-hover:scale-[0.8]   object-cover  duration-200   z-40" />
+                        </div>
+                        <button onclick="window.open('/another-project/Indoexplore/src/html/index.html', '_blank')"
+                            class="md:top-4 bottom-8 md:left-4 right-8 w-10 h-10 rotate-0 hover:-rotate-45  flex justify-center items-center rounded-full absolute z-20 flex items-center md:opacity-0 opacity-100 group-hover:opacity-100 duration-200">
+                            <i class="fa-solid fa-arrow-right md:text-3xl text-4xl md:text-white text-gray-400"></i>
+                        </button>
+                        <div
+                            class="absolute z-10 overflow-hidden -top-10 -left-10 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 md:group-hover:scale-[15] transition-transform duration-300 ease-out ">
+                        </div>
+
+                        <!-- tet -->
+                        <div class="bottom-4 absolute">
+                            <h3 class="md:text-2xl text-xl">Indoexplore</h3>
+                            <p class="md:text-xl text-lg text-gray-400">Website - Individual Competition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="py-10">
+        <div class="mt-32 mb-10   text-center text-sm text-gray-500 border-t  border-gray-300 pt-4">
+            © Portofolio by Azka. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // navbar ==========================
+        const burgerBtn = document.getElementById('burgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const iconClosed = document.getElementById('iconClosed');
+        const iconOpened = document.getElementById('iconOpened');
+
+        let menuOpen = false;
+
+        burgerBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+
+            if (menuOpen) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.remove('-translate-y-full');
+                    mobileMenu.classList.add('translate-y-0');
+                }, 10);
+            } else {
+                mobileMenu.classList.remove('translate-y-0');
+                mobileMenu.classList.add('-translate-y-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            }
+            iconClosed.classList.toggle('hidden', menuOpen);
+            iconOpened.classList.toggle('hidden', !menuOpen);
+        });
+
+        // ADD THIS CODE:
+        window.addEventListener('resize', () => {
+            // 768px is the md breakpoint in Tailwind
+            if (window.innerWidth >= 768 && menuOpen) {
+                // Close the mobile menu if switching to desktop
+                menuOpen = false;
+                mobileMenu.classList.remove('translate-y-0');
+                mobileMenu.classList.add('-translate-y-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+                iconClosed.classList.remove('hidden');
+                iconOpened.classList.add('hidden');
+            }
+        });
+        // contact me 
+        // button contact
+        const containerContact = document.getElementById('containerContact');
+        const btnContact = document.getElementById('btnContact');
+        const contact1 = document.getElementById('contact1');
+        const contact2 = document.getElementById('contact2');
+        const contact3 = document.getElementById('contact3');
+        let open = false;
+
+        btnContact.addEventListener('click', () => {
+            open = !open;
+            // Container Contact
+            containerContact.classList.toggle('w-[70px]', !open);
+            containerContact.classList.toggle('w-[270px]', open);
+            // Github
+            contact1.classList.toggle('opacity-0', !open);
+            contact1.classList.toggle('pointer-events-none', !open);
+            contact1.classList.toggle('translate-x-0', !open);
+            contact1.classList.toggle('-translate-x-[50px]', open);
+
+            // Linkedin
+            contact2.classList.toggle('opacity-0', !open);
+            contact2.classList.toggle('pointer-events-none', !open);
+            contact2.classList.toggle('translate-x-0', !open);
+            contact2.classList.toggle('-translate-x-[110px]', open);
+
+            // Whatsapp
+            contact3.classList.toggle('opacity-0', !open);
+            contact3.classList.toggle('pointer-events-none', !open);
+            contact3.classList.toggle('translate-x-0', !open);
+            contact3.classList.toggle('-translate-x-[170px]', open);
+        });
+    </script>
+
+</body>
+
+</html>

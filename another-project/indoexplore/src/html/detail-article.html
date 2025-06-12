@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Article - IndoExplore</title>
+    <link rel="icon" href="/another-project/indoexplore/asset/img/mini-icon.png">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- css -->
+    <link href="/another-project/indoexplore/src/css/style.css" rel="stylesheet">
+    <!-- awesome icon -->
+    <link rel="stylesheet" href="/another-project/indoexplore/fontAwesome/css/all.min.css">
+    <!-- java script -->
+    <script src="/another-project/indoexplore/src/js/detail-article.js" defer></script>
+        <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="font-trip-r">
+            <!-- Tombol untuk memunculkan popup -->
+    <nav class=" fixed bottom-0 left-0 z-50 pb-5 pl-5 ">
+        <button id="openPopup"
+            class="px-4 py-2 flex items-center md:text-base text-sm bg-[#F6F5F1] rounded-md border  text-[#9CA3AF]">
+            <i class="fa-solid fa-circle-info mr-1.5"></i>
+            <p class="">Details about this website</p>
+        </button>
+    </nav>
+
+    <!-- Popup -->
+    <div id="popupOverlay"
+        class="hidden w-full h-full fixed z-50 top-0 left-0 flex justify-center items-center bg-black/50">
+        <div class="sm:w-[500px] w-full sm:m-0 m-5 h-[400px] bg-[#F6F5F1] rounded-lg px-5 py-3 text-[#2b2b2b] relative overflow-y-scroll">
+            <!-- Tombol close -->
+            <button id="closePopup" class="absolute top-2 right-4 cursor-pointer text-red-500 text-lg">
+                <i class="fa-solid fa-square-xmark"></i>
+            </button>
+
+            <!-- Konten popup -->
+            <div class="flex items-center w-full text-gray-400 mb-2">
+                <i class="fa-solid fa-circle-info mr-1.5"></i>
+                <p>Details about this website</p>
+            </div>
+
+            <h3 class="sm:text-2xl text-xl mt-4">IndoExplore (Individual Competition Web)</h3>
+            <p class="sm:text-sm text-xs text-gray-500">Created on: 6 September 2024</p>
+            <p class="mt-2 sm:text-base text-sm">Ini adalah lomba website terakhir yang saya ikuti di tahun 2024, website ini tentang indonesia, saya memilih website article + Travel, namun kali ini saya kalah, disini saya sadar bahwa skill saya masih kurang, namun saya juga sadar saya telah berkembang sejauh ini.</p>
+
+
+
+            <h3 class="sm:text-xl text-md mt-4">Fitur Utama</h3>
+            <p class="sm:text-base text-sm">Tampilan bersih dan fokus. Menyediakan artikel dalam 4 kategori, yaitu Destinasi, Akomodasi, Hiburan, dan Kuliner, yang memberikan beragam informasi di masing-masing kategori. memiliki page Tiket. Explore Guide. Tour Guide. Responsive</p>
+
+            <h3 class="sm:text-xl text-md mt-4">Dibuat dengan</h3>
+            <p class="sm:text-base text-sm">Tailwind, CSS, HTML & JS.</p>
+        </div>
+    </div>
+    <div class="bg-gradient-blue h-full min-h-screen  flex pb-20 justify-center">
+        <div>
+            <a href="/another-project/indoexplore/src/html/article.html"
+                class="sticky top-1  cursor-pointer z-50 mb-3 h-[40px] justify-between flex py-2 px-3 items-center bg-white/50 backdrop-blur-3xl shadow-2xl rounded-2xl">
+                <p class="text-sm">← Go back</p>
+                <p>📰</p>
+            </a>
+
+            <div class="max-w-[1000px] mt-20 overflow-hidden my-3  bg-white/50 rounded-2xl">
+
+                <!-- type of article -->
+                <div class="py-1 px-2  bg-white/50 lg:w-auto w-full  lg:text-left text-center">
+                    <p class="md:text-xl sm:text-base text-sm "><span class="font-trip-m" id="type"></span>
+                        Article</p>
+                </div>
+
+
+                <div class="p-5">
+                    <!-- title -->
+                    <div class="w-full  lg:text-left text-center mb-5 mt-10">
+                        <h1 class="md:text-3xl sm:text-2xl text-xl font-trip-m" id="title">
+                        </h1>
+                        <p class="text-sm text-gray-500" id="date"></p>
+                    </div>
+                    <!-- template-normal -->
+                    <div class="flex lg:flex-row flex-col justify-between ">
+
+                        <div class="lg:w-[470px] w-full lg:h-[300px] h-auto  overflow-hidden rounded-2xl lg:mr-2 mr-0">
+                            <img class="w-full h-full object-cover" id="imageUrl" src="" alt="img">
+                        </div>
+
+                        <div class="lg:w-[470px] w-full lg:mt-0 mt-2 lg:ml-2 ml-0">
+                            <p class=" text-justify sm:text-sm text-xs" id="text1">
+                            </p>
+                        </div>
+                    </div>
+                    <!-- text2 and 3 -->
+                    <div class="flex lg:flex-row flex-col justify-between  mt-3">
+                        <!-- text2 -->
+                        <div class="lg:w-[470px] w-full lg:mt-0 mt-2 lg:mr-2 mr-0">
+                            <p class=" text-justify sm:text-sm text-xs" id="text2"></p>
+                        </div>
+                        <!-- text3 -->
+                        <div class="lg:w-[470px] w-full lg:mt-0 mt-2 lg:ml-2 ml-0">
+                            <p class=" text-justify sm:text-sm text-xs" id="text3"></p>
+                        </div>
+                    </div>
+                    <!-- longText and Title -->
+
+                    <div class="flex-col justify-between  ">
+                        <h1 class="sm:text-xl text-sm font-trip-m" id="longTitle"></h1>
+                        <p class=" mb-5 text-justify sm:text-sm text-xs " id="longText"></p>
+                    </div>
+
+                    <!-- template number -->
+                    <div class="flex lg:flex-row flex-col justify-between  mt-3">
+
+                        <div class=" lg:w-[470px] w-full lg:mr-2 mr-0">
+                            <!-- title1 and number1 -->
+                            <div>
+                                <h1 class="sm:text-xl text-sm font-trip-m" id="titleNumber1"></h1>
+                                <p class=" mb-5 text-justify sm:text-sm text-xs " id="textNumber1"></p>
+                            </div>
+                            <!-- title2 and numebr2 -->
+                            <div>
+                                <h1 class="sm:text-xl text-sm font-trip-m" id="titleNumber2"></h1>
+                                <p class=" mb-5 text-justify sm:text-sm text-xs" id="textNumber2"></p>
+                            </div>
+                        </div>
+                        <div class="lg:w-[470px] w-full lg:ml-2 ml-0">
+                            <!-- title3 and number3 -->
+                            <div>
+                                <h1 class="sm:text-xl text-sm font-trip-m" id="titleNumber3"></h1>
+                                <p class=" mb-5 text-justify sm:text-sm text-xs" id="textNumber3">
+                                </p>
+                            </div>
+                            <!-- title4 and number4 -->
+                            <div>
+                                <h1 class="sm:text-xl text-sm font-trip-m" id="titleNumber4"></h1>
+                                <p class=" mb-5 text-justify sm:text-sm text-xs" id="textNumber4"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- source -->
+                <div class=" ">
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+                        // detail web btn
+                        document.addEventListener('DOMContentLoaded', function () {
+            const openBtn = document.getElementById('openPopup');
+            const closeBtn = document.getElementById('closePopup');
+            const overlay = document.getElementById('popupOverlay');
+            const body = document.body;
+
+            if (openBtn && closeBtn && overlay) {
+                // Buka popup
+                openBtn.addEventListener('click', () => {
+                    overlay.classList.remove('hidden');
+                    body.classList.add('overflow-hidden');
+                });
+
+                // Tutup popup dengan tombol X
+                closeBtn.addEventListener('click', () => {
+                    overlay.classList.add('hidden');
+                    body.classList.remove('overflow-hidden');
+                });
+
+                // Tutup popup saat klik di area overlay (hitam)
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) {
+                        overlay.classList.add('hidden');
+                        body.classList.remove('overflow-hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

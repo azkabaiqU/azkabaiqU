@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccomYou | ComunityCourse</title>
+    <link rel="stylesheet" href="Gobal.css">
+
+    <script src="/another-project/AccomYou/src/js/script.js"></script>
+
+    <!-- taiwind cdn-flowBite -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+    <!-- baskerville clasico -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- baskerville libre -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+        <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    /* tool tip ----------- */
+    .btnLang,
+    .btnMt,
+    .btnSc {
+        position: relative;
+        display: flex;
+    }
+
+    .tooltip,
+    .tooltipMath,
+    .tooltipSains,
+    .tooltipMusic {
+        position: absolute;
+        visibility: hidden;
+        color: #fff;
+        background: #333;
+        border-radius: 4px;
+        z-index: 1;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .btnLang:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .btnMt:hover .tooltipMath {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .btnSc:hover .tooltipSains {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .btMed:hover .tooltipMedic {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltip-left {
+        left: 110%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .tooltip-right {
+        right: 110%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    /* tool tip Close ----------- */
+</style>
+
+<body class="h-full w-full relative">
+     <!-- Tombol untuk memunculkan popup -->
+    <nav class=" fixed bottom-0 left-0 z-50 pb-5 pl-5 ">
+        <button id="openPopup"
+            class="relative overflow-hidden group px-4 py-2 flex items-center md:text-base text-sm bg-[#F6F5F1] rounded-md border  text-gray-500">
+            <i class="fa-solid fa-circle-info mr-2 sm:text-lg text-base z-20"></i>
+            <p class="sm:text-xl text-base z-20">Details about this website</p>
+            <div
+                class="absolute z-10 overflow-hidden -bottom-10 left-0 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-[3] md:group-hover:scale-[0] transition-transform duration-300 ease-out ">
+            </div>
+        </button>
+    </nav>
+
+    <!-- Popup -->
+    <div id="popupOverlay"
+        class="hidden w-full h-full fixed z-50 top-0 left-0 flex justify-center items-center bg-black/50">
+        <div class="sm:w-[500px] w-full sm:m-0 m-5 h-[400px] bg-[#F6F5F1] rounded-lg px-5 py-3 text-[#2b2b2b] relative overflow-y-scroll">
+            <!-- Tombol close -->
+            <button id="closePopup" class="absolute top-2 right-4 cursor-pointer text-red-500 text-lg">
+                <i class="fa-solid fa-square-xmark"></i>
+            </button>
+
+            <!-- Konten popup -->
+            <div class="flex items-center w-full text-gray-400 mb-2">
+                <i class="fa-solid fa-circle-info mr-1.5"></i>
+                <p>Details about this website</p>
+            </div>
+
+            <h3 class="sm:text-2xl text-xl mt-4">AccomYou (Competition Web with Team)</h3>
+            <p class="sm:text-sm text-xs text-gray-500">Created on: 28 February 2024</p>
+            <p class="mt-2 sm:text-base text-sm">Kami melakukan Lomba website secara Online bersama satu teman saya,Saya
+                bertanggung jawab sebagai coder dan turut membantu desain, sementara teman saya fokus pada desain utama
+                dan pengisian konten.</p>
+            <p class="mt-2 sm:text-base text-sm">Website ini bernama Accomyou (singkatan dari Accompany You), yang
+                bertujuan untuk membantu dan menemani para pelajar dalam mempelajari berbagai materi melalui platform pembelajaran
+                online. Kami merancang website ini dengan empat materi:
+
+                Bahasa
+
+                Matematika
+
+                Sains
+
+                Medis
+
+                Namun karena keterbatasan waktu dalam lomba, kami hanya mengembangkan satu materi pelajaran dan satu
+                bagian saja sebagai contoh tampilan UI dan konsep pembelajaran yang kami rancang.
+
+            </p>
+
+
+            <h3 class="sm:text-xl text-md mt-4">Fitur Utama</h3>
+            <p class="sm:text-base text-sm">Tampilan bersih dan fokus. Memiliki 2 fitur utama yaitu: Course dan Comunity. Comunity yang terbagi disetiap materi pelajaran. Study Tips yang mudah ditemukan didalam couse</p>
+
+            <h3 class="sm:text-xl text-md mt-4">Dibuat dengan</h3>
+            <p class="sm:text-base text-sm">Tailwind, CSS, HTML & JS.</p>
+        </div>
+    </div>
+    <!-- rating container -->
+    <div class="fixed w-full h-full bg-black/5  backdrop-blur-sm z-40 | justify-center items-center flex | "
+        style="display: none;" id="buttonHide">
+        <div class="fixed w-full h-full bg-transparent  backdrop-blur-sm z-40 | justify-center items-center flex |">
+            <div>
+                <!-- chat area -->
+                <div class="w-[400px] h-[55vh] grayOri borderonly overflow-x-hidden p-4 rounded-md ">
+                    <div class="Human | m-5 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-blue-950"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">DongAha</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont">wow i like it</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="/another-project/AccomYou/assets/img/star.png" class="w-20" alt="">
+                        </div>
+                        <hr class="mt-3 borderonly " />
+                    </div>
+                    <div class="Human | m-5 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-yellow-950"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">Jonggvala</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont">I guarantee you will be great after learning in this course</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="/another-project/AccomYou/assets/img/star.png" class="w-20" alt="">
+                        </div>
+                        <hr class="mt-3 borderonly " />
+                    </div>
+                    <div class="Human | m-5 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-gray-800"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">Vallamiz</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont">I hope new material can emerge. but I still like this course,
+                                five stars for you :))</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="/another-project/AccomYou/assets/img/star.png" class="w-20" alt="">
+                        </div>
+                        <hr class="mt-3 borderonly " />
+                    </div>
+                    <div class="Human | m-5 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-gray-800"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">MariaGud</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont">Come on everyone help give this course five stars so it creates
+                                more material for @everyone @accomyou</p>
+                        </div>
+                        <div class="mt-4">
+                            <img src="/another-project/AccomYou/assets/img/star.png" class="w-20" alt="">
+                        </div>
+                        <hr class="mt-3 borderonly " />
+                    </div>
+                </div>
+                <!-- chat box -->
+                <div class="h-16 w-[400px]  flex items-center px-5 " style="background-color: #F2F2F2;">
+                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                    <dir class="ml-4 w-72 h-13 rounded-full py-2 px-5 bg-white borderFull ask">AccomYou Verry Good...
+                    </dir>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar top --------- -->
+    <nav class=" sticky top-0 |w-full z-20  start-0 bg-white/30 backdrop-blur-xl">
+        <div class=" flex flex-wrap items-center justify-between   py-4  px-20 ">
+
+            <!-- logo area -->
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/another-project/AccomYou/assets/img/logo.png" class="h-5" alt="Flowbite Logo">
+            </a>
+
+            <!-- btn and burger -->
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="/another-project/AccomYou/src/html/signIn.html"
+                    class=" flex justify-between items-center py-2 pt-2.5 px-5 btnonly text-white text-sm  rounded-xl monaSans text-center  duration-100 hover:opacity-85">JoinNow
+                </a>
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- list navbar  -->
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 text-black libre-baskerville-regular">
+                    <li class="">
+                        <a href="/another-project/AccomYou/src/html/home.html"
+                            class="block py-2 px-3  md:p-0 border-b-2 border-transparent hover:border-gray-300 duration-100 "
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/course.html"
+                            class="block py-2 px-3  md:p-0 border-b-2 border-transparent hover:border-gray-300 duration-100 ">Course</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/comunity.html"
+                            class="block py-2 px-3  md:p-0  border-b-2 brownBor duration-100">Comunity</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/about.html"
+                            class="block py-2 px-3  md:p-0  border-b-2 border-transparent hover:border-gray-300 duration-100">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- navbar course -->
+    <nav id="navbarCourse">
+        <div class="fixed | left-0  w-72 ml-20 mt-14 bg-white | borderOriR pr-3">
+            <div class="grayOri py-3 px-3 | flex rounded-md items-center |  hover:ring-gray-300 hover:ring-1 ring-0  ">
+                <div class=" p-2 rounded-md  w-7 | bg-white  ">
+                    <img src="/another-project/AccomYou/assets/img/world.png" class="w-4" alt="">
+                </div>
+                <p class="ml-3 baskervville-regular  ">Global Comunity</p>
+            </div>
+
+            <!-- btn fitur language - medical Course -->
+            <!-- BtnLanguage -->
+            <div
+                class="btnLang | py-3 px-3 | flex rounded-md items-center mt-2 |  hover:ring-gray-300 hover:ring-1 ring-0  ">
+                <div class=" p-2 rounded-md  w-7 | yellowLang  ">
+                    <img src="/another-project/AccomYou/assets/img/translate.png" class="w-4" alt="">
+                </div>
+                <div>
+                    <p class="ml-3 baskervville-regular  ">Language Comunity</p>
+                </div>
+                <span class="tooltip |  py-2 px-3 text-sm ">Not Yet Available</span>
+            </div>
+
+            <!-- btnMath -->
+            <div class="btnMt 
+             py-3 px-3 | flex rounded-md items-center mt-2 |  hover:ring-gray-300 hover:ring-1 ring-0  ">
+                <div class=" p-2 rounded-md  w-7 | purpleMusic  ">
+                    <img src="/another-project/AccomYou/assets/img/math.png" class="w-4" alt="">
+                </div>
+                <div>
+                    <p class="ml-3 baskervville-regular  ">Math Comunity</p>
+                </div>
+                <span class="tooltipMath | py-2 px-3 text-sm ">Not Yet Available</span>
+            </div>
+
+            <!-- BtnSains -->
+            <div
+                class="btnSc | py-3 px-3 | flex rounded-md items-center mt-2 |  hover:ring-gray-300 hover:ring-1 ring-0  ">
+                <div class=" p-2 rounded-md  w-7 | blueSains  ">
+                    <img src="/another-project/AccomYou/assets/img/atom.png" class="w-4" alt="">
+                </div>
+                <div>
+                    <p class="ml-3 baskervville-regular  ">Science Comunity</p>
+                </div>
+                <span class="tooltipSains | py-2 px-3 text-sm ">Not Yet Available</span>
+            </div>
+
+            <!-- BtnSains -->
+            <div class="btnSc |
+             py-3 px-3 | flex rounded-md items-center mt-2  |  hover:ring-gray-300 hover:ring-1 ring-0  ">
+                <div class=" p-2 rounded-md  w-7 | greenMath  ">
+                    <img src="/another-project/AccomYou/assets/img/HospitalIcon.png" class="w-4" alt="">
+                </div>
+                <div>
+                    <p class="ml-3 baskervville-regular  ">Medical Comunity</p>
+                </div>
+                <span class="tooltipSains |  py-2 px-3 text-sm ">Not Yet available </span>
+            </div>
+
+            <!-- Hr -->
+            <div class="pl-3 pr-52">
+                <hr class="my-6 borderonly sm:mx-auto lg:my-8 " />
+            </div>
+
+            <!-- other Comnunity  -->
+            <div>
+                <p class=" text-sm ml-3 mb-4 grayFont">Look Elsewhere </p>
+
+                <!-- BtnInstagram -->
+                <a href="https://www.instagram.com/kaa.bqi/"
+                    class=" py-3 px-3 | flex rounded-md items-center mt-2  |  hover:ring-gray-300 hover:ring-1 ring-0  ">
+                    <div class=" p-2 rounded-md  w-7 | bg-white  ">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1384/1384089.png" class="w-4" alt="">
+                    </div>
+                    <p class="ml-3 baskervville-regular  ">Instagram </p>
+                    <div class="ml-3 w-6 h-6 rounded-sm   text-black justify-center items-center flex text-md">→</div>
+                </a>
+
+                <!-- BtnWhatsapp -->
+                <a href="https://www.whatsapp.com/?lang=id_ID"
+                    class=" py-3 px-3 | flex rounded-md items-center mt-2  |  hover:ring-gray-300 hover:ring-1 ring-0  ">
+                    <div class=" p-2 rounded-md  w-7 | bg-white  ">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1384/1384023.png" class="w-4" alt="">
+                    </div>
+                    <p class="ml-3 baskervville-regular  ">WhatsApp </p>
+                    <div class="ml-3 w-6 h-6 rounded-sm   text-black justify-center items-center flex text-md">→</div>
+                </a>
+
+                <!-- Hr -->
+                <div class="pl-3 pr-52">
+                    <hr class="my-6 borderonly sm:mx-auto lg:my-8 " />
+                </div>
+
+                <!-- RateUs -->
+                <p class=" text-sm ml-3 mb-4 grayFont">Rate Us</p>
+
+                <!-- rateAccomYou -->
+                <a id="buttonShow"
+                    class=" cursor-pointer py-3 px-3 | flex rounded-md items-center mt-2  |  hover:ring-gray-300 hover:ring-1 ring-0  ">
+                    <div class=" p-2 rounded-md  w-7 | bg-white  ">
+                        <img src="https://cdn-icons-png.flaticon.com/128/8369/8369316.png" class="w-4" alt="">
+                    </div>
+                    <p class="ml-3 baskervville-regular  ">Rate AccomYou</p>
+                </a>
+    </nav>
+
+    <!-- Content Chat  -->
+    <section class="h-full w-full mt-14">
+        <div class=" | flex px-14">
+            <!-- Blank -->
+            <div class=" object-fi h-full w-[313.1px] " style="min-width: 313.1px;"></div>
+            <!-- Content -->
+            <div class=" grayOri  borderOriR">
+                <!-- text -->
+                <div class="w-auto px-14 py-10  ">
+                    <div class="borderB pb-10">
+                        <h1 class="text-6xl font-bold brownOri">Just<br>
+                            Talk To Other :)</h1>
+                        <button
+                            class=" flex justify-between items-center py-2 pt-2.5 px-5 btnonly text-white text-sm mt-3 rounded-xl monaSans text-center duration-100 hover:opacity-85">i
+                            Want To <div
+                                class="ml-3 w-6 h-6 rounded-2xl   text-white justify-center items-center flex text-2xl">
+                                →</div></button>
+                    </div>
+                </div>
+                <!-- chat -->
+                <div class=" | overflow-x-scroll  px-14 h-[35vh] w-auto">
+                    <!-- H1 -->
+                    <div class="Human | h-20 mb-4 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular" id="n1">Yohan</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont" id="t1">No, dont like that</p>
+                        </div>
+                    </div>
+                    <!-- H2 -->
+                    <div class="Human | h-20 mb-4 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-blue-900"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">Fealmora</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont" id="t2">no one can beat me from a language course</p>
+                        </div>
+                    </div>
+                    <!-- H3 -->
+                    <div class="Human | h-20 mb-4 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-gray-800"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">Dimasuke</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont" id="t3">What do you mean? I'm already your equal</p>
+                        </div>
+                    </div>
+                    <!-- H4 -->
+                    <div class="Human | h-20 mb-4 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-gray-800"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">Bombom</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont" id="t4">stop talking about unimportant things @feelmora</p>
+                        </div>
+                    </div>
+                    <!-- H5 -->
+                    <div class="Human | h-20 mb-4 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">ValentinoFale</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont" id="t5">Hey, did you know that recently the website has been
+                                undergoing
+                                repairs?</p>
+                        </div>
+                    </div>
+                    <!-- H6 -->
+                    <div class="Human | h-20 mb-4 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-purple-900"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">palejoang</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont" id="t6">you are right</p>
+                        </div>
+                    </div>
+                    <!-- H7 -->
+                    <div class="Human | h-20 mb-4 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-blue-900"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">simbaa</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont" id="t7">Hah, it's a shame the website is very good, especially
+                                the
+                                design, I really like it, it doesn't hurt the eyes</p>
+                        </div>
+                    </div>
+                    <!-- H8 -->
+                    <div class="Human | h-20 mb-4 mt-6">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-gray-800"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">Noss simp</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont" id="t8">yeah, for those of you who like design, that's the case,
+                                but for
+                                people who like the content, I think it's better, think about it, this website always
+                                accompanies me wherever I go, sometimes when I'm defecating I study mathematics, it
+                                makes me much better than I imagined.</p>
+                        </div>
+                    </div>
+                    <!-- H9 -->
+                    <div class="Human | h-20 mb-4 mt-16 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-yellow-900"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">lamp</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont" id="t9">Hey, stop your dirty talk</p>
+                        </div>
+                    </div>
+                    <!-- H10 -->
+                    <div class="Human | h-20 mb-4 ">
+                        <div class="profile | flex">
+                            <div class="w-10 h-10 rounded-full bg-gray-800"></div>
+                            <div class="ml-2">
+                                <h1 class="text-lg h-5 baskervville-regular">Noss simp</h1>
+                                <p class="text-sm  baskervville-regular mt-0.5">Student</p>
+                            </div>
+                        </div>
+                        <div class="comtext | mt-2">
+                            <p class="text-sm grayFont" id="t10">that's not dirty talk @lamp, it's a compliment</p>
+                        </div>
+                    </div>
+                    <!-- H11 -->
+                </div>
+                <!-- Your chatBox -->
+                <div class="h-16  flex items-center px-10 " style="background-color: #F2F2F2;">
+                    <div class="w-10 h-10 rounded-full bg-green-950"></div>
+                    <dir class="ml-4 w-full h-13 rounded-full py-2 px-5 bg-white borderFull ask">help him or ask
+                        something
+                        useful...</dir>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script>
+
+        // showcircle funtion ------
+        function showCircle() {
+            const circleElement = document.getElementById("buttonHide");
+            circleElement.style.display = "block";}
+
+        // hideCircle funtion ------
+        function hideCircle() {
+            const circleElement = document.getElementById("buttonHide");
+            circleElement.style.display = "none";}
+
+        // buttonShow cosnt ------
+        const buttonShow = document.getElementById("buttonShow");
+        buttonShow.addEventListener("click", showCircle);
+
+        // buttonHide const ------
+        const buttonHide = document.getElementById("buttonHide");
+        buttonHide.addEventListener("click", hideCircle);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const openBtn = document.getElementById('openPopup');
+  const closeBtn = document.getElementById('closePopup');
+  const overlay = document.getElementById('popupOverlay');
+  const body = document.body;
+
+  if (openBtn && closeBtn && overlay) {
+    // Buka popup
+    openBtn.addEventListener('click', () => {
+      overlay.classList.remove('hidden');
+      body.classList.add('overflow-hidden');
+    });
+
+    // Tutup popup dengan tombol X
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.add('hidden');
+      body.classList.remove('overflow-hidden');
+    });
+
+    // Tutup popup saat klik di area overlay (hitam)
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.add('hidden');
+        body.classList.remove('overflow-hidden');
+      }
+    });
+  }
+});
+
+    </script>
+
+
+</body>
+
+</html>

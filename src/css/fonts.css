@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Baskerville';
+  src: url('./fonts/Baskerville Classico Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TripSans';
+  src: url('./fonts/TripSans-Regular.ttf') format('truetype');
+}
+
+/* Harus di bawahnya */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

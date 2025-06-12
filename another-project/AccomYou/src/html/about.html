@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccomYou | About</title>
+    <!-- connect to other f -->
+    <link rel="stylesheet" href="/another-project/AccomYou/src/css/Gobal.css">
+    <link rel="stylesheet" href="/another-project/AccomYou/src/css/course.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <!-- baskerville clasico -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+    <!-- baskerville libre -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="relative w-full h-full">
+    <!-- Tombol untuk memunculkan popup -->
+    <!-- Tombol untuk memunculkan popup -->
+    <nav class=" fixed bottom-0 left-0 z-50 pb-5 pl-5 ">
+        <button id="openPopup"
+            class="relative overflow-hidden group px-4 py-2 flex items-center md:text-base text-sm bg-[#F6F5F1] rounded-md border  text-gray-500">
+            <i class="fa-solid fa-circle-info mr-2 sm:text-lg text-base z-20"></i>
+            <p class="sm:text-xl text-base z-20">Details about this website</p>
+            <div
+                class="absolute z-10 overflow-hidden -bottom-10 left-0 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-[3] md:group-hover:scale-[0] transition-transform duration-300 ease-out ">
+            </div>
+        </button>
+    </nav>
+
+    <!-- Popup -->
+    <div id="popupOverlay"
+        class="hidden w-full h-full fixed z-50 top-0 left-0 flex justify-center items-center bg-black/50">
+        <div class="sm:w-[500px] w-full sm:m-0 m-5 h-[400px] bg-[#F6F5F1] rounded-lg px-5 py-3 text-[#2b2b2b] relative overflow-y-scroll">
+            <!-- Tombol close -->
+            <button id="closePopup" class="absolute top-2 right-4 cursor-pointer text-red-500 text-lg">
+                <i class="fa-solid fa-square-xmark"></i>
+            </button>
+
+            <!-- Konten popup -->
+            <div class="flex items-center w-full text-gray-400 mb-2">
+                <i class="fa-solid fa-circle-info mr-1.5"></i>
+                <p>Details about this website</p>
+            </div>
+
+            <h3 class="sm:text-2xl text-xl mt-4">AccomYou (Competition Web with Team)</h3>
+            <p class="sm:text-sm text-xs text-gray-500">Created on: 28 February 2024</p>
+            <p class="mt-2 sm:text-base text-sm">Kami melakukan Lomba website secara Online bersama satu teman saya,Saya
+                bertanggung jawab sebagai coder dan turut membantu desain, sementara teman saya fokus pada desain utama
+                dan pengisian konten.</p>
+            <p class="mt-2 sm:text-base text-sm">Website ini bernama Accomyou (singkatan dari Accompany You), yang
+                bertujuan untuk membantu dan menemani para pelajar dalam mempelajari berbagai materi melalui platform pembelajaran
+                online. Kami merancang website ini dengan empat materi:
+
+                Bahasa
+
+                Matematika
+
+                Sains
+
+                Medis
+
+                Namun karena keterbatasan waktu dalam lomba, kami hanya mengembangkan satu materi pelajaran dan satu
+                bagian saja sebagai contoh tampilan UI dan konsep pembelajaran yang kami rancang.
+
+            </p>
+
+
+            <h3 class="sm:text-xl text-md mt-4">Fitur Utama</h3>
+            <p class="sm:text-base text-sm">Tampilan bersih dan fokus. Memiliki 2 fitur utama yaitu: Course dan Comunity. Comunity yang terbagi disetiap materi pelajaran. Study Tips yang mudah ditemukan didalam couse</p>
+
+            <h3 class="sm:text-xl text-md mt-4">Dibuat dengan</h3>
+            <p class="sm:text-base text-sm">Tailwind, CSS, HTML & JS.</p>
+        </div>
+    </div>
+
+    <nav class=" sticky top-0 |w-full z-20  start-0 bg-white/30 backdrop-blur-xl">
+        <div class=" flex flex-wrap items-center justify-between   py-4  px-20 ">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/another-project/AccomYou/assets/img/logo.png" class="h-5" alt="Flowbite Logo">
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="signIn.html"
+                    class=" flex justify-between items-center py-2 pt-2.5 px-5 btnonly text-white text-sm  rounded-xl monaSans text-center  duration-100 hover:opacity-85">JoinNow
+                </a>
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 text-black libre-baskerville-regular">
+                    <li class="">
+                        <a href="/another-project/AccomYou/src/html/home.html"
+                            class="block py-2 px-3  md:p-0   border-b-2 border-transparent hover:border-gray-300 duration-100">Home</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/course.html"
+                            class="block py-2 px-3  md:p-0  border-b-2 border-transparent hover:border-gray-300 duration-100 ">Course</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/comunity.html"
+                            class="block py-2 px-3  md:p-0   border-b-2 border-transparent hover:border-gray-300 duration-100 ">Comunity</a>
+                    </li>
+                    <li>
+                        <a href="/another-project/AccomYou/src/html/about.html"
+                            class="block py-2 px-3  md:p-0 border-b-2 brownBor duration-100">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="  | title | flex  px-20 pt-20 justify-between">
+        <div>
+            <h1 class=" mt-4 text-6xl font-bold  brownOri monaSans">About<br> AccomYou</h1>
+        </div>
+    </section>
+    <section class="w-[100vw] h-auto |  flex px-20 mt-10">
+        <div class="w-[45vw]">
+            <div class="h-52">
+                <h1 class=" mt-4 text-4xl font-bold   monaSans" style="color: #2b2b2b;">Purpose of making</h1>
+                <div class="w-[500px] h-[90px]">
+                    <p class="text-sm mt-2 h-5 text-gray-700 ">AcommYou is here to Accompany you with professional
+                        verified Courses ranging from basic to intermediate, our mission is to encourage young people to
+                        achieve their dreams and make them come true, with the help of our fun community and our
+                        professional teachers, everything is possible here.</p>
+                </div>
+
+            </div>
+
+            <div class="h-40">
+                <h1 class=" mt-4 text-4xl font-bold   monaSans" style="color: #2b2b2b;">Target Person</h1>
+                <div class="w-[500px] mt-5">
+                    <p class="text-md mt-2 h-5   ">✧ medical student:</p>
+                    <p class="mt-2 text-sm text-gray-700">AccomYou provides medical courses so that medical students can
+                        study medical material again</p>
+                </div>
+                <div class="w-[500px] mt-3">
+                    <p class="text-md mt-2 h-5   ">✧ elementary school students - college students or even parents:</p>
+                    <p class="mt-2 text-sm text-gray-700">Elementary school students and college students really need
+                        more education so they can learn more about the material but there are only a few in our area.
+                    </p>
+                </div>
+                <div class="w-[500px] mt-3">
+                    <p class="text-md mt-2 h-5   ">✧ general public</p>
+                    <p class="mt-2 text-sm text-gray-700">Anyone can study at accomYou as long as they have the
+                        intention and purpose of learning</p>
+                </div>
+                <div class="w-[500px] mt-3">
+                    <p class="text-md mt-2 h-5   ">✧ people who want to study abroad</p>
+                    <p class="mt-2 text-sm text-gray-700">We also provide language lessons for people who want to learn
+                        languages, but unfortunately at the moment we only provide 5 languages, especially English, but
+                        unfortunately the English language is only Indonesian-English.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <div class="h-full | pl-10 borderOriL ">
+                <h1 class=" mt-4 text-4xl font-bold   monaSans" style="color: #2b2b2b;">Our great team</h1>
+                <div class="text-left">
+                    <p class="text-md mt-2 h-5   ">team work is dream work, this attention is our<br> great team</p>
+                </div>
+                <div class="mt-20 | flex justify-center items-center">
+                    <div class="azka mr-10">
+                        <img src="/another-project/AccomYou/assets/img/azka.png" class="w-52" alt="">
+                    </div>
+                    <div class="reveeno">
+                        <img src="/another-project/AccomYou/assets/img/vino.png" class="w-52" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ...existing code... -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const openBtn = document.getElementById('openPopup');
+            const closeBtn = document.getElementById('closePopup');
+            const overlay = document.getElementById('popupOverlay');
+            const body = document.body;
+
+            if (openBtn && closeBtn && overlay) {
+                // Buka popup
+                openBtn.addEventListener('click', () => {
+                    overlay.classList.remove('hidden');
+                    body.classList.add('overflow-hidden');
+                });
+
+                // Tutup popup dengan tombol X
+                closeBtn.addEventListener('click', () => {
+                    overlay.classList.add('hidden');
+                    body.classList.remove('overflow-hidden');
+                });
+
+                // Tutup popup saat klik di area overlay (hitam)
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) {
+                        overlay.classList.add('hidden');
+                        body.classList.remove('overflow-hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

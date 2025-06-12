@@ -1,0 +1,63 @@
+
+/* tooltip open ==== */
+
+.buttonLang, .buttonMath, .buttonSains, .buttonMusic, .buttonMedic {
+    position: relative;
+    display: flex;
+    
+  }
+  
+  .tooltip, .tooltipMath, .tooltipSains, .tooltipMusic, .tooltipMedic {
+    position: absolute;
+    visibility: hidden;
+    color: #fff;
+    background: #333;
+    border-radius: 4px;
+
+    z-index: 1;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .buttonLang:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .buttonMath:hover .tooltipMath {
+    visibility: visible;
+    opacity: 1;
+
+  }
+
+  .buttonSains:hover .tooltipSains {
+    visibility: visible;
+    opacity: 1;
+
+  }
+
+  .buttonMusic:hover .tooltipMusic {
+    visibility: visible;
+    opacity: 1;
+
+  }
+
+  .buttonMedic:hover .tooltipMedic {
+    visibility: visible;
+    opacity: 1;
+
+  }
+  
+  .tooltip-left  {
+    left: 110%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .tooltip-right {
+    right: 110%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+  
+  /* tooltip close ====== */
+

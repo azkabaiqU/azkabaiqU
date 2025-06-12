@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy S24 | Ecommerce web </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/another-project/samsungS24/assets/css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Plus+Jakarta+Sans&display=swap"
+        rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-black relative h-full w-full">
+    <!-- navbar detail & Detail -->
+    <!-- Tombol untuk memunculkan popup -->
+    <nav class=" fixed bottom-0 left-0 z-50 pb-5 pl-5 ">
+        <button id="openPopup"
+            class="relative overflow-hidden group px-4 py-2 flex items-center md:text-base text-sm bg-[#F6F5F1] rounded-md border  text-gray-500">
+            <i class="fa-solid fa-circle-info mr-2 sm:text-lg text-base z-20"></i>
+            <p class="sm:text-xl text-base z-20">Details about this website</p>
+            <div
+                class="absolute z-10 overflow-hidden -bottom-10 left-0 w-10 h-10 filter blur-lg bg-[#FFCB42] rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-[3] md:group-hover:scale-[0] transition-transform duration-300 ease-out ">
+            </div>
+        </button>
+    </nav>
+
+  <!-- Popup -->
+  <div id="popupOverlay" class="hidden w-full h-full fixed z-50 top-0 left-0 flex justify-center items-center bg-black/50">
+    <div class="sm:w-[500px] w-full sm:m-0 m-5 h-[400px] bg-[#F6F5F1] rounded-lg px-5 py-3 text-[#2b2b2b] relative">
+      <!-- Tombol close -->
+      <button id="closePopup" class="absolute top-2 right-4 cursor-pointer text-red-500 text-lg">
+        <i class="fa-solid fa-square-xmark"></i>
+      </button>
+
+      <!-- Konten popup -->
+      <div class="flex items-center w-full text-gray-400 mb-2">
+        <i class="fa-solid fa-circle-info mr-1.5"></i>
+        <p>Details about this website</p>
+      </div>
+
+      <h3 class="sm:text-2xl text-xl mt-4">Samsung Galaxy S24 (Ecommerce Web)</h3>
+      <p class="sm:text-sm text-xs text-gray-500">Created on: 13 February 2024</p>
+      <p class="mt-2 sm:text-base text-sm">Ini adalah website Ecommerce, sebagai bahan latihan dengan menggunakan Tailwind. Saya membuatnya pada tahun 2024 saat kelas 10, ini dalah website Ecommerce ke2 dalam latihan website Ecommerce.</p>
+
+      <h3 class="sm:text-xl text-md mt-4">Fitur Utama</h3>
+      <p class="sm:text-base text-sm">Tampilan bersih dan fokus. Semua informasi ditampilkan dalam satu halaman ringkas dengan desain UI minimalis.</p>
+
+      <h3 class="sm:text-xl text-md mt-4">Dibuat dengan</h3>
+      <p class="sm:text-base text-sm">Tailwind, CSS, HTML & JS.</p>
+    </div>
+  </div>
+
+    <!-- nav Open | Nav Top-->
+
+
+    <div class="z-40 samsunglogos w-full py-3  justify-between flex items-center | px-10 ! absolute">
+        <div class="galaxy-dropwown | flex justify-center items-center w-40">
+            <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500"
+                data-dropdown-trigger="hover" class=" flex justify-center items-center  " type="button">
+                <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 10 6">
+                    <img src="/another-project/samsungS24/assets/img/galaxtS24-ultra.png" alt="">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" /></svg>
+            </button>
+
+            <!-- Dropdown menu -->
+            <div id="dropdownDelay"
+                class=" z-10 hidden    bg-black divide-y divide-gray-100  shadow  min-w-72 dark:bg-black dark:shadow-md  ">
+                <ul class="pb-2 text-black text-md opacity-80 samsungS tracking-wide dark:text-gray-200 pl-8"
+                    aria-labelledby="dropdownDelayButton">
+                    <li>
+                        <a href="#" class="block px-4 py-1 text-white ">Galaxy S24 Ultra √</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-1 text-white ">Galaxy S24 </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-1 text-white   ">Galaxy
+                            Z Flip5</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-1 text-white ">Galaxy
+                            Z Fold5</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="burger text-white justify-center flex items-center">
+            <ion-icon name="menu-outline" size="large"></ion-icon>
+        </div>
+    </div>
+    <div class="just-logo samsunglogos w-full pt-2 bg-none bg-black justify-center flex items-center | px-10 |  ">
+        <div class="logo | w-28 | ">
+            <img src="/another-project/samsungS24/assets/img/samsung-white.png" alt="samsung">
+        </div>
+    </div>
+
+    <!-- nav Stiky -->
+    <nav class="z-10 sticky top-0 |w-full  | flex justify-center items-center h-10 bg-black ">
+        <ul class="text-white flex justify-center  gap-4 tracking-wide font-light opacity-90 h-10  ">
+            <li
+                class="border-b-2 border-transparent shadow-lg  h-full | duration-100 hover:shadow-blue-400/50 hover:border-blue-400  | flex items-center">
+                Highlight</li>
+            <li
+                class="border-b-2 border-transparent shadow-lg  h-full | duration-100 hover:shadow-blue-400/50 hover:border-blue-400 | flex items-center">
+                Compare</li>
+            <li
+                class="border-b-2 border-transparent shadow-lg  h-full | duration-100 hover:shadow-blue-400/50 hover:border-blue-400 | flex items-center">
+                Accessories</li>
+        </ul>
+    </nav>
+    <!-- content  -->
+    <!-- p1 -->
+    <section class="w-full pb-72 |">
+        <div class="text-center text-white from-black to-transparent pb-10 pt-32 bg-gradient-to-b  | w-full">
+            <h1 class="text-5xl sm:text-6xl samsungS ">Galaxy S24 Ultra</h1>
+            <h1 class="text-3xl sm:text-4xl samsungS mt-4 opacity-90 | flex justify-center items-center ">Galaxy Ai
+                <span><img class="w-8" src="/another-project/samsungS24/assets/img/ai.png" alt=""></span>‎ is Here</h1>
+            <div
+                class="text-sm mt-5 py-2 font-light text-blue-400 hover:text-blue-400/80 | flex justify-center items-center">
+                <p class="flex justify-center items-center">Preorder Now <ion-icon name="chevron-forward-outline"
+                        class=""></ion-icon>
+                </p>
+            </div>
+        </div>
+        <div class="w-full | flex justify-center items-center ">
+            <img class="sm:w-96 w-60 " src="/another-project/samsungS24/assets/img/ThePhoneS24.png" alt="">
+        </div>
+
+    </section>
+
+    <!-- p2 -->
+    <section class="w-full | pb-72">
+        <div class=" text-center text-white">
+            <h1 class="text-4xl sm:text-5xl samsungS mt-4 opacity-90 | flex justify-center items-center ">Galaxy Ai
+                <span><img class="w-12" src="/another-project/samsungS24/assets/img/ai.png" alt=""></span>‎ is Here</h1>
+            <div class="w-full mt-5 | items-center justify-center flex text-center  ">
+                <p class="w-1/2 sm:text-sm text-xs opacity-80 ">Welcome to the era of mobile AI. With Galaxy S24 Ultra
+                    in your
+                    hands, you can unleash whole new levels of creativity, productivity and possibility — starting with
+                    the most important device in your life. Your smartphone.</p>
+            </div>
+            <div class="mt-10 | flex justify-center items-center ">
+                <div id="scrollP2"
+                    class="sm:w-80 sm:h-96 w-60 h-72 0 rounded-xl m-0 | overflow-x-scroll  overflow-y-hidden whitespace-nowrap | cursor-none">
+                    <div class=" bg-slate-300 inline-block" id="circle">
+                        <video class="w-full h-full m-0" controls>
+                            <source
+                                src="https://images.samsung.com/id/smartphones/galaxy-s24-ultra/videos/galaxy-s24-ultra-highlights-overview-circle-to-search.webm?imbypass=true"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                    <div class=" bg-neutral-300 inline-block" id="liveTranslate">
+                        <video class="w-full h-full " controls>
+                            <source
+                                src="https://images.samsung.com/id/smartphones/galaxy-s24-ultra/videos/galaxy-s24-ultra-highlights-overview-live-translate-a.webm?imbypass=true"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                    <div class=" bg-neutral-300 inline-block" id="NoteAsist">
+                        <video class="w-full h-full " controls>
+                            <source
+                                src="https://images.samsung.com/id/smartphones/galaxy-s24-ultra/videos/galaxy-s24-ultra-highlights-overview-note-assist.webm?imbypass=true"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                    <div class=" bg-neutral-300 inline-block" id="PhotoAsist">
+                        <video class="w-full h-full " controls>
+                            <source
+                                src="https://images.samsung.com/id/smartphones/galaxy-s24-ultra/videos/galaxy-s24-ultra-highlights-overview-photo-assist.webm?imbypass=true"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="box-fitur | mt-5 | flex justify-center items-center ">
+
+                <a id="circle" href="#circle #suu"
+                    class="sm:w-16 w-12  opacity-70 active:opacity-100 hover:opacity-100 cursor-pointer mx-2">
+                    <img class="rounded-xl sm:w-16 w-12"
+                        src="https://images.samsung.com/id/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-overview-circle-to-search-thumbnail-active.jpg?imbypass=true"
+                        alt="circle">
+                    <p class="mt-1" style=" font-size: 0.7em;">Circle to Search</p>
+                </a>
+                <a id="circle" href="#liveTranslate "
+                    class=" sm:w-16 w-12 opacity-70 active:opacity-100 hover:opacity-100 cursor-pointer mx-2">
+                    <img class="rounded-xl  sm:w-16 w-12"
+                        src="https://images.samsung.com/id/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-overview-live-translate-thumbnail-active.jpg?imbypass=true"
+                        alt="livetranslate">
+                    <p class="mt-1" style=" font-size: 0.7em;">Circle to Search</p>
+                </a>
+                <a id="circle" href="#NoteAsist"
+                    class="sm:w-16 w-12 opacity-70 active:opacity-100 hover:opacity-100 cursor-pointer mx-2">
+                    <img class="rounded-xl sm:w-16 w-12"
+                        src="https://images.samsung.com/id/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-overview-note-assist-thumbnail-active.jpg?imbypass=true"
+                        alt="NoteAsist">
+                    <p class="mt-1" style=" font-size: 0.7em;">Circle to Search</p>
+                </a>
+                <a id="circle" href="#PhotoAsist"
+                    class="sm:w-16 w-12 opacity-70 active:opacity-100 hover:opacity-100 cursor-pointer mx-2">
+                    <img class="rounded-xl sm:w-16 w-12"
+                        src="https://images.samsung.com/id/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-overview-photo-assist-thumbnail-active.jpg?imbypass=true"
+                        alt="PhotoAsist">
+                    <p class="mt-1" style=" font-size: 0.7em;">Circle to Search</p>
+                </a>
+            </div>
+    </section>
+
+
+    <section class="pb-72">
+        <div class=" text-center text-white ">
+            <h1 class="sm:text-5xl text-4xl samsungS mt-4 opacity-90 | flex justify-center items-center ">Sleek. Strong.
+                Stunning
+            </h1>
+            <div class="w-full mt-5 | items-center justify-center flex text-center  ">
+                <p class="w-1/2 sm:text-sm text-xs  opacity-80 ">Meet Galaxy S24 Ultra, the ultimate form of Galaxy
+                    Ultra with a new
+                    titanium exterior and a 6.8" flat display.5,6 It's an absolute marvel of design.</p>
+            </div>
+            <!-- <div class="| flex justify-center items-center">
+                    <div class="w-full " >
+                        <video id="SamsungArmor" class="w-full h-full px-60 ">
+                            <source  
+                                src="https://images.samsung.com/id/smartphones/galaxy-s24-ultra/videos/galaxy-s24-ultra-highlights-form-factor.webm?imbypass=true"
+                                type="video/mp4">
+                        </video>
+                        <div class="w-full pr-40 | flex justify-end items-center">
+                            <button onclick="playSams()"
+                                class="p-1 border-2 rounded-full | flex justify-center items-center text-center">
+                                <ion-icon id="button" name="play" size="large"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+            <div class="mt-10 w-full  | flex justify-center items-center">
+                <img src="/another-project/samsungS24/assets/img/img1.png" alt="" class="sm:w-fit w-80 ">
+            </div>
+
+            <div class=" mt-20 p-10 | flex justify-center items-start ">
+
+                <div id="no.1" class="">
+                    <div class="p-2">
+                        <div class="armor-1 pt-6 pr-6 rounded-lg sm:w-80 w-52 |   overflow-hidden"
+                            style="background-color: #1F1F27;">
+                            <img src="/another-project/samsungS24/assets/img/img2.png" alt="" class="w-fit">
+                        </div>
+                        <div class="sm:w-80 w-52 text-left" id="accordion-flush" data-accordion="collapse duration-500 "
+                            data-active-classes="bg-white dark:bg-black text-gray-900 dark:text-gray-300 dark:opacity-90 duration-500"
+                            data-inactive-classes="text-gray-500 dark:text-gray-400 duration-500">
+                            <h2 id="accordion-flush-heading-1">
+                                <!-- !!! 1-->
+
+                                <button type="button"
+                                    class="duration-500 samsungS text-gray-200 tracking-wide | flex items-center justify-between w-full pb-2 pt-1 "
+                                    data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
+                                    aria-controls="accordion-flush-body-1">
+                                    <!-- !!2 ,3-->
+                                    <span class="sm:text-md text-sm">Armor up with titanium</span>
+                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M9 5 5 1 1 5" />
+                                    </svg>
+                                </button>
+                            </h2>
+                            <!-- !!! 4,5 -->
+                            <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                                <div class="pb-2 text-left ">
+                                    <p class="mb-2 text-white opacity-50 font-light text-xs sm:text-sm">Corning®
+                                        Gorilla® Armor
+                                        helps
+                                        protect your screen from scratches to keep your device looking beautiful.7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- no.2 -->
+                <div id="no.2" class="">
+                    <div class="p-2">
+                        <div class="armor-1 sm:w-48 w-28  rounded-lg |   overflow-hidden"
+                            style="background-color: #1F1F27; ">
+                            <img src="/another-project/samsungS24/assets/img/img3.png" alt="">
+                        </div>
+                        <div class="sm:w-48 w-28 text-left" id="" data-accordion=" duration-500 "
+                            data-active-classes="bg-white dark:bg-black text-gray-900 dark:text-gray-300 dark:opacity-90 duration-500"
+                            data-inactive-classes="text-gray-500 dark:text-gray-400 duration-500">
+                            <h2 id="accordion-flush-heading-2">
+                                <!-- !!! 1-->
+
+                                <button type="button"
+                                    class="text-left duration-500 samsungS text-gray-200 tracking-wide | flex items-center justify-between w-full pb-2 pt-1 "
+                                    data-accordion-target="#accordion-flush-body-2" aria-expanded="true"
+                                    aria-controls="accordion-flush-body-2">
+                                    <!-- !!2 ,3-->
+                                    <span class="sm:text-md text-sm">Better scratch resistance with Corning® Gorilla®
+                                        Armor7</span>
+                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M9 5 5 1 1 5" />
+                                    </svg>
+                                </button>
+                            </h2>
+                            <!-- !!! 4,5 -->
+                            <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                                <div class=" text-left ">
+                                    <p class=" text-white opacity-50  font-light text-xs sm:text-sm">Corning® Gorilla®
+                                        Armor helps
+                                        protect your screen from scratches to keep your device looking beautiful.7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="armor-1  sm:w-56 w-36 rounded-lg |   overflow-hidden"
+                            style="background-color: #1F1F27;">
+                            <img src="/another-project/samsungS24/assets/img/img4.png" alt="">
+                        </div>
+                        <div class=" sm:w-56 w-36 text-left" id="" data-accordion=" duration-500 "
+                            data-active-classes="bg-white dark:bg-black text-gray-900 dark:text-gray-300 dark:opacity-90 duration-500"
+                            data-inactive-classes="text-gray-500 dark:text-gray-400 duration-500">
+                            <h2 id="accordion-flush-heading-3">
+                                <!-- !!! 1-->
+
+                                <button type="button"
+                                    class="text-left duration-500 samsungS text-gray-200 tracking-wide | flex items-center justify-between w-full pb-2 pt-1 "
+                                    data-accordion-target="#accordion-flush-body-3" aria-expanded="true"
+                                    aria-controls="accordion-flush-body-3">
+                                    <!-- !!2 ,3-->
+                                    <span class="sm:text-md text-sm">Water and dust resistant. Worry free</span>
+                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M9 5 5 1 1 5" />
+                                    </svg>
+                                </button>
+                            </h2>
+                            <!-- !!! 4,5 -->
+                            <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                                <div class="pb-2 text-left ">
+                                    <p class="mb-2 text-white opacity-50  font-light text-xs sm:text-sm">Don't let water
+                                        dampen
+                                        your spirits. Galaxy S24 Ultra is IP68 water and dust resistant — so you're
+                                        ready for every adventure, puddles and all.</p>
+                                    <p class="mb-2 text-white opacity-50  font-light text-xs sm:text-xs ">Don't
+                                        let water dampen your spirits. Galaxy S24 Ultra is IP68 water and dust resistant
+                                        — so you're ready for every adventure, puddles and all.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <footer class=" rounded-lg shadow   mt-20" style="background-color: #1F1F27 ;">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="/another-project/samsungS24/assets/img/samsung-white.png" class="h-11"
+                        alt="Flowbite Logo" />
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="mt-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-8" />
+            <span class="mt-3 block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+                    href="https://flowbite.com/" class="hover:underline">Samsung™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  <!-- Script JavaScript -->
+<script>
+  const openBtn = document.getElementById('openPopup');
+  const closeBtn = document.getElementById('closePopup');
+  const overlay = document.getElementById('popupOverlay');
+  const body = document.body;
+
+  // Buka popup
+  openBtn.addEventListener('click', () => {
+    overlay.classList.remove('hidden');
+    body.classList.add('overflow-hidden'); // Cegah scroll
+  });
+
+  // Tutup popup dengan tombol X
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.add('hidden');
+    body.classList.remove('overflow-hidden'); // Izinkan scroll lagi
+  });
+
+  // Tutup popup saat klik di area hitam luar
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.add('hidden');
+      body.classList.remove('overflow-hidden'); // Izinkan scroll lagi
+    }
+  });
+</script>
+
+</body>
+
+</html>
