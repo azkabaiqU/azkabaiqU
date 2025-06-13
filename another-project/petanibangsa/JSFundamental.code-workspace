@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../Downloads/scracht/JSFundamental"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/scracht/portofolio"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "invofast"
+	}
+}

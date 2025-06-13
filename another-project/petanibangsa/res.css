@@ -1,0 +1,152 @@
+@media screen and (max-width: 1244px){
+    .news-area{
+        grid-template-columns: auto; 
+        display: grid;
+    }  
+
+    .news-card{
+        width:400px;
+        height: 150px;
+
+    }
+
+  
+}
+@media screen and (max-width: 1102px){
+    .text-news{
+        width: 25vw;
+    }
+}
+
+
+@media screen and (max-width: 866px){
+    .text-news{
+        width: 35vw;
+    }
+
+}
+
+@media screen and (max-width: 636px){
+    .text-news{
+        width: 40vw;
+        font-size: 70%;
+    }
+    .listitem{
+        visibility: hidden;
+    }
+    
+}
+@media screen and (max-width:571px){
+    .text-news{
+        width: 45vw;
+        line-height: -30px;
+    }
+    
+}
+@media screen and (max-width:417px){
+    .text-news{
+        width: 60vw;
+
+    }
+    
+}
+
+
+@media (max-width: 600px) {
+    .listitem a {
+        font-size: 10px;
+        
+    }
+
+    .page1 {
+        height: 100vh;
+        padding-bottom: 30px;
+    }
+
+    .judul-page1 {
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    .des-page1 {
+        font-size: 300px;
+
+
+    }
+    .judul-page1 img{
+        width: 100px;
+    }
+
+    .des-page1 {
+        font-size: 2px;
+    }
+
+    .desp {
+        width: 300px;
+    }
+
+    .page2 {
+        padding-top: 40px;
+        height: auto;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .berawal {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100vw;
+    }
+
+    .fakta,
+    img {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .visimisi {
+        margin-right: 30px;
+        width: auto;
+    }
+
+    .blur-backround-contact {
+        flex-direction: column-reverse;
+    }
+
+    .news-area {
+        width: 100vw;
+    }
+
+    .dk {
+        margin-right: 50px;
+    }
+
+    .contact-area {
+        height: auto;
+    }
+
+    .contact {
+        margin-bottom: 50px;
+        width: 90vw;
+    }
+
+    .contact-logo img {
+        margin-top: 70px;
+        width: 250px;
+    }
+
+    #msg {
+        width: 120%;
+    }
+    .area-tag li{
+        display: flex;
+        flex-direction: column;
+    }
+    }
+    
